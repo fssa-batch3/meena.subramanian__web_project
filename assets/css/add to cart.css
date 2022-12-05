@@ -1,0 +1,210 @@
+*{
+	margin: 0px 0px 0px 0px;
+    padding:0;  
+}
+body{
+    font-family: Poppins;
+    overflow-x:hidden;
+    
+}
+
+header{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:space-between;
+    margin-top:-30px;
+    Height:150px;
+
+    background-color: blanchedalmond;
+    
+   
+}
+header div ul{
+	
+	display:flex;
+	flex-direction:row;
+    list-style:none;
+    margin-left:100px;
+	padding-top:20px;
+}
+
+header div ul li a{
+	
+	display:flex;
+	text-decoration:none;
+	padding-top:0px;
+	color:black;
+	font-size:19px;
+	padding:15px;
+	
+	
+}
+
+.logo img{
+border-radius: 15px;
+}
+
+.logo{
+	position: relative;
+	top: 45px;
+	left: 50px;
+}
+
+h1{
+	position: relative;
+	bottom: 60px;
+	left: 100px;
+}
+
+.nav{
+	position: relative;
+	top: 40px;
+}
+
+.navigations{
+    display:flex;
+    padding-top:50px;
+    margin-right:30px;
+	position: relative;
+	top: 28px;
+}
+
+.search{
+    padding-right:0px;
+    padding-top:-30px;
+	position: relative;
+	right: 20px;
+	top: 3px;
+}
+
+input[type="text"]{
+	height: 20px;
+	width: 200px;
+}
+
+.cart{
+    padding-right:30px;
+}
+
+.account {
+    padding-right:30px;
+}
+
+.order{
+    padding-left:30px;
+}
+.background-img {
+    height: 20%;
+    width: 100%;
+}
+
+
+.tag{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    padding: 20px 0;
+    border:1px solid gray ;
+    margin: 30px;
+    box-shadow: 5px 5px 5px  gray;
+    border-radius: 8px;
+   
+}
+
+h6 a{
+    color:cadetblue;
+    font-size: 13px;
+}
+
+.tag img{
+    width: 250px;
+    height: 200px;
+    border-radius: 5px;
+}
+
+.details small{
+    font-size:20px;
+}
+ 
+.total small{
+    padding-left:80px;
+}
+
+
+.details{
+    width: 200px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.details p{
+    font-size: 25px;
+    text-align: center;
+}
+
+.quan input{
+     width:45px;
+     height:25px;
+    border:0px solid ;
+    background-color:cadetblue;
+    border-radius: 5px;
+    text-align: center;
+   
+}
+.ten{
+    width: 50px;
+    height: 30px;
+}
+
+#button a{
+    text-decoration: none;
+    color:white;
+    
+}
+
+#button{
+    background-color:cadetblue;
+    border-radius: 5px;
+    border:0px solid transparent;
+    padding:10px 10px 10px 10px;
+    width:100px;
+    margin-left:1250px;
+}
+#button:hover{
+    background-color:#294445 ;
+    transition:0.2s;
+}
+.subt{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-size: large;
+
+}
+
+.tax{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-size: large;
+    
+}
+
+.total{
+    position: relative;
+    left: 170px;
+}
+
+.tot{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    font-size: large;
+}

@@ -1,0 +1,96 @@
+@import "normalize.css";
+body{
+    background-color:gray;
+    margin:100px 0px 0px 70px ;
+    
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background:gray;
+  }
+.container input{
+    width:550px;
+    background-color:wheat;
+    border-radius:7px;
+  }
+
+  .remember{
+    display: flex;
+
+  }
+  .remember input{
+    width:15px;
+    height: 15px;
+    margin-right: 20px;
+  }
+  hr {
+    border: 1px solid #F1F1F1;
+    margin-bottom: 25px;
+  }
+  button {
+    background-color:#3a100f;
+    color: white;
+    padding: 14px 20px;
+    margin: 16px ;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    margin-left:30px;
+  }
+  button a {
+    text-decoration: none;
+    color: white;
+  }
+  button:hover {
+    opacity:1;
+  }
+  .cancelbtn {
+    padding: 14px 20px;
+    background-color: #3a100f;
+    border-radius:8px;
+    
+  }
+  .cancelbtn, .signupbtn {
+    float: left;
+    width:40%;
+    border-radius: 8px;
+  
+  }
+  .container {
+    padding: 18px;
+    height:600px;
+    
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+}
+ div.container{
+        width:40%;
+        margin: auto;
+        margin-left:100px;
+        margin-top:45PX;
+        background-color: white;
+   
+}
+
+.in{
+    display:flex ;
+    justify-content: space-evenly;
+   
+}
+
+.it{
+    margin-right:250px;
+    margin-top: 45px;
+ 
+}
+
