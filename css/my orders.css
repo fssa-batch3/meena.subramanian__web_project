@@ -1,0 +1,130 @@
+.header{
+    background-color: burlywood;
+    display: flex;
+    justify-content:space-evenly;
+    height: 10%;
+   
+}
+
+.search{
+    padding:40px;
+    margin-left:90px;
+
+}
+
+input[type=search]{
+    padding:0px 300px 0px 0px;
+    outline: none;
+}
+*{
+    padding: 0px;
+    margin: 0;
+    font-family: 'poppins';
+}
+.sidebar li a{
+    text-decoration: none;
+    color: white;
+	
+}
+.sidebar li{
+    padding: 15px;
+    font-size: 20px;
+
+}
+.content .sidebar{
+    background-color: rgb(33, 33, 33);
+    width: 20%;
+    height:1150px;
+    
+}
+.he h1{
+    margin-left:30px;
+    margin-top:100px;
+}
+
+.he{
+    display: flex;
+}
+.content{
+    display: flex;
+}
+
+.orders{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: row;
+    
+
+}
+
+img{
+    border-radius:15px;
+    margin-top:100px;
+    margin-left:70px;
+}
+
+.orders .card-1{
+    margin-top: 100px;
+    margin-left:90px;
+}
+
+
+
+span{
+   background-color:cadetblue; 
+   border-radius: 8px;
+   padding:3px;
+}
+
+p{
+    padding:5px;
+}
+
+
+h2{
+    margin-top: 60px;
+    margin-left:300%;
+}
+
+h4{
+ 
+    margin-left:300%;
+}
+
+
+.navigations{
+    display:flex;
+	flex-direction: row;
+    justify-content:space-between;
+    padding-top:50px;
+    margin-left:200px;
+	
+}
+
+
+.cart{
+    padding-right:30px;
+}
+
+.account {
+    padding-right:30px;
+}
+
+.order{
+    padding-left:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
