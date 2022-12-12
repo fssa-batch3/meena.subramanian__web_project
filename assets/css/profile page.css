@@ -1,11 +1,9 @@
 *{
 	margin: 0px 0px 0px 0px;
-
-}
-
-body{
     font-family: Poppins;
 }
+
+
 
 
 header{
@@ -37,7 +35,6 @@ header div ul li a{
 	
 	display:flex;
 	text-decoration:none;
-	padding-top:0px;
 	color:black;
 	font-size:19px;
 	padding:15px;

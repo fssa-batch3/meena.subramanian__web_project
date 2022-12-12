@@ -19,7 +19,7 @@ input[type=search]{
 *{
     padding: 0px;
     margin: 0;
-    font-family: 'poppins';
+    font-family:Poppins;
 }
 .sidebar li a{
     text-decoration: none;
