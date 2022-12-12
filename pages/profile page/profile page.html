@@ -4,21 +4,24 @@
         <title>Profile page </title>
         <link rel="stylesheet" href="../../assets/css/profile page.css"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+       <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
      </head>
 
      <body>
 
         <header> 
             <div class="logo">
-                <img src="../../assets/img/product images.jfif"  width="80px" height="80px">
-                <h1> KAITHTHARI </h1>
+             <a href="../homepage/about_us.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"></a>
+               
             </div>
 
             <div class="nav">
                 <ul>
                 <li><a href="../products/product_list saree.html">Sarees</a></li>
                 <li><a href="../products/product_list dothi.html">Dothies</a></li>
-                <li><a href="#">Design your own</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact</a></li>
                 </ul>
@@ -27,52 +30,45 @@
 
                 <input type="text"  placeholder="search">
                 <div class="search">
-                <i class="fa fa-search" style="font-size:18px;color: gray;"></i>                   
+                <i class="fa fa-search" style="font-size:18px;color: black;"></i>                   
             </div>
           
-            <div class="cart">
-                    <img src="../../assets/img/icon-cart.svg" alt="cart" width="20px" height="20px"/>
+           <div class="cart">
+                <a href="../buy now page/add to cart.html"><i class="fa fa-shopping-cart" style="font-size:24px; color:black;"></i></a>
             </div>
 
             <div class="accound">
-               <i class="fa fa-user-circle-o" style="font-size:24px;color:gray;"></i>
+               <i class="fa fa-user-circle-o" style="font-size:24px;color:black;"></i>
               
             </div>
 
             <div class="order">
-                <i class="fa fa-shopping-bag" style="font-size:22px;color:gray;"></i>
+               <a href="../orders/my orders.html"> <i class="fa fa-shopping-bag" style="font-size:22px;color:black;"></i></a>
             </div>
     
         </div>
         </header>
-        <div class="border">
-
+        <div class="pro">
+            <h1 class="heading"> PROFILE </h1>
+           </div>
+    <section class="profile_details">
+        <div class="form">
+            <div class="profile">
+                <img class="profile_img" src="../../assets/img/profile.png" width="180px">
+            </div>
+            <div class="details">
+                <div class="details_list"><p class="list">Name:</p><p class="list_2">S.Meena</p></div>
+                <div class="details_list"><p class="list">Email:</p><p class="list_2">vasumeenu2004@gmail.com</p></div>
+                <div class="details_list"><p class="list">Address:</p><p class="list_2">42/36,baguadwjeduuiNDEId street</p></div>
+                <div class="details_list"><p class="list">Contact:</p><p class="list_2">74671*****</p></div>
+                <div class="details_list"><p class="list">District:</p><p class="list_2">Thirunelveli</p></div>
+                <div class="details_list"><p class="list">Bio:</p><p class="list_2"> CEO of Kaithari</p></div>
+            </div>
+            <div class="buttons">
+                <button type="button" class="edit-btn"><strong>EDIT</strong></button>
+                <a href="../homepage/about_us.html"><button type="button" class="log"> <strong>LOG OUT</strong></button></a>
+             </div>
         </div>
-       <section class="it">
-        
-       </section>
-
-     <div class="sun">
-       <div class="pro">
-        <h1 class="heading"> PROFILE </h1>
-        <img src="../../assets/img/profile.png" class="profile-image" width="180px">
-       </div>
-       <div class="son">
-        <b>
-            <p>Name:    <span class="meena">S.Meena</span></p>
-            <p> Email:  <span class="meena">vasumeenu2004@gmail.com </span></p>
-            <p>Address: <span>42/36,baguadwjeduuiNDEId street</span></p>
-            <P>Contact: <span> 124356880</span></P>
-            <p>District: <span>Thirunelveli</span></p>
-            <p>Bio: <span class="about"> ennam poll valkkai</span></p>
-         </b>
-         <a href="profile edit page.html"><button class="edit-btn">EDIT</button></a>
-       </div>
-       <div class="box">
-
-       </div>
-       
-</div>
-       
+    </section>
      </body>
 </html>
