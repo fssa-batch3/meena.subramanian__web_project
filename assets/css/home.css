@@ -263,8 +263,14 @@ i:hover{
 	border-radius: 9px;
 	width:150px;
 	height:40px;
+	margin-top:30px;
+	
 	
 
+}
+
+.par button a{
+	color: black;
 }
 
 .aboutus{

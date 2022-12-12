@@ -232,7 +232,15 @@ footer{
 	margin-top: 40px;
 }
 
+.vidios{
+	display: flex;
+	margin-top:40px;
+}
 
+.vido-content{
+	margin-left:50px;
+	margin-top:50px;
+}
 
 
 
