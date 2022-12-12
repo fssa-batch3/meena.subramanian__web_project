@@ -1,6 +1,7 @@
 *{
 	margin: 0px;
     text-decoration: none;
+    font-family: Poppins;
 }
 
 
@@ -40,22 +41,10 @@ header div ul li a{
 	
 	
 }
-
-.logo img{
-border-radius: 15px;
+header .logo img{
+   margin-top:10px;
 }
 
-.logo{
-	position: relative;
-	top: 45px;
-	left: 50px;
-}
-
-h1{
-	position: relative;
-	bottom: 60px;
-	left: 100px;
-}
 
 .nav{
 	position: relative;
@@ -107,7 +96,7 @@ input[type="text"]{
 
 .wat{
     width: 360px;
-    height: 400px;
+    height: 450px;
     border: 1px solid white;
     border-radius:6px;
     background-color: white;
@@ -156,7 +145,7 @@ input[type="text"]{
     display: block;
     width: 140px;
     height: 30px;
-    background-color: aquamarine;
+    background-color:cadetblue;
     color: black;
     border-radius: 6px;
     border: 1px solid white;
@@ -171,10 +160,7 @@ input[type="text"]{
     text-align: center;
 
 }
-.rate{
-    position: relative;
-    top: 15px;
-}
+
 .rate{
     position: relative;
     top: 15px;

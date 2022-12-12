@@ -16,7 +16,7 @@ header{
 	justify-content:space-between;
 	align-content:center;
     height:100px;
-    background-color:#ccc;   
+    background-color:blanchedalmond;   
    
 }
 header div ul{
@@ -44,34 +44,27 @@ header div ul li a{
 }
 
 .logo img{
- border-radius: 15px;
- margin-bottom:50px;
+   border-radius: 15px;
+   margin-top:10px;
 
 }
 
 .logo{
-	position: relative;
-	top: 45px;
-	left: 50px;
+	display: flex;
 }
 
-h1{
-	position: relative;
-	bottom: 100px;
-	left: 100px;
+.logo h1{
+	margin-top:40px;
+	display: flex;
+	flex-direction: row;
 }
 
-.nav{
-	position: relative;
-	top: 40px;
-}
 
 .navigations{
     display:flex;
     padding-top:50px;
     margin-right:30px;
-	position: relative;
-	top: 35px;
+	
 }
 
 .search{
@@ -80,16 +73,20 @@ h1{
 	position: relative;
 	right: 20px;
 	top: 3px;
+
 }
 
 input[type="text"]{
 	height: 20px;
 	width: 200px;
+	outline: none;
 }
+
 
 .cart{
     padding-right:30px;
 }
+
 
 .account {
     padding-right:30px;
@@ -101,16 +98,16 @@ input[type="text"]{
 
 .adds{
 	width: 1200px;
-	height: 600px;
+	height: 400px;
 	border: 1px solid rgb(219, 216, 216);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	justify-content: space-evenly;
-	position: relative;
-	left: 140px;
-	margin: 50px 0;
+	margin-top:50px;
+	margin-bottom:50px;
+	margin-left:135px;
 	box-shadow: 5px 5px 18px #ccc;
     border-radius: 8px;
 	background-color:wheat;
@@ -131,6 +128,7 @@ input[type="text"]{
 	right:30px;
 }
 
+
 .adds .content h4 img {
 	width:70px;
 	height:50px;
@@ -146,10 +144,7 @@ input[type="text"]{
     border: 1px solid white;
     border-radius:6px;
     background-color: white;
-    box-shadow: 5px 10px 18px #888888;
-
-
-    
+    box-shadow: 5px 10px 18px #888888;   
 }
   
 .wat img{
@@ -173,14 +168,21 @@ input[type="text"]{
     display: block;
     width: 140px;
     height: 30px;
-    background-color: aquamarine;
+    background-color:cadetblue;
     color: black;
     border-radius: 6px;
     border: 1px solid white;
-    position: relative;
-    left: 100px;
-    top: 40px;
+   margin-top:50px;
+   margin-left:100px;
 
+}
+
+img:hover{
+	scale: 1.04;
+}
+
+i:hover{
+	scale: 1.2;
 }
 
 .product-content{
@@ -200,11 +202,16 @@ input[type="text"]{
 .s1{
     position: relative;
     top: 15px;
+	
 }
 .star{
     position: relative;
     top: 25px;
     color:chocolate;
+}
+
+*{
+	cursor: pointer;
 }
 
 .hol{
@@ -213,29 +220,37 @@ input[type="text"]{
     flex-direction: row;
     justify-content: space-evenly;
     height: 45vh;
-	margin-top: 60px;
+	margin-top: 80px;
     
     
 }
 
-.border-1{
-	height:5px;
-	width:500px;
-	background-color: cadetblue;
-	position: relative;
-	left: 100px;
-	top: 23px;
+.products-container{
+	height:130vh;
+}
 
+.products-container h3{
+     color:black
+}
+
+
+.border-1{
+		height:5px;
+		width:500px;
+		background-color: cadetblue;
+        position: relative;
+		top: 20px;
 }
 
 .border-2{
-	height:5px;
-	width:500px;
-	background-color: cadetblue;
-	float: right;
-	position: relative;
-	right: 100px;
-	bottom: 23px;
+		height:5px;
+		width:500px;
+		background-color: cadetblue;
+		float:right;
+		margin-bottom:40px;
+		position: relative;
+		bottom: 20px;
+
 }
 
 .trent{
@@ -248,9 +263,7 @@ input[type="text"]{
 	border-radius: 9px;
 	width:150px;
 	height:40px;
-	position: relative;
-	top:30px;
-	right:10px;
+	
 
 }
 
@@ -258,19 +271,13 @@ input[type="text"]{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	align-content:center;
 	align-items: center;
-	position: relative;
-	left: 150px;
-	top: 200px;
 	height: 400px;
-	width: 1200px;
+	margin: 0 5% 5% 5%;
 	border: 1px solid wheat;
 	border-radius: 10px;
 	box-shadow: 5px 5px 18px #ccc;
 	background-color:blanchedalmond;
-	
-	
 	
 } 
 
@@ -284,13 +291,77 @@ input[type="text"]{
 }
 
 .par{
-	margin-left: 60px;
+	width: 40%;
 }
 
-.footer{
-	width:50vh;
-	height:600px;
+footer{
+	background-color:cadetblue;
+}
+
+.footer-container{
+     display: flex;
+	 flex-wrap: wrap;
+	 justify-content:center;	
+}
+
+.menu{
+	margin-top: 30px;
+	margin-right:800px;
+	
 }
 
 
+
+h3{
+	color: white;
+	font-size: 20px;
+}
+
+h6{
+    
+	font-size: 15px;
+}
+
+.about a{
+	color: black;
+}
+
+.c1 a{
+	color: black;
+}
+
+.dothi a{
+	color: black;
+}
+
+.dothi{
+	margin-top: 30px;
+	margin-left:80px;
+}
+
+.c1{
+	margin-top: 30px;
+	margin-left:50px;
+	
+}
+
+.about{
+	margin-top: 30px;
+	margin-right:50px;
+}
+
+.footer-2{
+	display: flex;
+	justify-content:space-around;
+	margin-top: 80px;
+}
+
+.copy{
+	margin-right:800px;
+}
+.border-110{
+	
+	height:40px;
+	width:3px;
+}
 

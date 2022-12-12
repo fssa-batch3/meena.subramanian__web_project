@@ -1,8 +1,12 @@
 *{
 	margin: 0px 0px 0px 0px;
+    padding:0;  
 }
+body{
+    font-family: Poppins;
 
-
+    
+}
 
 header{
 	display:flex;
@@ -10,10 +14,8 @@ header{
 	flex-direction:row;
 	justify-content:space-between;
 	align-content:space-between;
-	margin-bottom:-50px;
     margin-top:-30px;
-	
-    height:130px;
+    Height:150px;
     background-color: blanchedalmond;
     
    
@@ -23,11 +25,8 @@ header div ul{
 	display:flex;
 	flex-direction:row;
     list-style:none;
-	margin-left:100px;
+    margin-left:100px;
 	padding-top:20px;
-    
-	
-
 }
 
 header div ul li a{
@@ -42,14 +41,9 @@ header div ul li a{
 	
 }
 
-.logo img{
-border-radius: 15px;
-}
-
-.logo{
-	position: relative;
-	top: 45px;
-	left: 50px;
+header .logo img{
+    margin-top:25px; 
+    margin-left:60px;
 }
 
 h1{
@@ -77,11 +71,14 @@ h1{
 	position: relative;
 	right: 20px;
 	top: 3px;
+   
 }
 
-header .navigations input[type="text"]{
-	height: 20px;
+ header .navigations input[type="text"]{
+	height: 25px;
 	width: 200px;
+    outline: none;
+ 
 }
 
 .cart{
@@ -96,142 +93,143 @@ header .navigations input[type="text"]{
     padding-left:30px;
 }
 
-.left{
-    width: 50%;
-    position: relative;
-    top: 100px;
-    left: 200px;
+.total{
+  display:flex;
+flex-wrap: wrap;
 }
-.image img{
-    border-radius: 10px;
+
+.left {
+      margin-left:180px; 
+      margin-top:50px;   
+      
 }
-.sub-images{
-    position: relative;
-    top: 60px;
+
+.left .image img {
+    border-radius: 20px;
 }
-.sub-images img{
-    border-radius: 5px;
+
+.left .sub-images{
+    margin-top:30px;
+   
 }
-.s2{
-    position: relative;
-    left: 20px;
-}
-.s3{
-    position: relative;
-    left: 40px;
-}
-.s4{
-    position: relative;
-    left: 70px;
-}
+
 .right{
-    border: 2px solid white;
-    height: 600px;
-    width: 500px;
-    position: relative;
-    left: 750px;
-    bottom: 430px;
-}
-h2{
-    font-size: 25px;
-}
-h3{
-    font-size: 35px;
-    color:brown;
-	margin-top: 20px;
-}
-h4{
-    font-size: 20px;
-	margin-top:15px;
-    color: green;
-}
-p{
-    font-size: 18px;
-	margin-top: 20px;
+    margin-left:150px;
+    margin-top:70px;
+    
 }
 
-s{
-    color: gray;
-    position: relative;
-    bottom: 10px;
-}
-b{
-    color: green;
-    position: relative;
-    bottom: 10px;
-}
-strong{
+.right h4{
     font-size: 20px;
-    position: relative;
-    bottom: 10px;
+    color: rgb(81, 130, 81);
 }
-.name{
-    font-size: 22px;
-    position: relative;
-    top: 10px;
-}
-.add{
-    font-size: 22px;
-    position: relative;
-    top: 20px;
-}
-.no{
-    font-size: 22px;
-    position: relative;
-    top: 60px;
-}
-.cash{
-    font-size: 22px;
-    position: relative;
-    top: 70px;
-}
-.c1{
-    position: relative;
-    top: 10px;
-    margin-left: 80px;
-}
-.c2{
-    position: relative;
-    top: 20px;
-    margin-left: 80px;
-}
-input[type="name"]{
-    height: 25px;
-    width: 150px;
-    font-size: 15px;
-    padding-left: 25px;
-	margin-left:20px;	
-    position: relative;
-    left: 100px;
-}
-input[type="text"]{
-    height: 25px;
-    width: 200px;
-    font-size: 15px;
-    padding-left: 25px;
-    position: relative;
-    left: 100px;
+.right p strong {
+    color:orange;
+    margin-right: 10px;
 }
 
-.on{
-    font-size: 20px;
-    position: relative;
-    left: 180px;
-    bottom: 22px;
+.right p s{
+    margin-right: 10px;;
+}
+.right p b{
+color:orange;
+
+}
+
+
+.sub-images .s1{
+    border-radius:10px;
+ }
+
+.sub-images .s2{
+    margin-left:22px;
+   border-radius:10px;
+}
+
+.sub-images .s3{
+        border-radius:10px;
+        margin-left:22px;
+ }
+
+.sub-images .s4{
+    margin-left:22px;
+    border-radius:10px;
+}
+
+.s1:hover{
+    scale: 1.06 ;
+}
+
+.s2:hover{
+    scale: 1.06 ;
+}
+
+.s3:hover{
+    scale: 1.06 ;
+}
+
+.s4:hover{
+    scale: 1.06 ;
+}
+
+.right h2{
+    font-size: 26px;
+    
+}
+
+.right h3{
+     font-size: 30px;
+     color: crimson;
+}
+
+.right .form_list{
+    display: flex;
+    flex-direction: row;
+}
+.right .form_list .form{
+    width: 10rem;
+    margin-top: 15px;
+}
+.right .form_list .form_input{
+    margin-top: 15px;
+}
+.right .form_list .form input,.form_input input{
+    margin-top: 5px;
+}
+.right .cash{
+    display: flex;
+    flex-direction: row;
+    margin-top:20px;
+}
+
+.right .cash .payment{
+    margin-top: 15px;
+}
+.right .cash .radio{
+    margin-top: 18px;
+    margin-left: 20px;
 }
 .place{
-    height: 50px;
-    width: 200px;
-    border: 2px solid;
-    background-color:cadetblue;
-    border-radius: 5px;
-    color: white;
-    position: relative;
-    top: 90px;
-    left: 170px;
+    margin-top:100px;
+    margin-left:350px;
+    padding:10px;
+    background-color: cadetblue;
+    border:1px solid white;
+    border-radius: 10px;
 }
 
-input[type="no"]{
-	position:relative;
-	left:35px;
+
+.place:hover{
+    scale: 1.06;
 }
+
+input{
+    outline: none;
+}
+
+
+
+
+
+
+

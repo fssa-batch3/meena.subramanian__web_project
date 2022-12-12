@@ -1,5 +1,10 @@
 *{
 	margin: 0px 0px 0px 0px;
+
+}
+
+body{
+    font-family: Poppins;
 }
 
 
@@ -40,21 +45,14 @@ header div ul li a{
 	
 }
 
-.logo img{
-border-radius: 15px;
+ header .logo img{
+      margin-top:40px; 
+      margin-left:60px;
 }
 
-.logo{
-	position: relative;
-	top: 45px;
-	left: 50px;
-}
 
-h1{
-	position: relative;
-	bottom: 60px;
-	left: 100px;
-}
+
+
 
 .nav{
 	position: relative;
@@ -95,71 +93,62 @@ input[type="text"]{
 }
 
 
-.it{
-  
-    height:20vh;
-    width:1495px;
-    background-repeat: no-repeat;
-    background-size:cover;
 
+
+/*--form--*/
+
+
+body .profile_details{
+    margin-top: 20px;
 }
 
-span{
-    position: relative;
-    left: 19px;
-}
-
-p{
-    margin-right:200px;
-    padding-top:20px;
-}
-.sun{
+body .profile_details .form{
+    width: 30rem;
+    height: 34rem;
+    margin: auto;
+    border: 1px solid gray;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    box-shadow: 3px 3px 5px rgb(90, 88, 88);
+    border-radius: 15px;
 }
 
-.son{
-    margin-top:20px;
-    margin-left:10%;
-}
-.meena{
-    position: relative;
-    left: 35px;
-}
-.about{
-    position: relative;
-    left: 47px;
-}
-.profile-image{
-    position: relative;
-    left: 27%;
-}
-.heading{
-    position: relative;
-    left: 30%;
-}
-.box{
-    width: 450px;
-    height: 550px;
-    border: 1px solid rgb(255, 251, 251);
-    position: relative;
-    bottom: 450px;
-    left: 50px;
-    box-shadow: 5px 10px 18px #888888;
-    border-radius: 20px;
-
+.form .details_list{
+    display: flex;
+    flex-direction: row;
 }
 
-.edit-btn{
-      width: 120px;
-      height: 30px;
-      border-radius: 7px;
-     position: relative;
-     top: 50px;
-     left:45px;
-     border:none;
-     background-color:cadetblue;
+body .profile_details .form .profile,.details,.buttons{
+    margin: auto;
+}
+
+.pro .heading{
+    margin-top: 170px;
+    margin-left: 680px;
+}
+
+.form .details .list{
+    width: 100px;
+    padding-top: 10px;
+}
+
+.form .details .list_2{
+    width: 200px;
+    padding-top: 10px;
+}
+
+.form .buttons{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form .buttons .edit-btn{
+    margin-right: 120px;
+}
+
+.form .buttons .edit-btn,.log{
+    padding: 5px 10px;
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color:cadetblue;
 }

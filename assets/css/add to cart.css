@@ -3,9 +3,7 @@
     padding:0;  
 }
 body{
-    font-family: Poppins;
-    overflow-x:hidden;
-    
+    font-family: Poppins;   
 }
 
 header{
@@ -16,9 +14,7 @@ header{
 	align-content:space-between;
     margin-top:-30px;
     Height:150px;
-
     background-color: blanchedalmond;
-    
    
 }
 header div ul{
@@ -42,14 +38,9 @@ header div ul li a{
 	
 }
 
-.logo img{
-border-radius: 15px;
-}
-
-.logo{
-	position: relative;
-	top: 45px;
-	left: 50px;
+header .logo img{
+    margin-top:25px; 
+    margin-left:60px;
 }
 
 h1{
@@ -77,11 +68,14 @@ h1{
 	position: relative;
 	right: 20px;
 	top: 3px;
+   
 }
 
 input[type="text"]{
-	height: 20px;
+	height: 25px;
 	width: 200px;
+    outline: none;
+ 
 }
 
 .cart{
@@ -106,12 +100,12 @@ input[type="text"]{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    height: 20%;
-    padding: 20px 0;
     border:1px solid gray ;
-    margin: 30px;
     box-shadow: 5px 5px 5px  gray;
     border-radius: 8px;
+    width:1050px;
+    margin-left: 240px;
+    margin-top:30px;
    
 }
 
@@ -123,7 +117,7 @@ h6 a{
 .tag img{
     width: 250px;
     height: 200px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .details small{
@@ -165,7 +159,7 @@ h6 a{
 
 #button a{
     text-decoration: none;
-    color:white;
+    color:black;
     
 }
 
@@ -175,36 +169,93 @@ h6 a{
     border:0px solid transparent;
     padding:10px 10px 10px 10px;
     width:100px;
-    margin-left:1250px;
-}
-#button:hover{
-    background-color:#294445 ;
-    transition:0.2s;
-}
-.subt{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    font-size: large;
-
+    margin-left:1150px;
 }
 
-.tax{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    font-size: large;
-    
+
+
+
+
+.extra{
+    height:100px;
 }
 
 .total{
-    position: relative;
-    left: 170px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 50px 250px 50px 750px;
+    justify-content: space-between;
 }
 
-.tot{
-    display: flex;
-    flex-direction:row;
-    justify-content: space-around;
-    font-size: large;
+footer{
+	background-color:cadetblue;
 }
+
+.footer-container{
+     display: flex;
+	 flex-wrap: wrap;
+	 justify-content:center;	
+}
+
+.menu{
+	margin-top: 30px;
+	margin-right:800px;
+	
+}
+
+
+
+h3{
+	color: white;
+	font-size: 20px;
+}
+
+h6{
+    
+	font-size: 15px;
+}
+
+.about a{
+	color: black;
+}
+
+.c1 a{
+	color: black;
+}
+
+.dothi a{
+	color: black;
+}
+
+.dothi{
+	margin-top: 30px;
+	margin-left:80px;
+}
+
+.c1{
+	margin-top: 30px;
+	margin-left:50px;
+	
+}
+
+.about{
+	margin-top: 30px;
+	margin-right:50px;
+}
+
+.footer-2{
+	display: flex;
+	justify-content:space-around;
+	margin-top: 80px;
+}
+
+.copy{
+	margin-right:800px;
+}
+.border-110{
+	
+	height:40px;
+	width:3px;
+}
+

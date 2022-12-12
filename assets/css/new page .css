@@ -1,30 +1,25 @@
 .header{
     background-color: burlywood;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: center;
     height: 10%;
-   
 }
 
 .search{
-    padding:40px;
-    margin-left:90px;
-
+    padding:30px;
 }
 
 input[type=search]{
-    padding:0px 300px 0px 0px;
-    outline: none;
+    padding:0px 250px 0px 0px;
 }
 *{
-    padding: 0px;
+    padding: 0;
     margin: 0;
     font-family: 'poppins';
 }
 .sidebar li a{
     text-decoration: none;
     color: white;
-	
 }
 .sidebar li{
     padding: 15px;
@@ -34,17 +29,10 @@ input[type=search]{
 .content .sidebar{
     background-color: rgb(33, 33, 33);
     width: 20%;
-    height:1150px;
+    height:890px;;
     
 }
-.he h1{
-    margin-left:30px;
-    margin-top:100px;
-}
 
-.he{
-    display: flex;
-}
 .content{
     display: flex;
 }
@@ -54,7 +42,6 @@ input[type=search]{
     flex-wrap: wrap;
     align-items: center;
     flex-direction: row;
-    
 
 }
 
@@ -72,55 +59,15 @@ img{
 
 
 span{
-   background-color:cadetblue; 
+   background-color:gray; 
    border-radius: 8px;
    padding:3px;
 }
 
-p{
-    padding:5px;
+.cost{
+    margin-top: 100px;
+    margin-left:100%;
 }
-
-
-h2{
-    margin-top: 60px;
-    margin-left:300%;
-}
-
-h4{
- 
-    margin-left:300%;
-}
-
-
-.navigations{
-    display:flex;
-	flex-direction: row;
-    justify-content:space-between;
-    padding-top:50px;
-    margin-left:200px;
-	
-}
-
-
-.cart{
-    padding-right:30px;
-}
-
-.account {
-    padding-right:30px;
-}
-
-.order{
-    padding-left:30px;
-}
-
-
-
-
-
-
-
 
 
 

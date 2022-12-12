@@ -1,0 +1,140 @@
+*{
+	margin: 0px 0px 0px 0px;
+}
+
+body{
+    font-family: Poppins; 
+
+}
+
+header{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+    height:100px;
+    background-color: blanchedalmond;   
+}
+header div ul{	
+	display:flex;
+	flex-direction:row;
+    list-style:none;
+}
+
+
+header div ul li a{	
+	display:flex;
+	text-decoration:none;
+	color:black;
+	font-size:19px;
+	padding:15px;
+}
+
+header .logo img{
+    margin-left: -100px;
+    padding-top: 10px;
+}
+
+.nav{
+	margin-top: 20px;
+    margin-right:100px;
+}
+
+.navigations{
+    display:flex;
+    padding-top: 40px;	
+    padding-right: 80px;
+}
+
+.search{
+    padding-right:0px;
+    padding-top:-30px;
+	position: relative;
+	right: 20px;
+	top: 3px;
+}
+
+input[type="text"]{
+	height: 20px;
+	width: 200px;
+}
+
+.cart{
+    padding-right:30px;
+}
+
+.account {
+    padding-right:30px;
+}
+
+.order{
+    padding-left:30px;
+}
+
+.buy{
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color:cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    position: relative;
+    left: 100px;
+    top: 40px;
+
+}
+.product-content{
+    position: relative;
+    top: 70px;
+    text-align: center;
+
+}
+.rate{
+    position: relative;
+    top: 15px;
+}
+
+.s1{
+    position: relative;
+    top: 15px;
+}
+.star{
+    position: relative;
+    top: 25px;
+    color:crimson;
+}
+
+.wat{
+    width: 360px;
+    height: 520px;
+    border: 1px solid white;
+    border-radius:6px;
+    background-color: white;
+    box-shadow: 5px 10px 18px #888888;
+    
+    
+}
+  
+.wat img{
+    border-radius: 8px;
+    position: relative;
+    left: 90px;
+    top: 40px;
+}
+
+.hol{
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 45vh;
+    margin-top:100px;
+    
+    
+}
+
+.del{
+    margin-top: 20px;
+    margin-left: 300px;
+}
