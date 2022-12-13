@@ -32,6 +32,13 @@ header div ul{
 
 }
 
+.s1 i{
+    position: relative;
+    text-decoration: line-through;
+	color: black;
+	
+}
+
 header div ul li a{
 	
 	display:flex;
@@ -217,6 +224,7 @@ h2{
 	margin-top:30px;
 	color:crimson
 }
+
 .akka p{
 	margin-top:25px;
 	color:crimson;
@@ -326,6 +334,10 @@ div s{
    
 }
 
+.buy a{
+	text-decoration: none;
+	color: black;
+}
 
 
 .product-content{
@@ -359,7 +371,7 @@ div s{
 
 footer{
 	background-color:cadetblue;
-	margin-top:30px;
+	margin-top:90px;
 }
 
 .footer-container{
@@ -368,11 +380,21 @@ footer{
 	 justify-content:center;
 	 margin-top:80px;	
 }
+.number{
+	color: black;
+	background-color: cadetblue;
+	
+}
+
 
 .menu{
 	margin-top: 30px;
 	margin-right:600px;
 	
+}
+
+.icons h4{
+	color: black;
 }
 
 

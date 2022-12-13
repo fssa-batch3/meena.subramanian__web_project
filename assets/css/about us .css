@@ -1,50 +1,66 @@
 *{
-	margin: 0px 0px 0px 0px;
+	margin: 0;
+	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
 }
-
-
-    
-
-
+	
 
 header{
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction:row;
 	justify-content:space-between;
+	align-content:center;
     height:100px;
-    background-color: blanchedalmond;   
+    background-color:blanchedalmond;   
+   
 }
-header div ul{	
+header div ul{
+	
 	display:flex;
 	flex-direction:row;
     list-style:none;
+	margin-left:60px;
+	padding-top:30px;
+    
+	
+
 }
 
-
-header div ul li a{	
+header div ul li a{
+	
 	display:flex;
 	text-decoration:none;
 	color:black;
 	font-size:19px;
 	padding:15px;
+	
+	
 }
 
-header .logo img{
-    margin-left: -100px;
-    padding-top: 10px;
+.logo img{
+   border-radius: 15px;
+   margin-top:10px;
+
 }
 
-.nav{
-	margin-top: 20px;
-    margin-right:100px;
+.logo{
+	display: flex;
 }
+
+.logo h1{
+	margin-top:40px;
+	display: flex;
+	flex-direction: row;
+}
+
 
 .navigations{
     display:flex;
-    padding-top: 40px;	
-    padding-right: 80px;
+    padding-top:50px;
+    margin-right:30px;
+	
 }
 
 .search{
@@ -53,16 +69,20 @@ header .logo img{
 	position: relative;
 	right: 20px;
 	top: 3px;
+
 }
 
 input[type="text"]{
 	height: 20px;
 	width: 200px;
+	outline: none;
 }
+
 
 .cart{
     padding-right:30px;
 }
+
 
 .account {
     padding-right:30px;
@@ -73,9 +93,10 @@ input[type="text"]{
 }
 
 h2{
-    margin-top: 50px;
-    margin-right:80px;
-    font-size: 40px;
+  text-align: center;
+  font-size: 40px;
+  margin-top:30px;
+
 }
 
 .about{

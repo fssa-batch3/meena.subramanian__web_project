@@ -166,9 +166,10 @@ input[type="text"]{
     position: relative;
     top: 15px;
 }
-.s1{
+.s1 i{
     position: relative;
     top: 15px;
+    text-decoration: line-through;
 }
 .star{
     position: relative;

@@ -112,6 +112,7 @@ input[type="text"]{
 h6 a{
     color:cadetblue;
     font-size: 13px;
+    text-decoration: none;
 }
 
 .tag img{
