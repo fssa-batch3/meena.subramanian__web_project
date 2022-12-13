@@ -1,45 +1,131 @@
-.header{
-    background-color: burlywood;
-    display: flex;
-    justify-content:space-evenly;
-    height: 10%;
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+}
+	
+
+header{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+    height:100px;
+    background-color:blanchedalmond;   
    
+}
+header div ul{
+	
+	display:flex;
+	flex-direction:row;
+    list-style:none;
+	margin-left:60px;
+	padding-top:30px;
+    
+	
+
+}
+
+header div ul li a{
+	
+	display:flex;
+	text-decoration:none;
+	color:black;
+	font-size:19px;
+	padding:15px;
+	
+	
+}
+
+.logo img{
+   border-radius: 15px;
+   margin-top:10px;
+
+}
+
+.logo{
+	display: flex;
+}
+
+.logo h1{
+	margin-top:40px;
+	display: flex;
+	flex-direction: row;
+}
+
+
+.navigations{
+    display:flex;
+    padding-top:50px;
+    margin-right:30px;
+	
 }
 
 .search{
-    padding:40px;
-    margin-left:90px;
+    padding-right:0px;
+    padding-top:-30px;
+	position: relative;
+	right: 20px;
+	top: 3px;
 
 }
 
-input[type=search]{
-    padding:0px 300px 0px 0px;
-    outline: none;
+input[type="text"]{
+	height: 20px;
+	width: 200px;
+	outline: none;
 }
-*{
-    padding: 0px;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
+
+
+.cart{
+    padding-right:30px;
 }
-.sidebar li a{
-    text-decoration: none;
-    color: white;
-	
+
+
+
+.account {
+    padding-right:30px;
 }
-.sidebar li{
-    padding: 15px;
-    font-size: 20px;
+
+.order{
+    padding-left:30px;
+}
+
+.orders{
+    border:1px solid black;
+    width: 80vw;
+    height:300px;
+    margin:auto;
+    display: flex;
+    flex-direction: row;
+    margin-top:40px;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 20px;
 
 }
-.content .sidebar{
-    background-color: rgb(33, 33, 33);
-    width: 20%;
-    height:1150px;
+
+.orders  .card-1 .card-content{  
+  margin-top:-45px; 
+}
+
+
+
+.orders .cost{
+  margin-top: 30px;
+}
+
+.orders img{
+    margin-top:30px;
+    margin-left:50px;
+    border-radius: 15px;
     
 }
+
 .he h1{
     margin-left:30px;
-    margin-top:100px;
+    margin-top:80px;
 }
 
 .he{
@@ -49,18 +135,10 @@ input[type=search]{
     display: flex;
 }
 
-.orders{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-direction: row;
-    
 
-}
-
-img{
+.he img{
     border-radius:15px;
-    margin-top:100px;
+    margin-top:75px;
     margin-left:70px;
 }
 
@@ -68,6 +146,24 @@ img{
     margin-top: 100px;
     margin-left:90px;
 }
+
+.orders .cost .deliver{
+	margin-left:300%;
+}
+
+.deliver-logo{
+	display: flex;
+	flex-direction: row;
+}	
+.deliver-logo img{
+  margin-left:300%;
+}
+
+.deliver-logo p{
+	margin-left:300%;
+	margin-top:30px;
+  }
+
 
 
 
@@ -87,50 +183,99 @@ h2{
     margin-left:300%;
 }
 
-h4{
- 
+.icon h4{
+  margin-left:300%;
+}
+
+.cost h4{
     margin-left:300%;
 }
 
+footer{
+	background-color:cadetblue;
+    margin-top:80px;
+}
 
-.navigations{
-    display:flex;
-	flex-direction: row;
-    justify-content:space-between;
-    padding-top:50px;
-    margin-left:200px;
+
+.footer-container{
+     display: flex;
+	 flex-wrap: wrap;
+	 justify-content:center;	
+}
+
+
+.menu{
+	margin-top: 30px;
+	margin-right:800px;
 	
 }
 
-
-.cart{
-    padding-right:30px;
+h3{
+	color: white;
+	font-size: 20px;
 }
 
-.account {
-    padding-right:30px;
+
+.card-content h3{
+	color:black;
+	font-size: 20px;
 }
 
-.order{
-    padding-left:30px;
+
+h6{
+    
+	font-size: 15px;
 }
 
-.logo img{
-    border-radius: 15px;
-    margin-top:10px;
- 
- }
- 
- .logo{
-     display: flex;
- }
- 
- .logo h1{
-     margin-top:40px;
-     display: flex;
-     flex-direction: row;
- }
- 
+.about a{
+	color: black;
+}
+
+.c1 a{
+	color: black;
+}
+
+.dothi a{
+	color: black;
+}
+
+.dothi{
+	margin-top: 30px;
+	margin-left:80px;
+}
+
+.c1{
+	margin-top: 30px;
+	margin-left:50px;
+	
+}
+
+.about{
+	margin-top: 30px;
+	margin-right:50px;
+}
+
+.footer-2{
+	display: flex;
+	justify-content:space-around;
+	margin-top: 80px;
+}
+
+.copy{
+	margin-right:800px;
+}
+.border-110{
+	
+	height:40px;
+	width:3px;
+}
+
+
+
+
+
+
+
 
 
 
