@@ -1,38 +1,56 @@
 body{
     background-color: gray;
+   font-family: 'Poppins', sans-serif;;
+}
+
+input[type=email], input[type=password] {
+    display:block;
+    margin-top:5px;
+    border: none;
+    outline: none;
+    filter: brightness(0.9);
+    width:280px;
+    height:30px;
+    border-radius: 8px;
+    padding:8px;
 }
 
 
 
 
 .y{
-    border: 0px solid black;
-    height: 400px;
+    height: 530px;
     width: 400px;
     position: relative;
-    left: 300px;
-    top: 225px;
+    left: 250px;
+    top: 185px;
     background-color: white;
     
 
 }
+
+.y hr{
+   margin-top:35px;
+    color:gray
+}
+
 h1{
     position: relative;
     left: 150px;
-    top:45px;
+    top:25px;
 }
 
 .mail{
     position: relative;
     left: 80px;
-    top: 70px;
+    top: 45px;
   
 }
 
 .pass{
     position: relative;
     left: 80px;
-    top: 90px;
+    top: 70px;
    
 }
 
@@ -40,7 +58,7 @@ h1{
 .create{
     position: relative;
     left: 110px;
-    top: 150px;
+    top: 120px;
     padding:8px 15px 8px 15px;
     border-radius: 5px;
     background-color: cadetblue;
@@ -50,7 +68,7 @@ h1{
 .forget{
     position: relative;
     left: 130px;
-    top: 130px;
+    top: 100px;
 }
 
 .forget a{
@@ -61,7 +79,7 @@ h1{
 .submit{
     position: relative;
     left: 145px;
-    top: 150px;
+    top: 120px;
     background-color: cadetblue;
     border-radius: 5px;
     padding:8px 15px 8px 15px;
@@ -77,19 +95,21 @@ h1{
 p{
     position: relative;
     left: 160px;
-    top: 150px;
+    top: 120px;
 }
 
 
 .e{
     position: relative;
     left: 400px;
-    bottom: 232px;
+    bottom:383px;
+       
 }
  
 img{
-    height: 402px;
-    width: 500px;
+    height: 530px;
+    width: 580px;
+    background-color: white;
 }
 
 .create a{

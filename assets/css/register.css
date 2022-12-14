@@ -44,7 +44,7 @@ hr {
 button {
     background-color:cadetblue;
     color: white;
-    padding: 14px 20px;
+    padding: 14px 10px;
     margin: 16px 16px 16px 30px ;
     border: none;
     cursor: pointer;
@@ -81,11 +81,11 @@ button:hover {
     
   }
   .clearfix::after {
-    content: "";
     clear: both;
     display: table;
     
 }
+
  div.container{
         width:40%;
         margin: auto;
@@ -104,7 +104,7 @@ button:hover {
 }
 
 .it{
-    margin-right:230px;
+    margin-right:210px;
     margin-top: 45px;
  
 }
