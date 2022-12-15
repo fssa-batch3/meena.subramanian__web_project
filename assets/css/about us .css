@@ -45,15 +45,7 @@ header div ul li a{
 
 }
 
-.logo{
-	display: flex;
-}
 
-.logo h1{
-	margin-top:40px;
-	display: flex;
-	flex-direction: row;
-}
 
 
 .navigations{

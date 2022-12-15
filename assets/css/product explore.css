@@ -1,42 +1,32 @@
 *{
-	margin: 0px 0px 0px 0px;
+	margin: 0;
+	padding: 0;
 	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	cursor: pointer;
 }
-
-
+	
 
 header{
 	display:flex;
 	flex-wrap:wrap;
 	flex-direction:row;
 	justify-content:space-between;
-	align-content:space-between;
-	margin-bottom:-50px;
-    margin-top:-30px;
-    height:130px;
-    background-color: blanchedalmond;
-	width:100vw;
-    
+	align-content:center;
+    height:100px;
+    background-color:blanchedalmond;   
    
 }
 header div ul{
-	position: relative;
-	left: 35%;
+	
 	display:flex;
 	flex-direction:row;
     list-style:none;
-	margin-left:140px;
-	padding-top:20px;
+	margin-left:60px;
+	padding-top:30px;
     
 	
 
-}
-
-.s1 i{
-    position: relative;
-    text-decoration: line-through;
-	color: black;
-	
 }
 
 header div ul li a{
@@ -50,24 +40,19 @@ header div ul li a{
 	
 }
 
-header .logo img{
-    margin-top:30px; 
-    margin-left:60px;
+.logo img{
+   border-radius: 15px;
+   margin-top:10px;
+
 }
 
-.nav{
-	position: relative;
-	top: 40px;
-	margin-left:-450px;
-	padding-bottom:35px;
-}
+
 
 .navigations{
     display:flex;
     padding-top:50px;
-    margin-right:40px;
-	position: relative;
-	top: 28px;
+    margin-right:30px;
+	
 }
 
 .search{
@@ -76,16 +61,20 @@ header .logo img{
 	position: relative;
 	right: 20px;
 	top: 3px;
+
 }
 
 input[type="text"]{
 	height: 20px;
 	width: 200px;
+	outline: none;
 }
+
 
 .cart{
     padding-right:30px;
 }
+
 
 .account {
     padding-right:30px;
@@ -140,7 +129,7 @@ input[type="text"]{
 
 .sneaker{
 	padding:150px;
-	margin-top:25px;
+	margin-top:20px;
 	padding-top:30px;
 }
 
