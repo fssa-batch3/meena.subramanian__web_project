@@ -204,15 +204,12 @@ h2{
 	color:crimson
 }
 
+
 .akka p{
 	margin-top:25px;
 	color:crimson;
 	
-	
 }
-
-
-
 
 .what{
 	padding:30px;
@@ -233,15 +230,25 @@ span{
 	padding-top:2px;
 	padding-bottom:2px;
 	margin-bottom:30px;
+	background-color:cadetblue;
+	border-radius: 7px;
 }
 
-div s{
-	color: hsl(220, 14%, 75%);
+.ic s{
+	color:black;
 	margin-top:10px;
     font-size:18px;
 	font-weight:bold;
-
+	text-decoration: line-through;
 }
+
+.s1 i{
+    position: relative;
+    top: 15px;
+    text-decoration: line-through;
+}
+
+
 
 .svg{
 	
@@ -330,9 +337,10 @@ div s{
     top: 15px;
 }
 
-.s1{
+.s1 s{
     position: relative;
     top: 15px;
+	text-decoration: line-through;
 }
 .star{
     position: relative;
