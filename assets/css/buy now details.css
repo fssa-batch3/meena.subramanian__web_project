@@ -119,6 +119,8 @@ flex-wrap: wrap;
     
 }
 
+
+
 .right h4{
     font-size: 20px;
     color: rgb(81, 130, 81);
@@ -132,7 +134,10 @@ flex-wrap: wrap;
     margin-right: 10px;
 }
 .right p b{
-color:orange;
+border-radius: 7px;
+padding:3px;
+color:black;
+background-color: cadetblue;
 
 }
 
@@ -172,9 +177,16 @@ color:orange;
     scale: 1.06 ;
 }
 
-.right h2{
+.right .pers{
     font-size: 26px;
-    
+    margin-top:20px;
+}
+h2{
+    font-size: 26px; 
+}
+
+.right s{
+    text-decoration: line-through;
 }
 
 .right h3{
