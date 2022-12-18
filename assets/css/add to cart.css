@@ -192,6 +192,7 @@ h6 a{
     justify-content: space-between;
 }
 
+
 #footer{
 	background-color:cadetblue;
 }
@@ -257,11 +258,12 @@ h6{
 .copy{
 	margin-right:800px;
 }
-.border-110{
-	
-	height:40px;
-	width:3px;
+
+.icons a img{
+    margin-bottom:50px;
 }
+
+
 
 
 
