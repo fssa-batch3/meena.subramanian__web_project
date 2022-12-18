@@ -157,7 +157,7 @@ h4{
 
 footer{
 	background-color:cadetblue;
-	margin-top:30px;
+	margin-top:70px;
 }
 
 .footer-container{
@@ -169,7 +169,7 @@ footer{
 
 .menu{
 	margin-top: 30px;
-	margin-right:600px;
+	margin-right:720px;
 	
 }
 
@@ -254,6 +254,11 @@ footer{
 .vido-content{
 	margin-left:50px;
 	margin-top:50px;
+}
+
+.icons h4{
+		color:black;
+		font-size: 20px;
 }
 
 
