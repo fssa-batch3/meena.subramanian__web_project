@@ -356,7 +356,7 @@ span{
 	
 }
 
-footer{
+#footer{
 	background-color:cadetblue;
 	margin-top:90px;
 }
@@ -377,13 +377,16 @@ footer{
 .number{
 	color: black;
 	background-color:cadetblue;
+	position: relative;
+	right:10px;
+	bottom:5px;
 
 }
 
 
 .menu{
 	margin-top: 30px;
-	margin-right:700px;
+	margin-right:720px;
 	
 }
 
