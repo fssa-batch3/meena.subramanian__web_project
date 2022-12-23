@@ -93,6 +93,10 @@ input[type="text"]{
     padding-left:30px;
 }
 
+.favorite{
+    padding-left:30px;
+}
+
 .total{
   display:flex;
 flex-wrap: wrap;

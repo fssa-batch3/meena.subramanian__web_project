@@ -84,6 +84,10 @@ input[type="text"]{
     padding-left:30px;
 }
 
+.favorite{
+    padding-left:30px;
+}
+
 
 
 .avatar{
@@ -278,17 +282,21 @@ span{
 }
 
 
+
 .wat{
-    width: 360px;
+    width: 340px;
     height: 420px;
     border: 1px solid white;
     border-radius:6px;
-    background-color: white;
-    box-shadow: 5px 10px 18px #888888;
-
-    
-}
+    background-color:whitesmoke;
+	margin-bottom: 30px;
   
+}
+.wat:hover{
+	scale: 1.00;
+	box-shadow: 5px 5px 40px 5px #888888;
+}
+   
 .wat img{
     border-radius: 8px;
     position: relative;
@@ -315,7 +323,7 @@ span{
     border-radius: 6px;
     border: 1px solid white;
 	margin-top:50px;
-	margin-left:110px;
+	margin-left:100px;
 	text-decoration: none;
    
 }

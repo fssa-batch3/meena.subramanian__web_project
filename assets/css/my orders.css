@@ -106,6 +106,10 @@ input[type="text"]{
 
 }
 
+.favorite{
+    padding-left:30px;
+}
+
 .orders  .card-1 .card-content{  
   margin-top:-45px; 
 }

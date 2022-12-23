@@ -92,6 +92,10 @@ input[type="text"]{
 .order{
     padding-left:30px;
 }
+
+.favorite{
+    padding-left:30px;
+}
 .background-img {
     height: 20%;
     width: 100%;
