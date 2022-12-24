@@ -14,7 +14,8 @@ header{
 	justify-content:space-between;
 	align-content:center;
     height:100px;
-    background-color:blanchedalmond;   
+    background-color:white; 
+	box-shadow:0px 2px 7px 0px #eaecef;  
    
 }
 header div ul{
@@ -54,19 +55,24 @@ header div ul li a{
 	
 }
 
+
 .search{
     padding-right:0px;
     padding-top:-30px;
 	position: relative;
 	right: 20px;
-	top: 3px;
+	
+
 
 }
 
-input[type="text"]{
-	height: 20px;
-	width: 200px;
+input[type="search"]{
+    padding:4px 5px 4px 5px;
 	outline: none;
+	margin-bottom: 35px;
+	border-radius: 5px;
+	border-color: transparent;
+	background-color:#eaecef;
 }
 
 
@@ -90,7 +96,7 @@ input[type="text"]{
 .adds{
 	width: 1200px;
 	height: 400px;
-	border: 1px solid rgb(219, 216, 216);
+	border: 1px solid rgb(219, 236, 227);
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -98,9 +104,9 @@ input[type="text"]{
 	margin-top:50px;
 	margin-bottom:50px;
 	margin-left:135px;
-	box-shadow: 5px 5px 18px #ccc;
+
     border-radius: 8px;
-	background-color:wheat;
+	background-color:#e7fff2;
 }
 
 .adds  .content p{
