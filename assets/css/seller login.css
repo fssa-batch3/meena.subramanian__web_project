@@ -19,28 +19,7 @@ header{
 	box-shadow:0px 2px 7px 0px #eaecef;  
    
 }
-header div ul{
-	
-	display:flex;
-	flex-direction:row;
-    list-style:none;
-	margin-left:60px;
-	padding-top:30px;
-    
-	
 
-}
-
-header div ul li a{
-	
-	display:flex;
-	text-decoration:none;
-	color:black;
-	font-size:19px;
-	padding:15px;
-	
-	
-}
 
 .logo img{
 	
@@ -58,41 +37,8 @@ header div ul li a{
 }
 
 
-.search{
-    padding-right:0px;
-    padding-top:-30px;
-	position: relative;
-	right: 20px;
-	
-
-
-}
-
-input[type="search"]{
-    padding:4px 5px 4px 5px;
-	outline: none;
-	margin-bottom: 35px;
-	border-radius: 5px;
-	border-color: transparent;
-	background-color:#eaecef;
-}
-
-
-.cart{
-    padding-right:30px;
-}
-
-
 .account {
     padding-right:30px;
-}
-
-.order{
-    padding-left:30px;
-}
-
-.favorite{
-    padding-left:30px;
 }
 
 .sell{
