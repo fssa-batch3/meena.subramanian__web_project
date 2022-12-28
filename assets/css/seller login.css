@@ -80,6 +80,11 @@ input[type=email],input[type=password]{
    margin-bottom:10px;
 }
 
+.sign:hover{
+    scale: 1.04;
+    background-color: crimson;
+    color: white;
+}
 
 .total{
     display: flex;

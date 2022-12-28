@@ -1,0 +1,95 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+    
+	
+}
+
+body{
+    background-color: rgb(173, 215, 215);
+}
+	
+
+header{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+    height:50px;
+    margin-top:40px;
+   
+   
+}
+
+.navigations{
+    display:flex;
+    padding-top:50px;
+    margin-right:30px;
+	padding-right: 30px;
+}
+
+.accound{
+    padding-right:30px;
+}
+
+.all{
+    display: flex;
+}
+
+.all .home img{
+    width:600px;
+    margin-left:200px;
+    margin-top:50px;
+
+}
+
+.content h1{
+    font-size: 40px;
+    margin-top:250px;
+    margin-left:100px;   
+}
+.content .er {
+    font-size: 19px;
+    margin-top:10px;
+    margin-left:100px;   
+}
+
+.btn button{
+    margin-left:100px;
+   margin-top:50px;
+    padding:9px;
+    width:160px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: cadetblue;
+    margin-bottom:10px;
+}
+
+button:hover{
+    scale: 1.03;
+    background-color:rgb(51, 208, 213);
+}
+
+
+.content .content-1{
+    font-size: 15px;
+    margin-left:100px;
+    margin-top:20px;
+}
+
+.btn a{
+    color: black;
+}
+
+
+button:hover{
+    scale: 1.03;
+    background-color: crimson;
+    color: white;
+}
+
+
+ 

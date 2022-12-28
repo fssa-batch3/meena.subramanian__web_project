@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+    
+	
+}
+
+	
+
+header{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	justify-content:space-between;
+	align-content:center;
+    height:100px;
+    background-color:white; 
+    box-shadow:0px 2px 7px 0px #eaecef;      
+}
+
+h1{
+    margin-top:30px;
+    color: crimson;
+}
+
+
+
+ 
+.navigations{
+    display:flex;
+    padding-top:50px;
+    margin-right:30px;
+	padding-right: 30px;
+}
+
+.accound{
+    padding-right:50px;
+}
+
+.all{
+    display: flex;
+    margin-top:150px;
+    border:1px solid black;
+    width: 85rem;
+    height: 30rem;
+    margin-top: 100px;
+    margin-left:80px;
+    border: 1px solid transparent;
+    background-color: rgb(195, 241, 226);
+    border-radius: 15px;
+}
+
+.all .me img{
+    margin-top:30px;
+    margin-left:50px;
+    border-radius: 9px;
+}
+
+.details{
+    margin-top:45px;
+    margin-left:60px;
+}
+
+.details h4{
+     margin-top:10px;
+     margin-bottom: 10px;
+     color: crimson;
+}
+
+
+.offers p{
+    margin-bottom:5px;
+  
+}
+
+.star{
+    margin-top:10px;
+}
+
+.edit{
+    background-color:cadetblue;
+    border-radius: 5px;
+    border:0px solid transparent;
+    padding:6px;
+    width:130px;
+    margin-left:550px;
+    margin-top:30px;
+}
+
+.edit a{
+    color: black;
+}
+
+.edit:hover{
+    scale:1.04;
+    background-color:crimson;
+    color:white;
+}
+
+
