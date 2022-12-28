@@ -180,6 +180,19 @@ input[type="search"]{
 
 }
 
+.buy:hover{
+	scale: 1.04;
+	background-color: crimson;
+	color: white;
+}
+
+
+.parr:hover{
+	scale: 1.04;
+	background-color: crimson;
+	color: white;
+}
+
 img:hover{
 	scale: 1.04;
 }
