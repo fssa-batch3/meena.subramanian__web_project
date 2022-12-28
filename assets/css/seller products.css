@@ -42,7 +42,6 @@ h1{
 .all{
     display: flex;
     margin-top:100px;
-    border:1px solid black;
     width: 85rem;
     height: 30rem;
     margin-left:80px;
