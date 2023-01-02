@@ -1,0 +1,19 @@
+{
+  "name": "kaithari",
+  "version": "1.0.0",
+  "description": ".     ├── assets                  # Compiled files      ├── pages                   # Compiled files     ├── index.html     └── README.md",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fssa-batch3/meena.subramanian__web_project.git"
+  },
+  "author": "vasumeenu004",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fssa-batch3/meena.subramanian__web_project/issues"
+  },
+  "homepage": "https://github.com/fssa-batch3/meena.subramanian__web_project#readme"
+}
