@@ -20,33 +20,33 @@
 <section class="new">
     <section class="total">
     <p> Start For Free</p>
-    <h1>Create New Accound</h1>
+    <h1>Create New Account</h1>
 
     
     <div class="name" style="margin-top: 30px;">
     
-     <input  type="text" placeholder="First name" id="first">
+     <input  type="text" id="first_name" placeholder="First name">
      
-     <input type="text" placeholder="second name">
+     <input type="text" id="second_name" placeholder="second name">
     </div>
   
     <div class="mail" style="margin-top: 15px;">
 
-    <input type="email" placeholder="abcd@13u824.gmail.com" >
+    <input type="email" placeholder="abcd@13u824.gmail.com" id="email">
     </div>
 
     <div class="pass" style="margin-top: 15px;">
     
-    <input type="password" placeholder="**********">
+    <input type="password" id="password" placeholder="**********" >
     </div>
 
-    <div class="pass" style="margin-top: 15px;">
+    <div  class="pass" style="margin-top: 15px;">
 
-    <input type="password" placeholder="confirm password ">
+    <input type="password" id="confirm_password" class="passs" placeholder="confirm password">
     </div>
 
     
-    <a href="../../pages/seller products/seller products.html" style="color: black;"><button class="submit"><b>Save</b></button></a>
+  <button class="submit" type="button" onclick="submit()"><b>Save</b></button>
 
 </section>
 
@@ -57,6 +57,34 @@
 
 
 </section>
+<script>
+
+function submit(){ 
+    const email = document.getElementById("email").value
+    const confirm_password = document.getElementById("confirm_password").value
+    const password = document.getElementById("password").value
+    const first_name = document.getElementById("first_name").value
+    const second_name = document.getElementById("second_name").value
+
+    console.log(email)
+    console.log(password)
+    console.log(first_name)
+    console.log(second_name)
+    console.log(confirm_password)
+
+    localStorage.setItem("user_email",email)
+    localStorage.setItem("user_pasword",password)
+    localStorage.setItem("user_confirm_password",confirm_password)
+    localStorage.setItem("user_name",first_name)
+
+   
+
+
+    window.location.href = "../seller products/seller products.html"
+
+}
+
+</script>
 
 </body>
 </html>

@@ -22,11 +22,11 @@
 
            <div class="mail">
             <label> Email: </label>
-            <input type="email" placeholder="email id"  required="true" id="email id" />
+            <input type="email" placeholder="email"  required="true" id="email"  value="vasumeenu2004@gmail.com">
             </div>
             <div class="pass"> 
             <label> Password: </label>
-            <input type="password" placeholder="number" required />
+            <input type="password" placeholder="number" required id="password" value="**********">
             </div>
             <div class="forget">
                 <a href="#">Forget Password</a>
@@ -40,5 +40,17 @@
             </div>
         
         </div>
+
+
+        <script>
+            const email = document.getElementById("email").value
+            const password = document.getElementById("password").value
+           
+        
+            console.log(email)
+            console.log(password)
+          
+        
+        </script>
     </body>
 </html>

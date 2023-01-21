@@ -23,14 +23,14 @@
       <hr>
  
       <lable for="name"><b>Name</b></lable>
-      <input type="text" placeholder="name" required>
+      <input type="text" placeholder="name" required id="name" value="name">
       
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="example@abc.com" name="email">
+      <input type="text" placeholder="example@abc.com" name="email" id="email" value="vasumeena2004@.com">
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="********" name="psw" >
+      <input type="password" placeholder="********" name="psw" id="password" value="++++++" >
       <label for="psw-repeat"><b>Confirm Password</b></label>
-      <input type="password" placeholder="********" name="psw-repeat">
+      <input type="password" placeholder="********" name="psw-repeat" id="confirm_password" value="*******">
       <div class="remember">
         <input type="checkbox" checked="checked" name="remember" > Remember me
       </div>
@@ -46,6 +46,19 @@
         <img src="../../assets/img/concept-of-online-shopping-and-bill-payment-1917475-1634487.webp" alt="photo" width="600px" height="636px"/>
       </div>
     </div>
+
+    <script>
+      const email = document.getElementById("email").value
+      const confirm_password = document.getElementById("confirm_password").value
+      const password = document.getElementById("password").value
+      const name = document.getElementById("name").value
+
+      console.log(email)
+      console.log(password)
+      console.log(name)
+      console.log(confirm_password)
+  
+  </script>
 </body>
 </html>
 
