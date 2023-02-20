@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Register </title>
+    <title>Form</title>
 
-    <link rel="stylesheet" href="../../assets/css/seller register.css">
+    <link rel="stylesheet" href="../assets/css/form.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,18 +46,13 @@
     </div>
 
     
-  <button class="submit" type="button" onclick="submit()"><b>Save</b></button>
+  <button class="submit" type="button" onclick="submit()"><b>Submit</b></button>
 
 </section>
-
-<section class="img">
-    <img src="../../assets/img/Untitled-removebg-preview.png" alt="img">
 </section>
 
-
-
-</section>
 <script>
+   
 
 function submit(){ 
     const email = document.getElementById("email").value
@@ -76,15 +71,14 @@ function submit(){
     localStorage.setItem("user_pasword",password)
     localStorage.setItem("user_confirm_password",confirm_password)
     localStorage.setItem("user_name",first_name)
+    localStorage.setItem("user_second_name",second_name)
+
+   
 
 
-    window.location.href = "../seller products/seller products.html"
+    window.location.href = "#"
 
 }
-
 </script>
-
 </body>
 </html>
-
-

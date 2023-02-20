@@ -18,8 +18,20 @@ input[type=text], input[type=password] {
 
 }
 
+input[type=email]{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+   outline: none;
+    filter: brightness(0.9);
+
+}
+
+
 .container input{
-    width:550px;
+    width:450px;
     border-radius:7px;
 }
 
@@ -45,7 +57,6 @@ button {
     background-color:cadetblue;
     color: white;
     padding: 14px 10px;
-    margin: 16px 16px 16px 30px ;
     border: none;
     cursor: pointer;
     width: 100%;
@@ -66,7 +77,18 @@ button:hover {
     padding: 14px 20px;
     background-color:cadetblue;
     border-radius:8px;
+    margin-right: 20px;
+    margin-top: 20px;
     
+}
+
+.signupbtn{
+    padding: 14px 20px;
+    background-color:cadetblue;
+    border-radius:8px;
+    margin-left: 70px;
+    margin-top: 20px;
+     
 }
 
 .cancelbtn, .signupbtn {

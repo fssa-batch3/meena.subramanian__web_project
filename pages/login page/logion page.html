@@ -14,6 +14,7 @@
 
 </head>
     <body>
+        <form role = "form" onsubmit="signIn(event)";>
          <div class="y">
            
             <h1>Login</h1>
@@ -22,16 +23,16 @@
 
            <div class="mail">
             <label> Email: </label>
-            <input type="email" placeholder="email"  required="true" id="email"  value="vasumeenu2004@gmail.com">
+            <input type="email" placeholder="vasumeenu2004@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="true" id="email" >
             </div>
             <div class="pass"> 
             <label> Password: </label>
-            <input type="password" placeholder="number" required id="password" value="**********">
+            <input type="password" placeholder="*****" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required id="password" >
             </div>
             <div class="forget">
                 <a href="#">Forget Password</a>
             </div>
-            <button class="submit"><a href="../buy now page/buy now details.html"><strong>Submit</strong></a></button>
+            <button class="submit" type="submit" ><strong>Submit</strong></a></button>
             <p>OR</p>
             <button class="create"><a href="../register page/rigister page.html"><strong>Create New Account</strong></a></button>
 
@@ -40,17 +41,76 @@
             </div>
         
         </div>
+    </form>
 
 
         <script>
-            const email = document.getElementById("email").value
-            const password = document.getElementById("password").value
+            // const email = document.getElementById("email").value
+            // const password = document.getElementById("password").value
            
         
-            console.log(email)
-            console.log(password)
+            // console.log(email)
+            // console.log(password)
           
+        //     const signIn = e =>{
+           
+        //     let email = document.getElementById('email').value,
+        //         password = document.getElementById('password').value;
+        //     let formData = JSON.parse(localStorage.getItem('formData')) || [];
+        //     let exist = formData.length &&
+        //     JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email
+        //     && data.password.toLowerCase() == password);
+        //     if(!exist){
+        //         alert("Incorrect Login Credentials");
+        //     }
+        //     else{
+        //         alert("Your Login is Successful");
+        //         location.href = "../profile page/profile edit page.html";
+        //     }
+        //     e.preventDefault();
+        // }
         
+
+        
+        // const signIn = e =>{
+        //     let email = document.getElementById('email').value,
+        //         password = document.getElementById('password').value;
+
+        //     let user_cred = JSON.parse(localStorage.getItem('user_cred'));
+
+        //     let exist = user_cred.length &&
+        //     JSON.parse(localStorage.getItem('user_cred')).some(data => data.email.toLowerCase() == email );
+        //     if(!exist){
+        //         alert("Incorrect User Credentials");
+        //     }
+        //     else{
+        //         localStorage.setItem('uniqueID',JSON.stringify(email));
+        //         alert("Your Login is Successful");
+        //         location.href = "../profile page/profile page.html";
+        //     }
+        //     e.preventDefault();
+        // }
+
+
+        function signIn (e) {
+            e.preventDefault();
+            let email = document.getElementById('email').value,
+            password = document.getElementById('password').value;
+            let user_cred = JSON.parse(localStorage.getItem('user_cred')) || [];
+            let exist = user_cred.length &&
+            JSON.parse(localStorage.getItem('user_cred')).some(data =>
+            data.email.toLowerCase() == email
+            && data.password == password);
+            if(!exist){
+                alert("Incorrect User Credentials");
+                document.querySelector('form').reset();
+            }
+            else{
+                localStorage.setItem('uniqueID',JSON.stringify(email));
+                alert("Your Login is Successful");
+                location.href = "../profile page/profile page.html";
+            }
+        }
         </script>
     </body>
 </html>

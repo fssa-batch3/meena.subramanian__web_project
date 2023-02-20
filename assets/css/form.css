@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;	
+}
+
+
+
+.new{
+	display: flex;
+	margin-top:40px;
+	
+}
+
+.total{
+	margin-left: 200px;
+	margin-top: 170px;
+
+    
+}
+
+h1{
+	font-size: 40px;
+}
+
+input[type=email],input[type=password]{
+    border-radius: 5px;
+	border-color: transparent;
+	background-color:#eaecef;
+    outline: none;
+    padding:13px;
+    width:530px;
+    margin-bottom:20px;
+	font-size: 16px;
+  
+}
+
+input[type=text]{
+	border-radius: 5px;
+	border-color: transparent;
+	background-color:#eaecef;
+    outline: none;
+    padding:13px;
+    width:250px;
+    margin-bottom:20px;
+	font-size: 16px;
+
+	
+}
+
+
+
+.submit{
+    padding:3px;
+    width:85px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: cadetblue;
+    margin-top: 30px;
+	margin-left:470px;
+}
+
+.submit:hover{
+	scale: 1.04;
+	background-color: crimson;
+	color: white;
+}

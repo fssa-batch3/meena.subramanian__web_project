@@ -125,7 +125,6 @@ input[type="search"]{
 .product-1{
     margin-top:25px;
 	margin-left:40px;
-
 	
 }
 
@@ -153,7 +152,6 @@ h4{
 h2{
 	font-size:35px;
 	padding-bottom:40px;
-
 	color:crimson;
 	margin-bottom:-30px;
 }
@@ -253,7 +251,7 @@ span{
 	text-decoration: line-through;
 }
 
-.s1 i{
+.s1 {
     position: relative;
     top: 15px;
     text-decoration: line-through;

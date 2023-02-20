@@ -15,7 +15,7 @@
 </head>
 
 <body>
-  <form >
+    <form  role="form" onsubmit="signUp(event)">
     <div class="in">
     <div class="container">
       <h1>Creat New Account</h1>
@@ -23,21 +23,21 @@
       <hr>
  
       <lable for="name"><b>Name</b></lable>
-      <input type="text" placeholder="name" required id="name" value="name">
+      <input type="text" placeholder="name" pattern="[a-zA-Z0-9]+" required="true" id="name" >
       
       <label for="email"><b>Email</b></label>
-      <input type="text" placeholder="example@abc.com" name="email" id="email" value="vasumeena2004@.com">
+      <input type="email" placeholder="example@abc.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" name="email" id="email" required>
       <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="********" name="psw" id="password" value="++++++" >
+      <input type="password" placeholder="********" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" id="password" required  >
       <label for="psw-repeat"><b>Confirm Password</b></label>
-      <input type="password" placeholder="********" name="psw-repeat" id="confirm_password" value="*******">
+      <input type="password" placeholder="********"  name="psw-repeat" id="confirm_password" required >
       <div class="remember">
-        <input type="checkbox" checked="checked" name="remember" > Remember me
+        <input type="checkbox"  name="remember" > Remember me
       </div>
    
       <div class="clearfix">
         <button type="button" class="cancelbtn"><a href="../../index.html">CANCEL</a></button>
-        <button type="submit" class="signupbtn"><a href="../buy now page/buy now details.html">SIGN UP</a></button>
+        <button type="submit" class="signupbtn">SIGN UP</button>
       </div>
     </div>
   </form>
@@ -47,19 +47,126 @@
       </div>
     </div>
 
-    <script>
-      const email = document.getElementById("email").value
-      const confirm_password = document.getElementById("confirm_password").value
-      const password = document.getElementById("password").value
-      const name = document.getElementById("name").value
+    
 
-      console.log(email)
-      console.log(password)
-      console.log(name)
-      console.log(confirm_password)
-  
+    <script>
+
+        function signUp(e) {
+            let email = document.getElementById("email").value;
+              confirm_password = document.getElementById("confirm_password").value;
+              password = document.getElementById("password").value;
+             name = document.getElementById("name").value;
+
+            let user_cred = JSON.parse(localStorage.getItem('user_cred')) || [];
+
+            let exist = user_cred.length &&
+                JSON.parse(localStorage.getItem('user_cred')).some(data =>
+                    data.email.toLowerCase() == email.toLowerCase()
+                     
+                );
+            if(!exist){
+
+              if(password == confirm_password){
+                user_cred.push({name,email,confirm_password,password});
+                localStorage.setItem('user_cred',JSON.stringify(user_cred));
+                console.log(localStorage.getItem('user_cred'));
+                document.querySelector("form").reset();
+               document.getElementById('email').focus();
+                alert('Account created successfully');
+                location.href = "../login page/logion page.html";
+            }
+
+              else{
+                alert("Confirm password does not match")
+              }
+            }
+            else {
+                alert('Sorry the User already exists! \n Try with a new Email.');
+                document.querySelector('form').reset();
+            }
+            e.preventDefault();
+          }
+
+
+        // function guid() {
+        //         return "ss-s-s-s-sss".replace(/s/g, s4);
+        //         }
+
+        // function s4() {
+        //         return Math.floor((1 + Math.random()) * 0x10000)
+        //        .toString(16)
+        //        .substring(1);
+        //       }
+
+
+        // document.getElementById('value').value = guid();
+
+      
+
+     
+      // function submit(){ 
+      //   let name,email,password,confirm_password;
+
+      //  email = document.getElementById("email").value;
+      //  confirm_password = document.getElementById("confirm_password").value;
+      //  password = document.getElementById("password").value;
+      //  name = document.getElementById("name").value;
+
+      //  let user_records= new Array();
+      //  user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")) : []
+    
+      //  if (user_records.some((v)=>{return v.email == email && v.password == password && confirm_password==confirm_password && name==name}))
+      //  {
+      //   alert("invalid")
+      //  }
+      //  else{
+      //   user_records.push({
+      //   "userEmail":email,
+      //   "userpassword":password,
+      //   "userConfirm_password":confirm_password,
+      //   "name":name
+      //  })
+      //  localStorage.setItem("users",JSON.stringify(user_records));
+      //  }
+     
+      // }
+
+    // console.log(email)
+    //   console.log(password)
+    //   console.log(name)
+    //   console.log(confirm_password)
+
+
+    // window.location.href = "../buy now page/buy now details.html"
+
+    //   }
+
+     
+    // function addData(){
+
+    //  var email = document.getElementById("email").value;
+    //  var confirm_password = document.getElementById("confirm_password").value;
+    //  var password = document.getElementById("password").value;
+    //  var name = document.getElementById("name").value;
+
+    //   localStorage.setItem('userEmail',email);
+    //   localStorage.setItem('userPassword',password);
+    //   localStorage.setItem('userConfirm_password',confirm_password);
+    //   localStorage.setItem('userName',name);
+
+    // }
+
   </script>
+
+<script src="http://wzrd.in/standalone/uuid%2Fv4@latest">
+  let a= uuidv4();
+  console.log(a);
+</script>
+
 </body>
+
+
+
 </html>
 
 

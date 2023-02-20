@@ -81,12 +81,12 @@
 
         </div>
         <div class="run">
-            <div class="wat">
+            <!-- <div class="wat">
                 <img src="./assets/img/10.jpeg" alt="photo" width="150" height="150" />
                 <div class="product-content">
                     <h3 class="product-name">Kanchipuram Saree</h3>
-                    <p class="rate"><i class="fa fa-rupee">5,600</i> </p>
-                    <s class="s1"><i class="fa fa-rupee">7,500</i></s>
+                    <p class="rate">₹ 5,600 </p>
+                    <s class="s1">₹ 7,500</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -104,8 +104,8 @@
                 <img src="./assets/img/2.jpeg" alt="photo" width="150" height="150" />
                 <div class="product-content">
                     <h3 class="product-name">Binthu Pattu</h3>
-                    <p class="rate"><i class="fa fa-rupee">4,800</i> </p>
-                    <s class="s1"><i class="fa fa-rupee">6,500</i></s>
+                    <p class="rate">₹4,800</p>
+                    <s class="s1">₹6,500</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -123,8 +123,8 @@
                 <img src="./assets/img/9.jpeg" alt="photo" width="150" height="150" />
                 <div class="product-content">
                     <h3 class="product-name">Banaras Pattu</h3>
-                    <p class="rate"><i class="fa fa-rupee">4,500</i> </p>
-                    <s class="s1"><i class="fa fa-rupee">9,000</i></s>
+                    <p class="rate">₹4,500</p>
+                    <s class="s1">₹9,000</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -136,17 +136,17 @@
                     <a href="./pages/Saree details/product 6.html"><button class="buy"><strong>BUY NOW</strong></button></a>
                     </div>
             </div>
-    
+     -->
     
         </div>
 
         <div class="hol">
-            <div class="wat">
+            <!-- <div class="wat">
                 <img src="./assets/img/111.jpeg"  alt="photo" width="150" height="150" />
                 <div class="product-content">
                     <h3 class="product-name">Otiko kattiko</h3>
-                    <p class="rate"><i class="fa fa-rupee">500</i> </p>
-                    <s class="s1"><i class="fa fa-rupee">100</i></s>
+                    <p class="rate">₹ 500</p>
+                    <s class="s1">₹ 1000</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -166,8 +166,8 @@
                 <img src="./assets/img/or.webp" alt="photo" width="150" height="150"/>
                 <div class="product-content">
                     <h3 class="product-name">Prakasham Dhoti</h3>
-                    <p class="rate"><i class="fa fa-rupee">1,900</i> </p>
-                    <s class="s1"><i class="fa fa-rupee">2,500</i></s>
+                    <p class="rate">₹ 1,900</p>
+                    <s class="s1">₹ 2,500</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -186,8 +186,8 @@
                 <img src="./assets/img/55.jpeg" alt="photo" width="150" height="150" />
                 <div class="product-content">
                     <h3 class="product-name">Cotton Dhoti</h3>
-                    <p class="rate"><i class="fa fa-rupee">400</i> </p>
-                 <s class="s1"><i class="fa fa-rupee">800</i></s>
+                    <p class="rate">₹ 400</p>
+                 <s class="s1">₹ 800</s>
                     <div class="star">
                         <i class="fa fa-star" style="font-size:24px"></i>
                         <i class="fa fa-star" style="font-size:24px"></i>
@@ -199,7 +199,7 @@
                     <a href="./pages/dothi/dothi product 4.html"><button class="buy"><strong>BUY NOW</strong></button></a>
                     </div>
                 
-            </div>
+            </div> -->
     
     
     
@@ -283,7 +283,258 @@
           </div>
         </section>   
      </section>
+<script>
 
+let div_wat;
+        let img_pic;
+        let div_product_content;
+        let h3_product_name;
+        let p_rate;
+        let s_s1;
+        let div_star;
+        let i_fa;
+        let button_buy;
+        let strong;
+     
+
+let saree_list = [
+    {"image" : {"src" : "./assets/img/10.jpeg",
+                  "alt" : "photo"},
+     "name" : "Kanchivaram Saree",
+     "price" : {"actual" :"₹ 7500",
+                "current":"₹ 5700"
+                 },
+     "link" :"./pages/products/product_details.html"
+     },
+
+     {"image" : {"src" : "./assets/img/2.jpeg",
+                  "alt" : "photo"},
+     "name" : "Binthu Pattu",
+     "price" : {"actual" :"₹ 6500",
+                "current":"₹ 4000"
+                 },
+     "link"  :"./pages/Saree details/product 2.html"
+     },
+
+     {"image" : {"src" : "./assets/img/9.jpeg",
+                  "alt" : "photo"},
+     "name" : "Pattu saree",
+     "price" : {"actual" :"₹ 9000",
+                "current":"₹ 7500"
+                 },
+     "link"  : "./pages/Saree details/product 6.html"
+     },
+]
+
+    
+let dhoti_list = [
+        {"image" : {"src" : "./assets/img/oti.webp",
+                      "alt" : "photo"},
+         "name" : "Otiko kattiko",
+         "price" : {"actual" :"₹ 1000",
+                    "current":"₹ 500"
+                     },
+         "link" : "./pages/dothi/dothi product 2.html"
+         },
+    
+         {"image" : {"src" : "./assets/img/or.webp",
+                      "alt" : "photo"},
+         "name" : "Prakasam Dhoti",
+         "price" : {"actual" :"₹ 2500",
+                    "current":"₹ 1900"
+                     },
+        "link" : "./pages/dothi/dothi product 3 .html"
+         },
+    
+    
+         {"image" : {"src" : "./assets/img/55.jpeg",
+                      "alt" : "photo"},
+         "name" : "Cotton Dhothi",
+         "price" : {"actual" :"₹ 900",
+                    "current":"₹ 600"
+                     },
+         "link" : "./pages/dothi/dothi product 4.html"
+         },
+    ]
+
+
+for(let i=0;i<3;i++){
+
+
+    
+//    <div class=wat> </div>
+
+   div_wat = document.createElement("div");
+   div_wat.setAttribute("class","wat");
+   console.log(div_wat);
+
+//  <img> <img>
+
+   img_pic = document.createElement("img");
+   img_pic.setAttribute("src",saree_list[i]["image"]["src"]);
+   img_pic.setAttribute("alt",saree_list[i]["image"]["alt"]);
+   img_pic.setAttribute("height","150px");
+   img_pic.setAttribute("width","150px");
+   div_wat.append(img_pic);
+  
+
+
+//    <div class=product_content> </div>
+
+   div_product_content = document.createElement("div");
+   div_product_content.setAttribute("class","product-content");
+   div_wat.append(div_product_content);
+
+// <h3 class=product-name> </h3>
+  h3_product_name = document.createElement("h3");
+  h3_product_name.setAttribute("class","product-name")
+  h3_product_name.innerHTML= saree_list[i]["name"];
+  div_product_content.append(h3_product_name);
+
+
+// <p class=rate> </p>
+
+ p_rate = document.createElement("p");
+ p_rate.setAttribute("class","rate");
+ p_rate.innerHTML =saree_list[i]["price"]["current"];
+ div_product_content.append(p_rate);
+ 
+
+
+//  <s class=s1> </s>
+
+ s_s1 = document.createElement("s");
+ s_s1.setAttribute("class","s1");
+ s_s1.innerHTML = saree_list[i]["price"]["actual"];
+ div_product_content.append(s_s1);
+
+
+//  <div class=star> </div>
+
+div_star = document.createElement("div");
+div_star.setAttribute("class","star");
+div_product_content.append(div_star);
+
+// // <i class=fa fa-star> </i>
+for(let i=0;i<5;i++){
+
+i_fa = document.createElement("i");
+i_fa.setAttribute("class","fa fa-star");
+i_fa.setAttribute("style","font-size:24px")
+div_star.append(i_fa);
+}
+
+// a button
+a_but= document.createElement("a")
+a_but.setAttribute("href",saree_list[i]["link"]);
+div_product_content.append(a_but)
+
+// // <button class=buy> </buy>
+button_buy = document.createElement("button");
+button_buy.setAttribute("class","buy");
+a_but.append(button_buy);
+
+
+// // <strong> </strong>
+strong = document.createElement("strong");
+strong.innerHTML = "BUY NOW"
+button_buy.append(strong);
+
+
+document.querySelector("div.run").append(div_wat);
+
+}
+
+
+for(let i=0;i<3;i++){
+    
+    
+        
+    //    <div class=wat> </div>
+    
+       div_wat = document.createElement("div");
+       div_wat.setAttribute("class","wat");
+       console.log(div_wat);
+    
+    //  <img> <img>
+    
+       img_pic = document.createElement("img");
+       img_pic.setAttribute("src",dhoti_list[i]["image"]["src"]);
+       img_pic.setAttribute("alt",dhoti_list[i]["image"]["alt"]);
+       img_pic.setAttribute("height","150px");
+       img_pic.setAttribute("width","150px");
+       div_wat.append(img_pic);
+      
+    
+    
+    //    <div class=product_content> </div>
+    
+       div_product_content = document.createElement("div");
+       div_product_content.setAttribute("class","product-content");
+       div_wat.append(div_product_content);
+    
+    // <h3 class=product-name> </h3>
+      h3_product_name = document.createElement("h3");
+      h3_product_name.setAttribute("class","product-name")
+      h3_product_name.innerHTML= dhoti_list[i]["name"];
+      div_product_content.append(h3_product_name);
+    
+    
+    // <p class=rate> </p>
+    
+     p_rate = document.createElement("p");
+     p_rate.setAttribute("class","rate");
+     p_rate.innerHTML =dhoti_list[i]["price"]["current"];
+     div_product_content.append(p_rate);
+     
+    
+    
+    //  <s class=s1> </s>
+    
+     s_s1 = document.createElement("s");
+     s_s1.setAttribute("class","s1");
+     s_s1.innerHTML = dhoti_list[i]["price"]["actual"];
+     div_product_content.append(s_s1);
+    
+    
+    //  <div class=star> </div>
+    
+    div_star = document.createElement("div");
+    div_star.setAttribute("class","star");
+    div_product_content.append(div_star);
+    
+    // // <i class=fa fa-star> </i>
+    for(let i=0;i<5;i++){
+    
+    i_fa = document.createElement("i");
+    i_fa.setAttribute("class","fa fa-star");
+    i_fa.setAttribute("style","font-size:24px")
+    div_star.append(i_fa);
+    }
+    
+    // a button
+    a_but= document.createElement("a")
+    a_but.setAttribute("href",dhoti_list[i]["link"])
+    div_product_content.append(a_but)
+    
+    // // <button class=buy> </buy>
+    button_buy = document.createElement("button");
+    button_buy.setAttribute("class","buy");
+    a_but.append(button_buy);
+    
+    
+    // // <strong> </strong>
+    strong = document.createElement("strong");
+    strong.innerHTML = "BUY NOW"
+    button_buy.append(strong);
+    
+    
+    document.querySelector("div.hol").append(div_wat);
+    
+    }
+    
+
+</script>
      
 
      </body>

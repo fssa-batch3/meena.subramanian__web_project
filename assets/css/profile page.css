@@ -146,13 +146,20 @@ body .profile_details .form .profile,.details,.buttons{
 }
 
 .form .buttons .edit-btn{
-    margin-right: 120px;
+    margin-right: 30px;
 }
 
-.form .buttons .edit-btn,.log{
+.form .buttons .log{
+    margin-right: 20px;
+}
+
+
+.form .buttons .edit-btn,.log,.run{
     padding: 5px 10px;
     border-radius: 7px;
     border: 2px solid white;
     background-color:cadetblue;
 }
+
+
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Edit Page</title>
+    <title>Profile Page</title>
 
     <link rel="stylesheet" href="../../assets/css/profile page.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -69,55 +69,106 @@
             <div class="details">
                 <div class="details_list">
                     <p class="list">Name:</p>
-                    <p class="list_2">S.Meena</p>
+                    <p class="list_2" id="name">S.Meena</p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">Email:</p>
-                    <p class="list_2" id="user_email">vasumeenu2004@gmail.com</p>
+                    <p class="list_2" id="email">vasumeenu2004@gmail.com</p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">Address:</p>
-                    <p class="list_2">42/36,baguadwjeduuiNDEId street</p>
+                    <p class="list_2" id="address"></p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">Contact:</p>
-                    <p class="list_2">74671*****</p>
+                    <p class="list_2" id="phone"></p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">District:</p>
-                    <p class="list_2">Thirunelveli</p>
+                    <p class="list_2" id="district"></p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">D.O.B:</p>
-                    <p class="list_2"> 17/08/2004</p>
+                    <p class="list_2" id="dob"></p>
                 </div>
 
 
             </div>
             <div class="buttons">
                 <a href="../profile page/profile edit page.html"><button type="button" class="edit-btn"><strong>EDIT</strong></button></a>
-                <a href="../../index.html"><button type="button" class="log"> <strong>LOG OUT</strong></button></a>
+                <a href="../../index.html"><button type="submit" onclick="logOut()" class="log"> <strong>LOG OUT</strong></button></a>
+                <button type="submit" onclick="deleteAcc()" class="run"> <strong>DELETE</strong></button></a>
              </div>
         </div>
     </section>
 
 
-    <script>
+    <!-- <script>
         const user_email  = localStorage.getItem("user_email");
         console.log(user_email)
 
         document.getElementById("user_email").innerText =user_email
 
-    </script>
+    </script> -->
+
+    <script>
+        
+        let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+            let user_cred = JSON.parse(localStorage.getItem("user_cred"));
+            function profile_data(e){
+                return e.email == uniqueID;
+            }
+            person_data = user_cred.find(profile_data);
+            document.getElementById("name").innerText= person_data["name"];
+            document.getElementById("email").innerText = person_data["email"];
+            document.getElementById("phone").innerText = person_data["phone"];
+            document.getElementById("dob").innerText = person_data["dob"];
+            document.getElementById("address").innerText =person_data["address"];
+            document.getElementById("district").innerText = person_data["district"];
+
+
+            // delete account function
+        function deleteAcc(){
+            if(confirm("Are you sure to delete this account ?")){
+            //get value from local storage
+            let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+            let user_cred = JSON.parse(localStorage.getItem("user_cred"));
+            function profile_data(e){
+                return e.email == uniqueID;
+            }
+            person_data = user_cred.find(profile_data);
+            // find the index of person_data from userData
+            let result = user_cred.indexOf(person_data);
+
+            // deleting the indexof person data
+            user_cred.splice(resu= 1);
+            localStorage.setItem("user_cred", JSON.stringify(user_cred));
+            window.location.href="../../index.html";
+        }
+    }
+
+
+    // // logout function
+    // function logOut(){
+    //         if(confirm("Are you going to Logout ?")){
+    //        // deleting the unique_id of person data
+    //         localStorage.setItem("user_cred", "")
+    //         alert("Sucessfully Logged out!")
+    //     }
+    //     window.location.href="../../index.html";
+    // }
+
+
+        </script>
      </body>
 </html>

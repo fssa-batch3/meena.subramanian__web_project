@@ -207,15 +207,10 @@ i:hover{
     text-align: center;
 
 }
-.rate{
-    position: relative;
-    top: 15px;
-}
 
 
-.s1 i{
-    position: relative;
-    top: 15px;
+.s1 {
+
     text-decoration: line-through;
 	
 }
