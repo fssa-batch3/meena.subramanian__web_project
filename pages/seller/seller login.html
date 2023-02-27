@@ -40,23 +40,25 @@
     <div class="content">
         <p>Sell nationwide to millions customers<br> 24 hours a day. 7 day a week.</p>
     </div>
+    <form role="form" onsubmit="signIn(event)">
 
     <div class="mail">
-        <input type="email" id="email" placeholder="email" value="vasumeenu2004@gmail.com">
+        <input type="email" id="email" placeholder="abcd788@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
     </div>
     <div class="password">
-        <input type="password" id="password" placeholder="*********" value="**********">
+        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="*********" required>
     </div>
 
     <div class="forget">
         <a href="#" style="color: rgb(71, 159, 118);">Forget Password</a>
     </div>
 
-    <a href="../../pages/seller products/seller products.html" style="color: black;"> <button class="sign" > <b>Sign In</b></button></a>
+    <button class="sign" type="submit"> <b style="color: black;">Sign In</b></button>
  
     <div class="regis">
     <p> Don't have a account?<a href="../../pages/seller/seller register.html" style="color: rgb(71, 159, 118);">Register Now</a></p>
     </div>
+</form>
 
 </section>
 
@@ -66,14 +68,34 @@
 </section>
 
 <script>
-    const email = document.getElementById("email").value
-    const password = document.getElementById("password").value
+    // const email = document.getElementById("email").value
+    // const password = document.getElementById("password").value
    
 
-    console.log(email)
-    console.log(password)
+    // console.log(email)
+    // console.log(password)
   
 
+
+    function signIn(e) {
+            e.preventDefault();
+            let email = document.getElementById('email').value,
+            password = document.getElementById('password').value;
+            let seller_cred = JSON.parse(localStorage.getItem('seller_cred')) || [];
+            let exist = seller_cred.length &&
+            JSON.parse(localStorage.getItem('seller_cred')).some(data =>
+            data.email.toLowerCase() == email
+            && data.password == password);
+            if(!exist){
+                alert("Incorrect User Credentials");
+                document.querySelector('form').reset();
+            }
+            else{
+                localStorage.setItem('uniqueID',JSON.stringify(email));
+                alert("Your Login is Successful");
+                location.href = "../seller/Seller profile.html";
+            }
+        }
 </script>
 
 </body>

@@ -22,7 +22,7 @@
             <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
         </div>
 
-        <h1 class="up" style="margin-top: 30px; color: crimson;">UPLODE YOUR PRODUCTS</h1>
+        <h1 class="up" style="margin-top: 30px; color: crimson;">UPLOADE YOUR PRODUCTS</h1>
    
         <div class="navigations">
 
@@ -37,21 +37,71 @@
    
        <h2>ADD NEW</h2>
        <section class="profile_details">
-      
+       <form role="form" onsubmit="createProduct(event)">
         <div class="form">
             <div class="details">
-                <div class="details_list"><p class="list"> ProductName:</p><input type="text" class="list_2"></div>
-                <div class="details_list"><p class="list">Spical Price:</p><input type="text" value="₹" class="list_2"> </div>
-                <div class="details_list"><p class="list">Review:</p><input type="text" class="list_2"></div>
-                <div class="details_list"><p class="list">offers:</p><input type="text" class="list_2"></div>
-                <div class="details_list"><p class="list">discription:</p><input type="text" class="list_2"></div>
-     
+                <div class="new"><img src="../../assets/img/10.jpeg"></div>
+                <div class="details_list">
+                    <p class="list">UplodePhoto:</p>
+                    <input type="text" placeholder="https//.//" class="list_2" id="uppic">
+                </div>
+
+                <div class="details_list">
+                    <p class="list"> ProductName:</p>
+                    <input type="text" class="list_2" placeholder="Saree" required id="productname">
+                </div>
+
+                <div class="details_list">
+                    <p class="list">Spical Price:</p>
+                    <input type="text"  class="list_2" placeholder="₹0000" required id="productprice">
+                 </div>
+
+                <div class="details_list">
+                    <p class="list">Review:</p>
+                    <input type="text" class="list_2" placeholder="jfdhgurefjmdsjfi" required id="productreview">
+                </div>
+
+                <div class="details_list">
+                    <p class="list">offers:</p>
+                    <input type="text" class="list_2" placeholder="3000" required id="productoffer">
+                </div>
+
+                <div class="details_list">
+                    <p class="list">discription:</p>
+                    <input type="text" class="list_2" placeholder="fdnbjrgfj" required id="descrip">
+                </div>
+
+            </div   >
+               <button type="submit" class="save"><strong>Upload</strong></button>
+               
             </div>
-                <a href="../../pages/seller products/seller products.html"><button type="button" class="save"> <strong>Upload</strong></button></a>
-        </div>
+    </form>
     </section>
       
-   
+   <script>
+    function createProduct(e) {
+        e.preventDefault();
+        let   uppic = document.getElementById("uppic").value;
+        let   descrip = document.getElementById("descrip").value;
+        let   productreview= document.getElementById("productreview").value;
+        let   productprice= document.getElementById("productprice").value;
+        let   productname= document.getElementById("productname").value;
+        let   productoffer= document.getElementById("productoffer").value;
+        let    product_uuid=uuidv4();
+
+            let product_crud = JSON.parse(localStorage.getItem('product_crud')) || [];
+
+        
+          
+                product_crud.push({uppic,productname,productprice,productreview,descrip,productoffer,product_uuid});
+                localStorage.setItem('product_crud',JSON.stringify(product_crud));
+           
+                alert('Product created successfully');
+              window.location.href = "../seller products/seller products.html";
+              
+            }      
+   </script>
+   <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
     </body>
     </html>

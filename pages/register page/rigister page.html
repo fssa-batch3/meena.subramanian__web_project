@@ -56,7 +56,7 @@
               confirm_password = document.getElementById("confirm_password").value;
               password = document.getElementById("password").value;
              name = document.getElementById("name").value;
-
+             user_uuid=uuidv4();
             let user_cred = JSON.parse(localStorage.getItem('user_cred')) || [];
 
             let exist = user_cred.length &&
@@ -67,7 +67,7 @@
             if(!exist){
 
               if(password == confirm_password){
-                user_cred.push({name,email,confirm_password,password});
+                user_cred.push({name,email,confirm_password,password,user_uuid});
                 localStorage.setItem('user_cred',JSON.stringify(user_cred));
                 console.log(localStorage.getItem('user_cred'));
                 document.querySelector("form").reset();
@@ -158,10 +158,7 @@
 
   </script>
 
-<script src="http://wzrd.in/standalone/uuid%2Fv4@latest">
-  let a= uuidv4();
-  console.log(a);
-</script>
+<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
 </body>
 

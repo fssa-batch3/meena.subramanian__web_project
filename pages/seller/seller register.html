@@ -21,32 +21,30 @@
     <section class="total">
     <p> Start For Free</p>
     <h1>Create New Account</h1>
-
-    
+<form role="form" onsubmit="signUp(event)">    
     <div class="name" style="margin-top: 30px;">
     
-     <input  type="text" id="first_name" placeholder="First name">
-     
-     <input type="text" id="second_name" placeholder="second name">
-    </div>
+     <input  type="text" id="name" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
+     </div>
   
     <div class="mail" style="margin-top: 15px;">
 
-    <input type="email" placeholder="abcd@13u824.gmail.com" id="email">
+    <input type="email" placeholder="abcd@13u824.gmail.com" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
     </div>
 
     <div class="pass" style="margin-top: 15px;">
     
-    <input type="password" id="password" placeholder="**********" >
+    <input type="password" id="password" placeholder="**********" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
     </div>
 
     <div  class="pass" style="margin-top: 15px;">
 
-    <input type="password" id="confirm_password" class="passs" placeholder="confirm password">
+    <input type="password" id="confirm_password" class="passs" placeholder="confirm password" required>
     </div>
 
-    
-  <button class="submit" type="button" onclick="submit()"><b>Save</b></button>
+  <button class="submit" type="submit"><b>Save</b></button>
+
+</form>
 
 </section>
 
@@ -59,30 +57,67 @@
 </section>
 <script>
 
-function submit(){ 
-    const email = document.getElementById("email").value
-    const confirm_password = document.getElementById("confirm_password").value
-    const password = document.getElementById("password").value
-    const first_name = document.getElementById("first_name").value
-    const second_name = document.getElementById("second_name").value
+// function submit(){ 
+//     const email = document.getElementById("email").value
+//     const confirm_password = document.getElementById("confirm_password").value
+//     const password = document.getElementById("password").value
+//     const first_name = document.getElementById("first_name").value
+//     const second_name = document.getElementById("second_name").value
 
-    console.log(email)
-    console.log(password)
-    console.log(first_name)
-    console.log(second_name)
-    console.log(confirm_password)
+//     console.log(email)
+//     console.log(password)
+//     console.log(first_name)
+//     console.log(second_name)
+//     console.log(confirm_password)
 
-    localStorage.setItem("user_email",email)
-    localStorage.setItem("user_pasword",password)
-    localStorage.setItem("user_confirm_password",confirm_password)
-    localStorage.setItem("user_name",first_name)
+//     localStorage.setItem("user_email",email)
+//     localStorage.setItem("user_pasword",password)
+//     localStorage.setItem("user_confirm_password",confirm_password)
+//     localStorage.setItem("user_name",first_name)
 
 
-    window.location.href = "../seller products/seller products.html"
+//     window.location.href = "../seller products/seller products.html"
 
-}
+// }
 
+function signUp(e) {
+    let email = document.getElementById("email").value;
+      confirm_password = document.getElementById("confirm_password").value;
+      password = document.getElementById("password").value;
+     name = document.getElementById("name").value;
+     seller_uuid=uuidv4();
+    let seller_cred = JSON.parse(localStorage.getItem('seller_cred')) || [];
+
+    let exist = seller_cred.length &&
+        JSON.parse(localStorage.getItem('seller_cred')).some(data =>
+            data.email.toLowerCase() == email.toLowerCase()
+             
+        );
+    if(!exist){
+
+      if(password == confirm_password){
+        seller_cred.push({name,email,confirm_password,password,seller_uuid});
+        localStorage.setItem('seller_cred',JSON.stringify(seller_cred));
+        console.log(localStorage.getItem('seller_cred'));
+        document.querySelector("form").reset();
+       document.getElementById('email').focus();
+        alert('Account created successfully');
+        location.href = "../seller/seller login.html";
+    }
+
+      else{
+        alert("Confirm password does not match")
+      }
+    }
+    else {
+        alert('Sorry the User already exists! \n Try with a new Email.');
+    document.querySelector('form').reset();
+    }
+    
+    e.preventDefault();
+  }
 </script>
+<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
 </body>
 </html>

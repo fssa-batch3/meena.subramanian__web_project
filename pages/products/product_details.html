@@ -280,30 +280,42 @@
   </section>
   <script>
 
-    let product_details = 
-      {
-        image: {
-          source: "../../assets/img/10.jpeg",
-          alt: "product"
+    let product_details =
+    {
+      image: {
+        source: "../../assets/img/10.jpeg",
+        alt: "product"
+      },
+      heading: "Kanchipuram Saree",
+      price: {
+        actual: {
+          type: "₹",
+          value: 7500
         },
-        heading: "Kanchipuram Saree",
-        price: {
-          actual: 7500,
-          discount: {
-            type: "%",
-            value: 25,
-          }
-        },
-        description: {
-          one: "Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.",
-          two: "Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C.",
-          three: "Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C.",
-          four: "Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C."
-        },
-        link: "../register page/rigister page.html"
-      }
-    
 
+        discount: {
+          type: "% off",
+          value: 25,
+        },
+        current: {
+          type: "₹",
+          value: 5200,
+        }
+
+      },
+      product_description: "Available Price",
+      description: [
+        { text: "Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C." },
+        { text: "Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C." },
+        { text: "Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C." },
+        { text: "Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C." }
+      ],
+
+      
+    }
+
+    let product_upload = JSON.parse(localStorage.getItem("product_crud"));
+    console.log(product_upload)
 
     // div_meenu
 
@@ -362,7 +374,7 @@
 
     // h2
     h2 = document.createElement("h2");
-    h2.innerText = product_details["heading"];
+    h2.innerText = product_upload[0]["productname"];
     div_sneaker.append(h2);
 
 
@@ -389,14 +401,14 @@
     // <b></b> 
 
     b = document.createElement("b");
-    b.innerText = "₹ 5,200";
+    b.innerText = product_upload[0]["productprice"];
     div_akka.append(b);
 
 
     //  <span></span>
 
     span = document.createElement("span");
-    span.innerText = " 25%  off ";
+    span.innerText = product_upload[0]["productoffer"];
     div_akka.append(span);
 
 
@@ -409,7 +421,7 @@
     // <s></s>
 
     s = document.createElement("s");
-    s.innerText = "₹ 7500";
+    s.innerText = product_details.price.actual.type + product_details.price.actual.value;
     div_ic.append(s);
 
 
@@ -447,34 +459,17 @@
     h3.innerText = "Available price";
     div_content_details.append(h3);
 
-
-    // <p_Special>
-
-    p_spcial = document.createElement("P");
-    p_spcial.innerText = "Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.";
-    div_content_details.append(p_spcial);
-
-
-
-    // p_bank
-
-    p_bank = document.createElement("p");
-    p_bank.innerText = "Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C."
-    div_content_details.append(p_bank);
+    const descript = product_details.description;
+    const no_of_list = descript.length;
+    //<p_Special>
+    // for (let j = 0; j < no_of_list; j++) {
+      p_spcial = document.createElement("P");
+      p_spcial.innerText = product_upload[0]["descrip"];
+      div_content_details.append(p_spcial);
+    
 
 
-    // p_bank_Offer
 
-    p_bank_offer = document.createElement("p");
-    p_bank_offer.innerText = "Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C."
-    div_content_details.append(p_bank_offer);
-
-
-    // p_bank_offer_1
-
-    p_ba_of = document.createElement("p");
-    p_ba_of.innerText = "Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C."
-    div_content_details.append(p_ba_of);
 
     // div_what
 
