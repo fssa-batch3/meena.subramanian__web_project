@@ -10,6 +10,7 @@ User flow: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvI
 Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ
 
 USER CRUD:   
+
       Register   
     
       Login  
@@ -21,6 +22,7 @@ USER CRUD:
 
 
 PRODUCT CRUD:  
+
       Create products  
     
       Read products  
