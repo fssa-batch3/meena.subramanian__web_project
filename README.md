@@ -1,45 +1,21 @@
-# Folder_structure
+# Kaithari 
 
-    .
-    ├── assets                  # Compiled files 
-    ├── pages                   # Compiled files
-    ├── index.html
-    └── README.md
+Sonarcloud :https://sonarcloud.io/summary/new_code?id=fssa-batch3_meena.subramanian__web_project;
+Documentation:https://docs.google.com/document/d/1SY5oMnrNV9ZAFU8paUDbzOnmwYM8PGL1/edit
+User flow: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ
+Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ
 
-## assets
+1.Register CRUD
+  
+  Create user profile
+  Read user profile
+  Update user profile
+  delete user profile
 
-    .
-    ├── assets                  # Compiled files 
-        ├── images              # Compiled files 
-        ├── css                 # Compiled files 
-        └── js                  # Compiled files 
 
-### assets/images
+2.Product CRUD
 
-    .
-    ├── images                  # Compiled files 
-        ├── logo.svg            # Compiled files 
-        └── banner.png          # Compiled files 
-
-### assets/css
-
-    .
-    ├── css                     # Compiled files 
-        ├── normalize.css       # Compiled files 
-        ├── style.css           # Compiled files 
-        ├── header.css          # Compiled files 
-        └── footer.css          # Compiled files 
-
-## pages
-
-    .
-    └── pages                         
-        └── Products                  
-            ├── product_list.html               # Compiled files
-            ├── new_product.html                # Compiled files
-            └── edit_product.html               # Compiled files
-        └── Orders                              
-            ├── order_list.html                 # Compiled files
-            ├── new_order.html                  # Compiled files
-            ├── edit_order.html                 # Compiled files
-            └── order_details.html              # Compiled files
+   Create product
+   Read  product
+   Update product
+   Delete product
