@@ -10,16 +10,23 @@ User flow: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvI
 Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ
 
 USER CRUD:   
-    1. Register   
-    2. Login  
-    3. Read Profile  
-    4. Profile Edit / Delete  
+      Register   
+    
+      Login  
+    
+      Read Profile 
+    
+      Profile Edit / Delete  
 
 
 
 PRODUCT CRUD:  
-    1. Create products  
-    2. Read products  
-    3. Product detail page  
-    4. Update products  
-    5. Delete products   
+      Create products  
+    
+      Read products  
+    
+      Product detail page  
+
+      Update products 
+    
+      Delete products   
