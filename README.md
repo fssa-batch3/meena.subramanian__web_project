@@ -11,15 +11,21 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
 
 1.Register CRUD
   
-  Create user profile
-  Read user profile
-  Update user profile
-  delete user profile
+    Create user profile
+  
+    Read user profile
+  
+    Update user profile
+  
+    delete user profile
 
 
 2.Product CRUD
 
-   Create product
-   Read  product
-   Update product
-   Delete product
+    Create product
+   
+    Read  product
+    
+    Update product
+    
+    Delete product
