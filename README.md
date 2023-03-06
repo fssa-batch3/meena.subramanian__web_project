@@ -30,9 +30,9 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     
     Delete product
 
-   Product detail
-
-   Add and Remove product list
+    Product detail
+ 
+    Add and Remove product list
 
 
 3.Add to cart
