@@ -125,7 +125,7 @@
 
     </div>
 
-     <div class="run">
+     <!-- <div class="run"> -->
         <!-- <div class="wat">
             <img src="../../assets/img/5.jpeg" alt="photo" width="150" height="150" />
             <div class="product-content">
@@ -184,7 +184,7 @@
         </div>  -->
 
 
-    </div>
+    <!-- </div> -->
 
 </section>
 
@@ -293,35 +293,35 @@ let saree_list = [
      },
 ]
 
-let saree_list_2 = [
-    {"image" : {"src" : "../../assets/img/5.jpeg",
-                  "alt" : "photo"},
-     "name" : "Silk Saree",
-     "price" : {"actual" :"₹ 8500",
-                "current":"₹ 4200"
-                 },
-    "link" : "../Saree details/product 4.html"
-     },
+// let saree_list_2 = [
+//     {"image" : {"src" : "../../assets/img/5.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Silk Saree",
+//      "price" : {"actual" :"₹ 8500",
+//                 "current":"₹ 4200"
+//                  },
+//     "link" : "../Saree details/product 4.html"
+//      },
 
-     {"image" : {"src" : "../../assets/img/6.jpeg",
-                  "alt" : "photo"},
-     "name" : "Cotton Saree",
-     "price" : {"actual" :"₹ 4000",
-                "current":"₹ 2000"
-                 },
-     "link" : "../Saree details/product 5.html"
-     },
+//      {"image" : {"src" : "../../assets/img/6.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Cotton Saree",
+//      "price" : {"actual" :"₹ 4000",
+//                 "current":"₹ 2000"
+//                  },
+//      "link" : "../Saree details/product 5.html"
+//      },
 
 
-     {"image" : {"src" : "../../assets/img/9.jpeg",
-                  "alt" : "photo"},
-     "name" : "Pattu saree",
-     "price" : {"actual" :"₹ 9000",
-                "current":"₹ 4500"
-                 },
-     "link" : "../Saree details/product 6.html"
-     },
-]
+//      {"image" : {"src" : "../../assets/img/9.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Pattu saree",
+//      "price" : {"actual" :"₹ 9000",
+//                 "current":"₹ 4500"
+//                  },
+//      "link" : "../Saree details/product 6.html"
+//      },
+// ]
 
 
 
@@ -418,92 +418,92 @@ document.querySelector("div.hol").append(div_wat);
 
 
 
-for(let i=0;i<3;i++){
+// for(let i=0;i<3;i++){
 
 
     
-//    <div class=wat> </div>
+// //    <div class=wat> </div>
 
-   div_wat = document.createElement("div");
-   div_wat.setAttribute("class","wat");
-   console.log(div_wat);
+//    div_wat = document.createElement("div");
+//    div_wat.setAttribute("class","wat");
+//    console.log(div_wat);
 
-//  <img> <img>
+// //  <img> <img>
 
-   img_pic = document.createElement("img");
-   img_pic.setAttribute("src",saree_list_2[i]["image"]["src"]);
-   img_pic.setAttribute("alt",saree_list_2[i]["image"]["alt"]);
-   img_pic.setAttribute("height","150px");
-   img_pic.setAttribute("width","150px");
-   div_wat.append(img_pic);
+//    img_pic = document.createElement("img");
+//    img_pic.setAttribute("src",saree_list_2[i]["image"]["src"]);
+//    img_pic.setAttribute("alt",saree_list_2[i]["image"]["alt"]);
+//    img_pic.setAttribute("height","150px");
+//    img_pic.setAttribute("width","150px");
+//    div_wat.append(img_pic);
   
 
 
-//    <div class=product_content> </div>
+// //    <div class=product_content> </div>
 
-   div_product_content = document.createElement("div");
-   div_product_content.setAttribute("class","product-content");
-   div_wat.append(div_product_content);
+//    div_product_content = document.createElement("div");
+//    div_product_content.setAttribute("class","product-content");
+//    div_wat.append(div_product_content);
 
-// <h3 class=product-name> </h3>
-  h3_product_name = document.createElement("h3");
-  h3_product_name.setAttribute("class","product-name")
-  h3_product_name.innerHTML= saree_list_2[i]["name"];
-  div_product_content.append(h3_product_name);
+// // <h3 class=product-name> </h3>
+//   h3_product_name = document.createElement("h3");
+//   h3_product_name.setAttribute("class","product-name")
+//   h3_product_name.innerHTML= saree_list_2[i]["name"];
+//   div_product_content.append(h3_product_name);
 
 
-// <p class=rate> </p>
+// // <p class=rate> </p>
  
- p_rate = document.createElement("p");
- p_rate.setAttribute("class","rate");
- p_rate.innerHTML =saree_list_2[i]["price"]["current"];
- div_product_content.append(p_rate);
+//  p_rate = document.createElement("p");
+//  p_rate.setAttribute("class","rate");
+//  p_rate.innerHTML =saree_list_2[i]["price"]["current"];
+//  div_product_content.append(p_rate);
  
 
 
-//  <s class=s1> </s>
+// //  <s class=s1> </s>
 
- s_s1 = document.createElement("s");
- s_s1.setAttribute("class","s1");
- s_s1.innerHTML =saree_list_2[i]["price"]["actual"];
- div_product_content.append(s_s1);
-
-
-//  <div class=star> </div>
-
-div_star = document.createElement("div");
-div_star.setAttribute("class","star");
-div_product_content.append(div_star);
-
-// // <i class=fa fa-star> </i>
-for(let i=0;i<5;i++){
-
-i_fa = document.createElement("i");
-i_fa.setAttribute("class","fa fa-star");
-i_fa.setAttribute("style","font-size:24px")
-div_star.append(i_fa);
-}
-
-// a button
-a_but= document.createElement("a")
-a_but.setAttribute("href",saree_list_2[i]["link"]);
-div_product_content.append(a_but)
-
-// // <button class=buy> </buy>
-button_buy = document.createElement("button");
-button_buy.setAttribute("class","buy");
-a_but.append(button_buy);
+//  s_s1 = document.createElement("s");
+//  s_s1.setAttribute("class","s1");
+//  s_s1.innerHTML =saree_list_2[i]["price"]["actual"];
+//  div_product_content.append(s_s1);
 
 
-// // <strong> </strong>
-strong = document.createElement("strong");
-strong.innerHTML = "BUY NOW"
-button_buy.append(strong);
+// //  <div class=star> </div>
+
+// div_star = document.createElement("div");
+// div_star.setAttribute("class","star");
+// div_product_content.append(div_star);
+
+// // // <i class=fa fa-star> </i>
+// for(let i=0;i<5;i++){
+
+// i_fa = document.createElement("i");
+// i_fa.setAttribute("class","fa fa-star");
+// i_fa.setAttribute("style","font-size:24px")
+// div_star.append(i_fa);
+// }
+
+// // a button
+// a_but= document.createElement("a")
+// a_but.setAttribute("href",saree_list_2[i]["link"]);
+// div_product_content.append(a_but)
+
+// // // <button class=buy> </buy>
+// button_buy = document.createElement("button");
+// button_buy.setAttribute("class","buy");
+// a_but.append(button_buy);
 
 
-document.querySelector("div.run").append(div_wat);
+// // // <strong> </strong>
+// strong = document.createElement("strong");
+// strong.innerHTML = "BUY NOW"
+// button_buy.append(strong);
 
-}
+
+// document.querySelector("div.run").append(div_wat);
+
+// }
 
 
 

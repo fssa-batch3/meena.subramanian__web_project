@@ -29,3 +29,32 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
    Update product
    
    Delete product
+
+   Product detail
+
+   Add and Remove product list
+
+
+3.Add to cart
+
+    Product list
+
+    Delete product
+
+
+4.Whishlist
+
+    Product list
+
+    Delete product
+
+
+5.Seller CRUD
+
+    Profile create
+
+    Profile delete
+
+    Profile read
+
+    Profile delete

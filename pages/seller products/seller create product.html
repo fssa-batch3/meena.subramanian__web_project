@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -19,89 +21,97 @@
 
     <header>
         <div class="logo">
-            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
+            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
+                    height="80px"></a>
         </div>
 
         <h1 class="up" style="margin-top: 30px; color: crimson;">UPLOADE YOUR PRODUCTS</h1>
-   
+
         <div class="navigations">
 
             <div class="accound">
-                <a href="../profile page/profile page.html"><i class="fa fa-user-circle-o"style="font-size:24px;color: black;"></i>
+                <a href="../profile page/profile page.html"><i class="fa fa-user-circle-o"
+                        style="font-size:24px;color: black;"></i>
                 </a>
             </div>
         </div>
     </header>
 
 
-   
-       <h2>ADD NEW</h2>
-       <section class="profile_details">
-       <form role="form" onsubmit="createProduct(event)">
-        <div class="form">
-            <div class="details">
-                <div class="new"><img src="../../assets/img/10.jpeg" alt="photo"></div>
-                <div class="details_list">
-                    <p class="list">UplodePhoto:</p>
-                    <input type="text" placeholder="https//.//" class="list_2" id="uppic">
+
+    <h2>ADD NEW</h2>
+    <section class="profile_details">
+        <form role="form" onsubmit="createProduct(event)">
+            <div class="form">
+                <div class="details">
+                    <div class="new"><img src="../../assets/img/10.jpeg" alt="photo"></div>
+                    <div class="details_list">
+                        <p class="list">UplodePhoto:</p>
+                        <input type="url" placeholder="https//.//" class="list_2" id="uppic">
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list"> ProductName:</p>
+                        <input type="text" class="list_2" placeholder="Saree" required id="productname">
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Spical Price:</p>
+                        <input type="text" class="list_2" placeholder="₹0000" required id="productprice">
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">category:</p>
+                        <select type="text" class="list_2" placeholder="others" required id="productreview">
+                            <option>Saree</option>
+                            <option>Dhoti</option>
+                            <option>others</option>
+                        </select>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">offers:</p>
+                        <input type="text" class="list_2" placeholder="10%off" required id="productoffer">
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">discription:</p>
+                        <input type="text" class="list_2" placeholder="fdnbjrgfj" required id="descrip">
+                    </div>
+
                 </div>
+                <button type="submit" class="save"><strong>Upload</strong></button>
 
-                <div class="details_list">
-                    <p class="list"> ProductName:</p>
-                    <input type="text" class="list_2" placeholder="Saree" required id="productname">
-                </div>
-
-                <div class="details_list">
-                    <p class="list">Spical Price:</p>
-                    <input type="text"  class="list_2" placeholder="₹0000" required id="productprice">
-                 </div>
-
-                <div class="details_list">
-                    <p class="list">Review:</p>
-                    <input type="text" class="list_2" placeholder="jfdhgurefjmdsjfi" required id="productreview">
-                </div>
-
-                <div class="details_list">
-                    <p class="list">offers:</p>
-                    <input type="text" class="list_2" placeholder="3000" required id="productoffer">
-                </div>
-
-                <div class="details_list">
-                    <p class="list">discription:</p>
-                    <input type="text" class="list_2" placeholder="fdnbjrgfj" required id="descrip">
-                </div>
-
-            </div   >
-               <button type="submit" class="save"><strong>Upload</strong></button>
-               
             </div>
-    </form>
+        </form>
     </section>
-      
-   <script>
-    function createProduct(e) {
-        e.preventDefault();
-        let   uppic = document.getElementById("uppic").value;
-        let   descrip = document.getElementById("descrip").value;
-        let   productreview= document.getElementById("productreview").value;
-        let   productprice= document.getElementById("productprice").value;
-        let   productname= document.getElementById("productname").value;
-        let   productoffer= document.getElementById("productoffer").value;
-        let    product_uuid=uuidv4();
+
+    <script>
+        function createProduct(e) {
+            e.preventDefault();
+            let uppic = document.getElementById("uppic").value;
+            let descrip = document.getElementById("descrip").value;
+            let productreview = document.getElementById("productreview").value;
+            let productprice = document.getElementById("productprice").value;
+            let productname = document.getElementById("productname").value;
+            let productoffer = document.getElementById("productoffer").value;
+            let product_uuid = uuidv4();
 
             let product_crud = JSON.parse(localStorage.getItem('product_crud')) || [];
 
-        
-          
-                product_crud.push({uppic,productname,productprice,productreview,descrip,productoffer,product_uuid});
-                localStorage.setItem('product_crud',JSON.stringify(product_crud));
-           
-                alert('Product created successfully');
-              window.location.href = "../seller products/seller products.html";
-              
-            }      
-   </script>
-   <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-    </body>
-    </html>
+
+            product_crud.push({ uppic, productname, productprice, productreview, descrip, productoffer, product_uuid });
+            localStorage.setItem('product_crud', JSON.stringify(product_crud));
+
+            alert('Product created successfully');
+            window.location.href = "../seller products/seller products.html";
+
+        }      
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+
+</body>
+
+</html>
+<!-- <a href="https://freeimage.host/"><img src="https://iili.io/HVTQc2R.jpg" alt="HVTQc2R.jpg" border="0"></a> -->
