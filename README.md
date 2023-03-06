@@ -1,4 +1,5 @@
 # Kaithari 
+My project is an e-commerce website (Kaithari)
 
 Sonarcloud :https://sonarcloud.io/summary/new_code?id=fssa-batch3_meena.subramanian__web_project;
 
@@ -11,24 +12,23 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
 
 1.Register CRUD
   
-  Create user profile;
+    Create user profile
   
-  Read user profile;
+    Read user profile
   
-  Update user profile
+    Update user profile
   
-  delete user profile
+    delete user profile
 
 
-2.Product CRUD
 
-   Create product
+    Create product
    
-   Read  product
-   
-   Update product
-   
-   Delete product
+    Read  product
+    
+    Update product
+    
+    Delete product
 
    Product detail
 
