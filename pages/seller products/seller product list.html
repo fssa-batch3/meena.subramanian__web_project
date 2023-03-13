@@ -36,7 +36,7 @@
             </div>
 
             <div class="new">
-                <a href="../seller products/seller products.html"><button>Go To Detail</button></a>
+                <a href="../seller products/seller create product.html"><button>Create New</button></a>
               </div>
 
           
@@ -117,9 +117,9 @@
 
 
 
-    <!-- </div> -->
+    </div> 
 
-     <!-- <div class="run"> -->
+    <!-- <div class="run"> -->
         <!-- <div class="wat">
             <img src="../../assets/img/5.jpeg" alt="photo" width="150" height="150" />
             <div class="product-content">
@@ -360,8 +360,6 @@ for(let i=0;i<product_upload.length; i++){
    console.log(div_wat);
 
    // link for next page 
-
-
    locateUser=document.createElement("a");
    locateUser.setAttribute("href","../seller products/seller products.html?product="+product_upload[i]["product_uuid"]);
    locateUser.setAttribute("style","text-decoration: none;color:black ")
@@ -439,7 +437,7 @@ div_product_content.append(a_but_1)
 // // <button> </buy>
 button_buy_1 = document.createElement("button");
 button_buy_1.setAttribute("class","run");
-button_buy_1.setAttribute("data_uuid", product_upload[i]["product_uuid"]);
+button_buy_1.setAttribute("data-uuid", product_upload[i]["product_uuid"]);
 a_but.append(button_buy_1);
 
 
@@ -447,7 +445,6 @@ a_but.append(button_buy_1);
 strong = document.createElement("strong");
 strong.innerHTML = "Add"
 button_buy_1.append(strong);
-
 
 document.querySelector("div.hol").append(div_wat);
 
@@ -457,14 +454,76 @@ document.querySelector("div.hol").append(div_wat);
 }
 
 
+// let button_id = document.querySelectorAll('button.run');
+//      button_id = button_buy_1.getAttribute('data-id')
+//             button_buy_1.addEventListener("click", function () {
+//             console.log(button_id);
+//               if(!added_products.includes(button_id)){
+//                 added_products.push(button_id);
+//               } else {
+//                 alert("Already Added");
+//               }
+//             localStorage.setItem('added_products', JSON.stringify(added_products));
+//             })
+           
 const add = document.querySelectorAll('button.run');
     add.forEach(function (findId) {
       findId.addEventListener('click', function () {
-        const id = this.dataset.id;
-        localStorage.setItem("product_uuid", JSON.stringify(id));
+        const id = this.dataset.uuid;
+        let display_products = JSON.parse(localStorage.getItem('add_products')) || [];
+        // console.log(id)
+
+        let exist = display_products.length &&
+            JSON.parse(localStorage.getItem('add_products')).some(data =>
+                data == id);
+
+        if(!exist){
+            display_products.push(
+                id
+            )
+            localStorage.setItem("add_products", JSON.stringify(display_products));
+            alert("Product is added to the page");
+        }
+        else{
+            alert("Product is already added");
+        }
         window.location.href = "../products/product_list saree.html"
       });
     });
+
+    const remove = document.querySelectorAll("button.buy");
+     remove.forEach(function (findId) {
+        findId.addEventListener('click', function() {
+            let parentBox = this.closest(".product-content");
+            let id = parentBox.querySelector(".run").getAttribute("data-uuid");
+
+            let delete_ids = JSON.parse(localStorage.getItem('add_products')) || [];
+            
+            let exist = delete_ids.length &&
+                    JSON.parse(localStorage.getItem('add_products')).some(data =>
+                        data == id)
+
+                if (exist) {
+                    alert("This product is removed from the page")
+
+                    let uuid = JSON.parse(localStorage.getItem("add_products"));
+
+                    function find_data(e) {
+                        return e === id;
+                    }
+                    let remove_id = uuid.find(find_data);
+                    console.log(remove_id)
+                    const indexOfUser = uuid.indexOf(remove_id);
+                    uuid.splice(indexOfUser, 1);
+                    localStorage.setItem('add_products', JSON.stringify(uuid));
+                }
+                else{
+                    alert("This product is not added yet!")
+                }
+        }
+        )
+     }
+     )
 
 
 // let product_details = document.querySelectorAll(".wat")
@@ -477,27 +536,7 @@ const add = document.querySelectorAll('button.run');
 //                             })
 //                         })
 
-// let add = document.querySelectorAll("button.run");
-//         add.forEach(function (add_product) {
-//             add_product.addEventListener('click', function () {
-//                 let parentBox = this.closest('.wat');
-//                 let get_id = parentBox.querySelector('.edit').getAttribute("data-id");
-//                 let display_foods = JSON.parse(localStorage.getItem('product_ids')) || [];
-//                 let exist = display_foods.length &&
-//                     JSON.parse(localStorage.getItem('product_ids')).some(data =>
-//                         data.product_id == get_id)
-//                 if (!exist) {
-//                     display_foods.push({
-//                         "product_id": get_id
-//                     });
-//                     localStorage.setItem('product_ids', JSON.stringify(display_foods));
-//                     alert("Your product is successfully added to the menu");
-//                 }
-//                 else {
-//                     alert('This product is already added');
-//                 }
-//             });
-//         });
+
 
 
 

@@ -95,7 +95,7 @@ h1{
     background-color:cadetblue;
     margin-top: 40px;
 	width:80px;
-   margin-left:49rem;
+   margin-left:40rem;
 }
 
 
@@ -103,6 +103,22 @@ h1{
     scale: 1.03;
     background-color:crimson;
     color:white;
+}
+
+.delete_data:hover{
+    scale: 1.03;
+    background-color:crimson;
+    color:white;
+}
+
+.form .delete_data{
+    padding: 7px;
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color:cadetblue;
+    margin-bottom: 190px;
+	width:80px;
+    margin-left:49rem;
 }
 
 .profile_details .run{

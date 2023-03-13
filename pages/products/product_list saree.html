@@ -262,36 +262,36 @@
     let button_buy;
     let strong;
  
-let saree_list = [
-    {"image" : {"src" : "../../assets/img/10.jpeg",
-                  "alt" : "photo"},
-     "name" : "Kanchivaram Saree",
-     "price" : {"actual" :"₹ 7500",
-                "current":"₹ 5200"
-                 },
-    "link" : "./product_details.html"
+// let saree_list = [
+//     {"image" : {"src" : "../../assets/img/10.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Kanchivaram Saree",
+//      "price" : {"actual" :"₹ 7500",
+//                 "current":"₹ 5200"
+//                  },
+//     "link" : "./product_details.html"
      
-     },
+//      },
 
-     {"image" : {"src" : "../../assets/img/2.jpeg",
-                  "alt" : "photo"},
-     "name" : "Binthu Pattu",
-     "price" : {"actual" :"₹ 6500",
-                "current":"₹ 4800"
-                 },
-    "link"  : "../Saree details/product 2.html" 
-     },
+//      {"image" : {"src" : "../../assets/img/2.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Binthu Pattu",
+//      "price" : {"actual" :"₹ 6500",
+//                 "current":"₹ 4800"
+//                  },
+//     "link"  : "../Saree details/product 2.html" 
+//      },
 
 
-     {"image" : {"src" : "../../assets/img/3.jpeg",
-                  "alt" : "photo"},
-     "name" : "Banarash Saree",
-     "price" : {"actual" :"₹ 6500",
-                "current":"₹ 5850"
-                 },
-    "link" : "../Saree details/product 3.html"
-     },
-]
+//      {"image" : {"src" : "../../assets/img/3.jpeg",
+//                   "alt" : "photo"},
+//      "name" : "Banarash Saree",
+//      "price" : {"actual" :"₹ 6500",
+//                 "current":"₹ 5850"
+//                  },
+//     "link" : "../Saree details/product 3.html"
+//      },
+// ]
 
 // let saree_list_2 = [
 //     {"image" : {"src" : "../../assets/img/5.jpeg",
@@ -324,8 +324,23 @@ let saree_list = [
 // ]
 
 
+let add = JSON.parse(localStorage.getItem("add_products"));
+// console.log(add);
+let products = JSON.parse(localStorage.getItem("product_crud"));
+// console.log(products);   
 
-for(let i=0;i<3;i++){
+
+       
+        let saree_list = products.filter(product =>
+            add.some(uuid => uuid === product.product_uuid)
+        );
+        console.log(saree_list)
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const product_id = urlParams.get('product');
+
+for(let i=0;i<saree_list.length;i++){
 
 
     
@@ -338,8 +353,8 @@ for(let i=0;i<3;i++){
 //  <img> <img>
 
    img_pic = document.createElement("img");
-   img_pic.setAttribute("src",saree_list[i]["image"]["src"]);
-   img_pic.setAttribute("alt",saree_list[i]["image"]["alt"]);
+   img_pic.setAttribute("src",saree_list[i]["uppic"]);
+   img_pic.setAttribute("alt",saree_list[i]["productname"] + " image");
    img_pic.setAttribute("height","150px");
    img_pic.setAttribute("width","150px");
    div_wat.append(img_pic);
@@ -355,7 +370,7 @@ for(let i=0;i<3;i++){
 // <h3 class=product-name> </h3>
   h3_product_name = document.createElement("h3");
   h3_product_name.setAttribute("class","product-name")
-  h3_product_name.innerHTML= saree_list[i]["name"];
+  h3_product_name.innerHTML= saree_list[i]["productname"];
   div_product_content.append(h3_product_name);
 
 
@@ -363,7 +378,7 @@ for(let i=0;i<3;i++){
 
  p_rate = document.createElement("p");
  p_rate.setAttribute("class","rate");
- p_rate.innerHTML =saree_list[i]["price"]["current"];
+ p_rate.innerHTML =saree_list[i]["productprice"];
  div_product_content.append(p_rate);
  
 
@@ -372,7 +387,7 @@ for(let i=0;i<3;i++){
 
  s_s1 = document.createElement("s");
  s_s1.setAttribute("class","s1");
- s_s1.innerHTML = saree_list[i]["price"]["actual"];
+ s_s1.innerHTML = saree_list[i]["productprice"];
  div_product_content.append(s_s1);
 
 
@@ -393,7 +408,7 @@ div_star.append(i_fa);
 
 // a button
 a_but= document.createElement("a")
-a_but.setAttribute("href",saree_list[i]["link"]);
+a_but.setAttribute("href","../products/product_details.html?product =" + product_id);
 div_product_content.append(a_but)
 
 // // <button class=buy> </buy>
@@ -512,4 +527,4 @@ document.querySelector("div.hol").append(div_wat);
 </html>
 
 
-   
+ 

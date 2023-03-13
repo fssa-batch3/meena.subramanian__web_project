@@ -96,7 +96,7 @@
             let productname = document.getElementById("productname").value;
             let productoffer = document.getElementById("productoffer").value;
             let product_uuid = uuidv4();
-
+            // console.log(product_uuid)
             let product_crud = JSON.parse(localStorage.getItem('product_crud')) || [];
 
 
@@ -105,7 +105,7 @@
             localStorage.setItem('product_crud', JSON.stringify(product_crud));
 
             alert('Product created successfully');
-            window.location.href = "../seller products/seller products.html";
+            window.location.href = "../seller products/seller product list.html?product=" + product_uuid;
 
         }      
     </script>

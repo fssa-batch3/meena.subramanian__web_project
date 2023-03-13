@@ -126,9 +126,7 @@ section{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 45vh;
-    
-    
+      
 }
 
 .run{
@@ -172,7 +170,6 @@ section{
 
 
 .s1 {
- 
     text-decoration: line-through;
 }
 

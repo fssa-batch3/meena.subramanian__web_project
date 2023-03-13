@@ -171,9 +171,10 @@ section{
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-   margin-top:100px;
+    margin-top:100px;
     
 }
+
 .buy{
     display: block;
     width: 140px;
@@ -185,8 +186,6 @@ section{
     position: relative;
     left: 180px;
     top: 40px;
-    
-
 }
 
 
@@ -242,7 +241,6 @@ h2{
 	margin-right:730px;
 	
 }
-
 
 
 .about h3{
