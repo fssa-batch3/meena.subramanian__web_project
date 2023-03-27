@@ -19,8 +19,8 @@
 
 <body>
 
-    <header>
-        <div class="logo">
+    <header id="header">
+        <!-- <div class="logo">
             <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
                     height="80px"></a>
         </div>
@@ -61,7 +61,7 @@
                         style="font-size: 22px; color:black;"></i></a>
             </div>
 
-        </div>
+        </div> -->
     </header>
 
 
@@ -110,10 +110,10 @@
 
     <script>
 
-        let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+        let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
         let user_cred = JSON.parse(localStorage.getItem("user_cred"));
         function profile_data(e) {
-            return e.email == uniqueID;
+            return e.email == uniqueID_user;
         }
         person_data = user_cred.find(profile_data);
         document.getElementById("name").value = person_data["name"];
@@ -142,6 +142,10 @@
         }
 
     </script>
+    
+    <script src="../../JS/header.js"></script>
+    <script>home()</script>
+    
 
 </body>
 

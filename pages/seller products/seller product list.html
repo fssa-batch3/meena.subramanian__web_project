@@ -349,9 +349,11 @@ let saree_list = [
 let product_upload = JSON.parse(localStorage.getItem("product_crud"));
     console.log(product_upload)
 
+    let uniqueID_seller = JSON.parse(localStorage.getItem('uniqueID_seller'));
+    
 for(let i=0;i<product_upload.length; i++){
 
-
+if(product_upload[i].seller_id === uniqueID_seller){
     
 //    <div class=wat> </div>
 
@@ -393,7 +395,7 @@ for(let i=0;i<product_upload.length; i++){
 
  p_rate = document.createElement("p");
  p_rate.setAttribute("class","rate");
- p_rate.innerHTML =product_upload[i]["productprice"];
+ p_rate.innerHTML = "₹" + product_upload[i]["discountprice"];
  div_product_content.append(p_rate);
  
 
@@ -402,7 +404,7 @@ for(let i=0;i<product_upload.length; i++){
 
  s_s1 = document.createElement("s");
  s_s1.setAttribute("class","s1");
- s_s1.innerHTML = product_upload[i]["productoffer"];
+ s_s1.innerHTML = "₹" + product_upload[i]["productprice"];
  div_product_content.append(s_s1);
 
 
@@ -450,7 +452,7 @@ document.querySelector("div.hol").append(div_wat);
 
 // document.querySelector("div.run").append(div_wat);
 
-
+}
 }
 
 

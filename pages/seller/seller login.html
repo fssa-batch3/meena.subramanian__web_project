@@ -25,7 +25,7 @@
     
         <div class="navigations">
           <div class="accound">
-                <a href="../../pages/profile page/profile page.html"><i class="fa fa-user-circle-o"style="font-size:24px;color:black;"></i>
+                <a href="../../pages/seller/Seller profile.html"><i class="fa fa-user-circle-o"style="font-size:24px;color:black;"></i>
                 </a>
             </div>
 
@@ -91,12 +91,13 @@
                 document.querySelector('form').reset();
             }
             else{
-                localStorage.setItem('uniqueID',JSON.stringify(email));
+                localStorage.setItem('uniqueID_seller',JSON.stringify(email));
                 alert("Your Login is Successful");
-                location.href = "../seller/Seller profile.html";
+                location.href = "../seller products/seller product list.html";
             }
         }
 </script>
+
 
 </body>
 </html>

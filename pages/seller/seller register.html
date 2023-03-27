@@ -42,7 +42,8 @@
     <input type="password" id="confirm_password" class="passs" placeholder="confirm password" required>
     </div>
 
-  <button class="submit" type="submit"><b>Save</b></button>
+  <button class="submit" type="submit"><b>Creat</b></button>
+  <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button></a>
 
 </form>
 
@@ -116,10 +117,14 @@ function signUp(e) {
     
     e.preventDefault();
   }
+
+  function loginpage(){
+      window.location.href="../seller/seller login.html" 
+    }
+
 </script>
 <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-</body>
-</html>
+</body
 
 

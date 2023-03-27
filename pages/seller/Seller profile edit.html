@@ -28,7 +28,7 @@
 
 
     <div class="pro">
-        <h1 class="heading"> PROFILE </h1>
+        <h1 class="heading">EDIT PROFILE </h1>
     </div>
     <section class="profile_details">
         <form onsubmit="update_details(event)">
@@ -72,10 +72,10 @@
 
     <script>
 
-        let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+        let uniqueID_seller = JSON.parse(localStorage.getItem("uniqueID_seller"));
         let seller_cred = JSON.parse(localStorage.getItem("seller_cred"));
         function profile_data(e) {
-            return e.email == uniqueID;
+            return e.email == uniqueID_seller;
         }
         person_data = seller_cred.find(profile_data);
         document.getElementById("name").value = person_data["name"];

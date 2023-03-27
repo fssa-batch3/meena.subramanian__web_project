@@ -17,8 +17,8 @@
 
 <body>
 
-    <header>
-        <div class="logo">
+    <header id="header">
+        <!-- <div class="logo">
             <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
         </div>
 
@@ -53,7 +53,7 @@
                 <a href="../whislist/wishlist.html"><i class="fa fa-heart" style="font-size: 22px; color:black;"></i></a>
             </div>
 
-        </div>
+        </div> -->
     </header>
 
    <section>
@@ -262,87 +262,21 @@
     let button_buy;
     let strong;
  
-// let saree_list = [
-//     {"image" : {"src" : "../../assets/img/10.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Kanchivaram Saree",
-//      "price" : {"actual" :"₹ 7500",
-//                 "current":"₹ 5200"
-//                  },
-//     "link" : "./product_details.html"
-     
-//      },
 
-//      {"image" : {"src" : "../../assets/img/2.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Binthu Pattu",
-//      "price" : {"actual" :"₹ 6500",
-//                 "current":"₹ 4800"
-//                  },
-//     "link"  : "../Saree details/product 2.html" 
-//      },
-
-
-//      {"image" : {"src" : "../../assets/img/3.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Banarash Saree",
-//      "price" : {"actual" :"₹ 6500",
-//                 "current":"₹ 5850"
-//                  },
-//     "link" : "../Saree details/product 3.html"
-//      },
-// ]
-
-// let saree_list_2 = [
-//     {"image" : {"src" : "../../assets/img/5.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Silk Saree",
-//      "price" : {"actual" :"₹ 8500",
-//                 "current":"₹ 4200"
-//                  },
-//     "link" : "../Saree details/product 4.html"
-//      },
-
-//      {"image" : {"src" : "../../assets/img/6.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Cotton Saree",
-//      "price" : {"actual" :"₹ 4000",
-//                 "current":"₹ 2000"
-//                  },
-//      "link" : "../Saree details/product 5.html"
-//      },
-
-
-//      {"image" : {"src" : "../../assets/img/9.jpeg",
-//                   "alt" : "photo"},
-//      "name" : "Pattu saree",
-//      "price" : {"actual" :"₹ 9000",
-//                 "current":"₹ 4500"
-//                  },
-//      "link" : "../Saree details/product 6.html"
-//      },
-// ]
 
 
 let add = JSON.parse(localStorage.getItem("add_products"));
-// console.log(add);
+
 let products = JSON.parse(localStorage.getItem("product_crud"));
-// console.log(products);   
 
-
-       
-        let saree_list = products.filter(product =>
-            add.some(uuid => uuid === product.product_uuid)
-        );
-        console.log(saree_list)
 
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
     const product_id = urlParams.get('product');
 
-for(let i=0;i<saree_list.length;i++){
+for(let i=0;i<products.length;i++){
 
-
+if(products[i].productreview === "Saree"){
     
 //    <div class=wat> </div>
 
@@ -353,8 +287,8 @@ for(let i=0;i<saree_list.length;i++){
 //  <img> <img>
 
    img_pic = document.createElement("img");
-   img_pic.setAttribute("src",saree_list[i]["uppic"]);
-   img_pic.setAttribute("alt",saree_list[i]["productname"] + " image");
+   img_pic.setAttribute("src",products[i]["uppic"]);
+   img_pic.setAttribute("alt",products[i]["productname"] + " image");
    img_pic.setAttribute("height","150px");
    img_pic.setAttribute("width","150px");
    div_wat.append(img_pic);
@@ -370,7 +304,7 @@ for(let i=0;i<saree_list.length;i++){
 // <h3 class=product-name> </h3>
   h3_product_name = document.createElement("h3");
   h3_product_name.setAttribute("class","product-name")
-  h3_product_name.innerHTML= saree_list[i]["productname"];
+  h3_product_name.innerHTML= products[i]["productname"];
   div_product_content.append(h3_product_name);
 
 
@@ -378,7 +312,7 @@ for(let i=0;i<saree_list.length;i++){
 
  p_rate = document.createElement("p");
  p_rate.setAttribute("class","rate");
- p_rate.innerHTML =saree_list[i]["productprice"];
+ p_rate.innerHTML = "₹" + products[i]["discountprice"];
  div_product_content.append(p_rate);
  
 
@@ -387,7 +321,7 @@ for(let i=0;i<saree_list.length;i++){
 
  s_s1 = document.createElement("s");
  s_s1.setAttribute("class","s1");
- s_s1.innerHTML = saree_list[i]["productprice"];
+ s_s1.innerHTML = "₹" + products[i]["productprice"];
  div_product_content.append(s_s1);
 
 
@@ -408,7 +342,7 @@ div_star.append(i_fa);
 
 // a button
 a_but= document.createElement("a")
-a_but.setAttribute("href","../products/product_details.html?product =" + product_id);
+a_but.setAttribute("href","./product_details.html?product=" + products[i].product_uuid);
 div_product_content.append(a_but)
 
 // // <button class=buy> </buy>
@@ -426,105 +360,10 @@ button_buy.append(strong);
 document.querySelector("div.hol").append(div_wat);
 
 }
-
-
-
-console.log("hello world");
-
-
-
-// for(let i=0;i<3;i++){
-
-
-    
-// //    <div class=wat> </div>
-
-//    div_wat = document.createElement("div");
-//    div_wat.setAttribute("class","wat");
-//    console.log(div_wat);
-
-// //  <img> <img>
-
-//    img_pic = document.createElement("img");
-//    img_pic.setAttribute("src",saree_list_2[i]["image"]["src"]);
-//    img_pic.setAttribute("alt",saree_list_2[i]["image"]["alt"]);
-//    img_pic.setAttribute("height","150px");
-//    img_pic.setAttribute("width","150px");
-//    div_wat.append(img_pic);
-  
-
-
-// //    <div class=product_content> </div>
-
-//    div_product_content = document.createElement("div");
-//    div_product_content.setAttribute("class","product-content");
-//    div_wat.append(div_product_content);
-
-// // <h3 class=product-name> </h3>
-//   h3_product_name = document.createElement("h3");
-//   h3_product_name.setAttribute("class","product-name")
-//   h3_product_name.innerHTML= saree_list_2[i]["name"];
-//   div_product_content.append(h3_product_name);
-
-
-// // <p class=rate> </p>
- 
-//  p_rate = document.createElement("p");
-//  p_rate.setAttribute("class","rate");
-//  p_rate.innerHTML =saree_list_2[i]["price"]["current"];
-//  div_product_content.append(p_rate);
- 
-
-
-// //  <s class=s1> </s>
-
-//  s_s1 = document.createElement("s");
-//  s_s1.setAttribute("class","s1");
-//  s_s1.innerHTML =saree_list_2[i]["price"]["actual"];
-//  div_product_content.append(s_s1);
-
-
-// //  <div class=star> </div>
-
-// div_star = document.createElement("div");
-// div_star.setAttribute("class","star");
-// div_product_content.append(div_star);
-
-// // // <i class=fa fa-star> </i>
-// for(let i=0;i<5;i++){
-
-// i_fa = document.createElement("i");
-// i_fa.setAttribute("class","fa fa-star");
-// i_fa.setAttribute("style","font-size:24px")
-// div_star.append(i_fa);
-// }
-
-// // a button
-// a_but= document.createElement("a")
-// a_but.setAttribute("href",saree_list_2[i]["link"]);
-// div_product_content.append(a_but)
-
-// // // <button class=buy> </buy>
-// button_buy = document.createElement("button");
-// button_buy.setAttribute("class","buy");
-// a_but.append(button_buy);
-
-
-// // // <strong> </strong>
-// strong = document.createElement("strong");
-// strong.innerHTML = "BUY NOW"
-// button_buy.append(strong);
-
-
-// document.querySelector("div.run").append(div_wat);
-
-// }
-
-
-
-
-
+}
  </script>
+<script src="../../JS/header.js"></script>
+<script>home()</script>
 </body>
 </html>
 

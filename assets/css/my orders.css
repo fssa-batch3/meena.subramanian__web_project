@@ -6,6 +6,16 @@
 }
 	
 
+.log {
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 10px;
+}
 
 header{
 	display:flex;

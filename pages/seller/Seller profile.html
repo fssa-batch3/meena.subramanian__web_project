@@ -52,13 +52,13 @@
             <div class="details">
                 <div class="details_list">
                     <p class="list">Name:</p>
-                    <p class="list_2" id="name">S.Meena</p>
+                    <p class="list_2" id="name"></p>
                 </div>
 
 
                 <div class="details_list">
                     <p class="list">Email:</p>
-                    <p class="list_2" id="email">vasumeenu@gmail.com</p>
+                    <p class="list_2" id="email"></p>
                 </div>
 
 
@@ -109,28 +109,28 @@
 
     <script>
 
-        let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+        let uniqueID_seller = JSON.parse(localStorage.getItem("uniqueID_seller"));
         let seller_cred = JSON.parse(localStorage.getItem("seller_cred"));
-        function profile_data(e) {
-            return e.email == uniqueID;
-        }
-        person_data = seller_cred.find(profile_data);
-        document.getElementById("name").innertext = person_data["name"];
-        document.getElementById("email").innertext = person_data["email"];
-        document.getElementById("phone").innerText = person_data["phone"];
-        document.getElementById("dob").innerText = person_data["dob"];
-        document.getElementById("address").innerText = person_data["address"];
-        document.getElementById("district").innerText = person_data["district"];
+
+        const seller = seller_cred.find(user => user.email === uniqueID_seller);
+        // console.log(seller);
+
+        document.getElementById("name").innerText = seller["name"];
+        document.getElementById("email").innerText = seller["email"];
+        document.getElementById("phone").innerText = seller["phone"];
+        document.getElementById("dob").innerText = seller["dob"];
+        document.getElementById("address").innerText = seller["address"];
+        document.getElementById("district").innerText = seller["district"];
 
 
         // delete account function
         function deleteAcc() {
             if (confirm("Are you sure to delete this account ?")) {
                 //get value from local storage
-                let uniqueID = JSON.parse(localStorage.getItem("uniqueID"));
+                let uniqueID_seller = JSON.parse(localStorage.getItem("uniqueID_seller"));
                 let seller_cred = JSON.parse(localStorage.getItem("seller_cred"));
                 function profile_data(e) {
-                    return e.email == uniqueID;
+                    return e.email == uniqueID_seller;
                 }
                 person_data = seller_cred.find(profile_data);
                 // find the index of person_data from userData
@@ -156,6 +156,7 @@
 
 
     </script>
+  
 </body>
 
 </html>

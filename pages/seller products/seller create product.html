@@ -62,10 +62,10 @@
 
                     <div class="details_list">
                         <p class="list">category:</p>
-                        <select type="text" class="list_2" placeholder="others" required id="productreview">
+                        <select type="text" class="list_2"  placeholder="others" required id="productreview">
                             <option>Saree</option>
                             <option>Dhoti</option>
-                            <option>others</option>
+                            <option>None</option>
                         </select>
                     </div>
 
@@ -98,11 +98,24 @@
             let product_uuid = uuidv4();
             // console.log(product_uuid)
             let product_crud = JSON.parse(localStorage.getItem('product_crud')) || [];
+            let unique = JSON.parse(localStorage.getItem('uniqueID_seller'));
+            let seller_id = unique;
 
 
+            if(productoffer==productoffer){
+                discountprice=productprice-productprice*productoffer/100;
+                discountprice=Math.round(discountprice);
+            }
+            else{
+                discountprice=productprice-productoffer;
+            }
+        
 
-            product_crud.push({ uppic, productname, productprice, productreview, descrip, productoffer, product_uuid });
+
+            product_crud.push({ uppic, productname, productprice, discountprice, productreview, descrip, productoffer, product_uuid, seller_id,});
             localStorage.setItem('product_crud', JSON.stringify(product_crud));
+      
+           
 
             alert('Product created successfully');
             window.location.href = "../seller products/seller product list.html?product=" + product_uuid;

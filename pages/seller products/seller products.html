@@ -264,14 +264,14 @@
     // <b></b> 
 
     b = document.createElement("b");
-    b.innerText = unique_id["productprice"];
+    b.innerText = "₹" + unique_id["discountprice"];
     div_akka.append(b);
 
 
     //  <span></span>
 
     span = document.createElement("span");
-    span.innerText = unique_id["productoffer"];
+    span.innerText = unique_id["productoffer"] + "% off";
     div_akka.append(span);
 
 
@@ -284,7 +284,7 @@
     // <s></s>
 
     s = document.createElement("s");
-    s.innerText = "₹ 5200";
+    s.innerText = "₹" + unique_id["productprice"];
     div_ic.append(s);
 
 

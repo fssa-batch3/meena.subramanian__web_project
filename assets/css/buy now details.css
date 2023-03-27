@@ -75,6 +75,34 @@ input[type="search"]{
 	background-color:#eaecef;
 }
 
+input[type="text"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
+
+.log {
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+
+input[type="number"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
 
 .cart{
     padding-right:30px;
@@ -93,8 +121,12 @@ input[type="search"]{
     padding-left:30px;
 }
 
+.form label{
+    margin-top: 30px;
+}
+
 .total{
-  display:flex;
+display:flex;
 flex-wrap: wrap;
 }
 
@@ -198,6 +230,7 @@ h2{
     display: flex;
     flex-direction: row;
 }
+
 .right .form_list .form{
     width: 10rem;
     margin-top: 15px;
@@ -222,8 +255,8 @@ h2{
     margin-left: 20px;
 }
 .place{
-    margin-top:100px;
-    margin-left:350px;
+    margin-top:63px;
+    margin-left:285px;
     padding:10px;
     background-color: cadetblue;
     border:1px solid white;

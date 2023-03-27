@@ -58,10 +58,26 @@ input[type=text]{
     border-color: transparent;
     background-color: cadetblue;
     margin-top: 30px;
-	margin-left:350px;
+	margin-left:240px;
+}
+
+.login{
+    padding:3px;
+    width:85px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: cadetblue;
+    margin-top: 30px;
+	margin-left: 20px;
 }
 
 .submit:hover{
+	scale: 1.04;
+	background-color: crimson;
+	color: white;
+}
+
+.login:hover{
 	scale: 1.04;
 	background-color: crimson;
 	color: white;

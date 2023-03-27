@@ -19,8 +19,8 @@
 
 <body>
 
-  <header>
-    <div class="logo">
+  <header id="header">
+    <!-- <div class="logo">
       <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
           height="80px"></a>
     </div>
@@ -59,85 +59,82 @@
         <a href="../whislist/wishlist.html"><i class="fa fa-heart" style="font-size: 22px; color:black;"></i></a>
       </div>
 
-    </div>
+    </div> -->
   </header>
 
   <div class="section">
-    <!-- <div class="meenu">
+    <div class="meenu">
       <div class="product">
-        <img src="../../assets/img/10.jpeg" alt="product-1" width="450px" height="450px"/>
+        <img src="../../assets/img/10.jpeg" alt="product-1" width="450px" height="450px" />
       </div>
- 
+
       <div class="product-1">
-        <img src="../../assets/img/10.jpeg" alt="product"  width ="86px"/>
+        <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
 
-        <img src="../../assets/img/10.jpeg" alt="product"  width="86px"/>
-    
-	      <img src="../../assets/img/10.jpeg" alt="product" width = "86px"/>
+        <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
 
-       <img src="../../assets/img/10.jpeg" alt="product" width="86px"/>
-     </div>
+        <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
+
+        <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
+      </div>
     </div>
 
- <div class="sneaker">
-  <h4>KAITHTHARI</h4>
+    <div class="sneaker">
+      <h4>KAITHTHARI</h4>
 
-  <h2>Kanchipuram Saree</h2>
-  <div class="rupeeees">
+      <h2 id="product_name"></h2>
+      <div class="rupeeees">
 
-  <div class="akka">
-    <p>Special Price</p>
-    <b>₹ 5,200</b>  
-    <span>
-       25%  off
-    </span>
-  </div>
-</div>
-   
-  <div class="ic">
-   <s>₹ 7500</s>
-  </div>
+        <div class="akka">
+          <p>Special Price</p>
+          <b id="price"></b>
+          <span id="percentage">
+          </span>
+        </div>
+      </div>
 
-  <div class="review"> 
-    REVIEW :
-    <i  class="fa fa-star"style="font-size:24px; color:orange;"></i>
-    <i  class="fa fa-star" style="font-size:24px; color:orange;" ></i>
-    <i  class="fa fa-star"style="font-size:24px; color:orange;"></i>
-    <i  class="fa fa-star-o"style="font-size:24px; color:orange;"></i>
-    <i  class="fa fa-star-o"style="font-size:24px; color:orange;"></i>
-  </div>
+      <div class="ic">
+        <s id="actualprice">₹ 7500</s>
+      </div>
 
- 
-  <div class="content-details"> 
-    <h3>Available price</h3>
-     <p>Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.</p>
-     <p>Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C.</p>
-     <p>Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C.</p>
-     <p>Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C.</p>
-  </div>
+      <div class="review">
+        REVIEW :
+        <i class="fa fa-star" style="font-size:24px; color:orange;"></i>
+        <i class="fa fa-star" style="font-size:24px; color:orange;"></i>
+        <i class="fa fa-star" style="font-size:24px; color:orange;"></i>
+        <i class="fa fa-star-o" style="font-size:24px; color:orange;"></i>
+        <i class="fa fa-star-o" style="font-size:24px; color:orange;"></i>
+      </div>
+
+
+      <div class="content-details">
+        <h3>Available price</h3>
+        <p id="description"></p>
+      </div>
 
 
 
-  
-<div class="what">
-<button class="the" >
 
-  <a href="../register page/rigister page.html"><strong>BUY NOW</strong></a>
+      <div class="what">
+        <button class="the">
 
-</button>
+          <a onclick="already()"><strong>BUY NOW</strong></a>
 
-<button class="that">
- <a href="../buy now page/add to cart.html"><i class="fa fa-shopping-cart" style="font-size:15px; color:black; margin-right: 10px;"></i>ADD TO CART</a>
+        </button>
 
-</button>
+        <button class="that">
+          <a onclick="cart()">
+            <i class="fa fa-shopping-cart" style="font-size:15px; color:black; margin-right: 10px;"></i>ADD TO CART</a>
+        </button>
 
-<button class="heart">
-  <a href="../whislist/wishlist.html"><i class="fa fa-heart" style="font-size:15px; color:black;"><strong>Whislist</strong></i></a>
- </button>
+        <button class="heart">
+          <a href="../whislist/wishlist.html"><i class="fa fa-heart"
+              style="font-size:15px; color:black;"><strong>Whislist</strong></i></a>
+        </button>
 
-</div>
+      </div>
 
-</div> -->
+    </div>
 
   </div>
 
@@ -280,275 +277,64 @@
   </section>
   <script>
 
-    let product_details =
-    {
-      image: {
-        source: "../../assets/img/10.jpeg",
-        alt: "product"
-      },
-      heading: "Kanchipuram Saree",
-      price: {
-        actual: {
-          type: "₹",
-          value: 7500
-        },
+    let product_upload = JSON.parse(localStorage.getItem("product_crud"));
 
-        discount: {
-          type: "% off",
-          value: 25,
-        },
-        current: {
-          type: "₹",
-          value: 5200,
+
+    const product_id = new URLSearchParams(window.location.search).get('product');
+
+
+    const product = product_upload.find(product => product.product_uuid === product_id);
+
+    if (product) {
+      let name = document.getElementById("product_name").innerText = product.productname;
+      let price = document.getElementById("price").innerText = "₹" + product.discountprice;
+      let actual_price = document.getElementById("actualprice").innerText = "₹" + product.productprice;
+      let description = document.getElementById("description").innerText = product.descrip;
+      let dpercentage = document.getElementById("percentage").innerText = product.productoffer + "% off";
+
+    }
+
+    function already() {
+      let uniqueID_user = localStorage.getItem("uniqueID_user");
+      if (uniqueID_user) {
+        window.location.href = "../buy now page/buy now details.html";
+        return;
+      }
+      else {
+        window.location.href = "../register page/rigister page.html";
+        return;
+      }
+    }
+
+    function cart() {
+      e.preventDefault();
+      let addto_cart = JSON.parse(localStorage.getItem("addto_cart")) || [];
+
+      let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
+
+      let product_uuid = new URLSearchParams(window.location.search).get('product');
+
+      let prod_data = addto_cart.find(product => product.product_id === product_uuid && product.buyer_id === user_unique);
+
+      if (prod_data) {
+        alert('This Product Is Already Added In Your Cart Page');
+        return;
+      } else {
+        let prod = {
+          product_id: product_uuid,
+          buyer_id: user_unique
         }
 
-      },
-      product_description: "Available Price",
-      description: [
-        { text: "Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C." },
-        { text: "Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C." },
-        { text: "Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C." },
-        { text: "Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C." }
-      ],
-
-      
+        addto_cart.push(prod);
+        localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
+        alert('Your Product Has Been Added To Your Cart')
+      }
     }
-
-    let product_upload = JSON.parse(localStorage.getItem("product_crud"));
-    console.log(product_upload)
-
-    // div_meenu
-
-    div_meenu = document.createElement("div");
-    div_meenu.setAttribute("class", "meenu");
-    console.log(div_meenu);
-
-
-    // // div_product
-
-    div_product = document.createElement("div");
-    div_product.setAttribute("class", " product");
-    div_meenu.append(div_product);
-
-
-    // <img> </img>
-
-    img = document.createElement("img");
-    img.setAttribute("src", product_details["image"]["source"]);
-    img.setAttribute("alt", "product-1");
-    img.setAttribute("height", "450px");
-    img.setAttribute("width", "450px");
-    div_product.append(img);
-
-
-    // div_product_1
-
-    div_product_1 = document.createElement("div");
-    div_product_1.setAttribute("class", "product-1");
-    div_product.append(div_product_1);
-
-
-    // img
-    for (i = 0; i < 4; i++) {
-      img_1 = document.createElement("img");
-      img_1.setAttribute("src", product_details["image"]["source"]);
-      img_1.setAttribute("alt", product_details["image"]["alt"]);
-      img_1.setAttribute("width", "86px")
-      div_product_1.append(img_1);
-    }
-
-
-
-
-    // div_sneaker
-
-    div_sneaker = document.createElement("div");
-    div_sneaker.setAttribute("class", "sneaker");
-    console.log(div_sneaker);
-
-    // h4
-    h4 = document.createElement("h4");
-    h4.innerText = "KAITHTHARI";
-    div_sneaker.append(h4);
-
-
-    // h2
-    h2 = document.createElement("h2");
-    h2.innerText = product_upload[0]["productname"];
-    div_sneaker.append(h2);
-
-
-    // div_rupeeees
-
-    div_rupeeees = document.createElement("div");
-    div_rupeeees.setAttribute("class", "rupeeees");
-    div_sneaker.append(div_rupeeees);
-
-
-    // div_akka
-
-    div_akka = document.createElement("div");
-    div_akka.setAttribute("class", "akka");
-    div_rupeeees.append(div_akka);
-
-
-    // <p></p>
-
-    p = document.createElement("p");
-    p.innerText = "Special Price";
-    div_akka.append(p);
-
-    // <b></b> 
-
-    b = document.createElement("b");
-    b.innerText = product_upload[0]["productprice"];
-    div_akka.append(b);
-
-
-    //  <span></span>
-
-    span = document.createElement("span");
-    span.innerText = product_upload[0]["productoffer"];
-    div_akka.append(span);
-
-
-    //  div_ic 
-    div_ic = document.createElement("div");
-    div_ic.setAttribute("class", "ic");
-    div_sneaker.append(div_ic);
-
-
-    // <s></s>
-
-    s = document.createElement("s");
-    s.innerText = product_details.price.actual.type + product_details.price.actual.value;
-    div_ic.append(s);
-
-
-
-    //   div_review 
-
-    div_review = document.createElement("div");
-    div_review.setAttribute("class", "review");
-    div_review.innerText = "REVIEW :"
-    div_sneaker.append(div_review);
-
-
-
-    // <i class=fa fa-star> </i>
-    for (let i = 0; i < 5; i++) {
-
-      i_fa = document.createElement("i");
-      i_fa.setAttribute("class", "fa fa-star");
-      i_fa.setAttribute("style", "font-size:24px");
-      i_fa.setAttribute("style", "color:orange");
-      div_review.append(i_fa);
-
-    }
-
-    // <div_content-details> 
-
-    div_content_details = document.createElement("div");
-    div_content_details.setAttribute("class", "content-details");
-    div_sneaker.append(div_content_details);
-
-
-    // <h3></h3>
-
-    h3 = document.createElement("h3");
-    h3.innerText = "Available price";
-    div_content_details.append(h3);
-
-    const descript = product_details.description;
-    const no_of_list = descript.length;
-    //<p_Special>
-    // for (let j = 0; j < no_of_list; j++) {
-      p_spcial = document.createElement("P");
-      p_spcial.innerText = product_upload[0]["descrip"];
-      div_content_details.append(p_spcial);
-    
-
-
-
-
-    // div_what
-
-    div_what = document.createElement("div");
-    div_what.setAttribute("class", "what");
-    console.log(div_what);
-
-    // button_the
-
-    button_the = document.createElement("button");
-    button_the.setAttribute("class", "the");
-    div_what.append(button_the);
-
-
-    // a_href
-    a_href = document.createElement("a");
-    a_href.setAttribute("href", product_details["link"]);
-    button_the.append(a_href);
-
-    // <strong>
-    strong_2 = document.createElement("strong");
-    strong_2.innerText = "BUY NOW "
-    a_href.append(strong_2);
-
-
-    // button_that
-
-    button_that = document.createElement("button");
-    button_that.setAttribute("class", "that");
-    div_what.append(button_that);
-
-    // a_href_1
-    a_href_1 = document.createElement("a");
-    a_href_1.setAttribute("href", "../buy now page/add to cart.html");
-    a_href_1.innerText = "Add To Cart";
-    button_that.append(a_href_1);
-
-    // <i>Cart</i>
-    i_add = document.createElement("i");
-    i_add.setAttribute("class", "fa fa-shopping-cart");
-    i_add.setAttribute("style", "font-size:15px");
-    i_add.setAttribute("color", "black");
-    i_add.setAttribute("margin-right", "10px");
-    a_href_1.append(i_add);
-
-
-
-
-    // button_heart
-
-    button_heart = document.createElement("button");
-    button_heart.setAttribute("class", "heart");
-    div_what.append(button_heart);
-
-    // a_href_2
-
-    a_href_2 = document.createElement("a");
-    a_href_2.setAttribute("href", "../whislist/wishlist.html");
-    button_heart.append(a_href_2);
-
-    // <i>wish</i>
-    i_whish = document.createElement("i");
-    i_whish.setAttribute("class", "fa fa-heart");
-    i_whish.setAttribute("style", "font-size:15px");
-    i_whish.setAttribute("color", "black");
-    a_href_2.append(i_whish);
-
-    // <strong>
-    strong_1 = document.createElement("strong");
-    strong_1.innerText = "Whishlist"
-    i_whish.append(strong_1);
-
-
-    document.querySelector("div.section").append(div_meenu);
-    document.querySelector("div.section").append(div_sneaker);
-    document.querySelector("div.sneaker").append(div_what);
 
   </script>
 
+  <script src="../../JS/header.js"></script>
+  <script>home()</script>
 </body>
 
 </html>
