@@ -46,8 +46,8 @@
           <input type="password" id="confirm_password" class="passs" placeholder="confirm password" required>
         </div>
 
-        <button class="submit" type="submit"><b>Creat</b></button>
-      
+        <button class="submit" type="submit"><b>Create</b></button>
+
         <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button> </a>
 
       </form>
@@ -68,48 +68,81 @@
 
   <script>
     function signUp(e) {
-      e.preventDefault();
-      let email = document.getElementById("email").value;
-      let confirm_password = document.getElementById("confirm_password").value;
-      let password = document.getElementById("password").value;
+      // Get form values
       let name = document.getElementById("name").value;
-      let user_uuid = uuidv4();
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let confirmPassword = document.getElementById("confirm_password").value;
+      let userUuid = uuidv4();
 
-      let user_cred = JSON.parse(localStorage.getItem('user_cred')) || [];
-      console.log(user_cred);
+      // Get user credentials from local storage or create an empty array
+      let userCred = JSON.parse(localStorage.getItem('user_cred')) || [];
 
-      let exist = user_cred.length &&
-        JSON.parse(localStorage.getItem('user_cred')).some(data =>
-          data.email.toLowerCase() == email.toLowerCase()
+      // Check if user already exists
+      let exist = userCred.length && userCred.some(data => data.email.toLowerCase() === email.toLowerCase());
 
-        );
       if (!exist) {
-
-        if (password == confirm_password) {
-          user_cred.push({ name, email, confirm_password, password, user_uuid });
-          localStorage.setItem('user_cred', JSON.stringify(user_cred));
+        // Add user credentials to local storage if passwords match
+        if (password === confirmPassword) {
+          userCred.push({ name, email, confirmPassword, password, userUuid });
+          localStorage.setItem('user_cred', JSON.stringify(userCred));
           console.log(localStorage.getItem('user_cred'));
           document.querySelector("form").reset();
           document.getElementById('email').focus();
           alert('Account created successfully');
           location.href = "../login page/logion page.html";
+        } else {
+          alert("Confirm password does not match");
         }
-
-        else {
-          alert("Confirm password does not match")
-        }
-      }
-      else {
+      } else {
         alert('Sorry the User already exists! \n Try with a new Email.');
         document.querySelector('form').reset();
       }
-
+      e.preventDefault();
     }
 
-    function loginpage(){
-      window.location.href="../login page/logion page.html" 
-    }
+    // function signUp(e) {
+    //   // Get form values
+    //   let name = document.getElementById("name").value;
+    //   let email = document.getElementById("email").value;
+    //   let password = document.getElementById("password").value;
+    //   let confirmPassword = document.getElementById("confirm_password").value;
+    //   let userUuid = uuidv4();
 
+    //   // Get user credentials from local storage or create an empty array
+    //   let userCred = JSON.parse(localStorage.getItem('user_cred')) || [];
+
+    //   // Check if user already exists
+    //   let exist = userCred.length && userCred.some(data => data.email.toLowerCase() === email.toLowerCase());
+
+    //   if (!exist) {
+    //     // Validate user input
+    //     if (password === confirmPassword) {
+    //       // Add user credentials to local storage if passwords match
+    //       if (password === confirmPassword) {
+    //         userCred.push({ name, email, password, userUuid });
+    //         localStorage.setItem('user_cred', JSON.stringify(userCred));
+    //         console.log(localStorage.getItem('user_cred'));
+    //         document.querySelector("form").reset();
+    //         document.getElementById('email').focus();
+    //         alert('Account created successfully');
+    //         location.href = "../login page/logion page.html";
+    //       } else {
+    //         alert("Confirm password does not match");
+    //       }
+    //     } else {
+    //       alert("Please fill in all fields with valid inputs");
+    //     }
+    //   } else {
+    //     alert('Sorry the user already exists! \n Please try with a new email.');
+    //     document.querySelector('form').reset();
+    //   }
+    //   e.preventDefault();
+    // }
+
+    function loginpage() {
+      window.location.href = "../login page/logion page.html"
+    }
 
   </script>
 

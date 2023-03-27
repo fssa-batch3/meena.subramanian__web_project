@@ -92,7 +92,7 @@
                         class="edit-btn"><strong>EDIT</strong></button></a>
                 <a href="../seller products/seller home.html"><button type="submit" onclick="logOut()" class="log">
                         <strong>LOG OUT</strong></button></a>
-                <button type="submit" onclick="deleteAcc()" class="run"><strong>DELETE</strong></button></a>
+                <!-- <button type="submit" onclick="deleteAcc()" class="run"><strong>DELETE</strong></button></a> -->
             </div>
         </div>
     </section>
@@ -123,32 +123,32 @@
         document.getElementById("district").innerText = seller["district"];
 
 
-        // delete account function
-        function deleteAcc() {
-            if (confirm("Are you sure to delete this account ?")) {
-                //get value from local storage
-                let uniqueID_seller = JSON.parse(localStorage.getItem("uniqueID_seller"));
-                let seller_cred = JSON.parse(localStorage.getItem("seller_cred"));
-                function profile_data(e) {
-                    return e.email == uniqueID_seller;
-                }
-                person_data = seller_cred.find(profile_data);
-                // find the index of person_data from userData
-                let result = seller_cred.indexOf(person_data);
+        // // delete account function
+        // function deleteAcc() {
+        //     if (confirm("Are you sure to delete this account ?")) {
+        //         //get value from local storage
+        //         let uniqueID_seller = JSON.parse(localStorage.getItem("uniqueID_seller"));
+        //         let seller_cred = JSON.parse(localStorage.getItem("seller_cred"));
+        //         function profile_data(e) {
+        //             return e.email == uniqueID_seller;
+        //         }
+        //         person_data = seller_cred.find(profile_data);
+        //         // find the index of person_data from userData
+        //         let result = seller_cred.indexOf(person_data);
 
-                // deleting the indexof person data
-                seller_cred.splice(resu = 1);
-                localStorage.setItem("seller_cred", JSON.stringify(seller_cred));
-                window.location.href = "../seller products/seller home.html";
-            }
-        }
+        //         // deleting the indexof person data
+        //         seller_cred.splice(resu = 1);
+        //         localStorage.setItem("seller_cred", JSON.stringify(seller_cred));
+        //         window.location.href = "../seller products/seller home.html";
+        //     }
+        // }
 
 
         // logout function
         function logOut() {
             if (confirm("Are you going to Logout ?")) {
                 // deleting the unique_id of person data
-                localStorage.setItem("user_cred", "")
+                localStorage.removeItem("uniqueID_seller")
                 alert("Sucessfully Logged out!")
             }
             window.location.href = "../seller products/seller home.html";

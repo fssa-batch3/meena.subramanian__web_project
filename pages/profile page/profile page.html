@@ -107,7 +107,7 @@
             <div class="buttons">
                 <a href="../profile page/profile edit page.html"><button type="button" class="edit-btn"><strong>EDIT</strong></button></a>
                 <a href="../../index.html"><button type="submit" onclick="logOut()" class="log"> <strong>LOG OUT</strong></button></a>
-                <button type="submit" onclick="deleteAcc()" class="run"> <strong>DELETE</strong></button></a>
+                <!-- <button type="submit" onclick="deleteAcc()" class="run"> <strong>DELETE</strong></button></a> -->
              </div>
         </div>
     </section>
@@ -136,32 +136,36 @@
             document.getElementById("district").innerText = person_data["district"];
 
 
-            // delete account function
-        function deleteAcc(){
-            if(confirm("Are you sure to delete this account ?")){
-            //get value from local storage
-            let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
-            let user_cred = JSON.parse(localStorage.getItem("user_cred"));
-            function profile_data(e){
-                return e.email == uniqueID_user;
-            }
-            person_data = user_cred.find(profile_data);
-            // find the index of person_data from userData
-            let result = user_cred.indexOf(person_data);
-
-            // deleting the indexof person data
-            user_cred.splice(resu= 1);
-            localStorage.setItem("user_cred", JSON.stringify(user_cred));
-            window.location.href="../../index.html";
-        }
-    }
+    //         // delete account function
+    //     function deleteAcc(){
+    //         if(confirm("Are you sure to delete this account ?")){
+    //         //get value from local storage
+    //         let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
+    //         console.log(uniqueID_user);
+    //         let user_cred = JSON.parse(localStorage.getItem("user_cred"));
+    //         console.log(user_cred);
+    //         function profile_data(e){
+    //             return e.email == uniqueID_user;
+    //         }
+    //         person_data = user_cred.find(profile_data);
+    //         console.log(person_data);
+    //         // find the index of person_data from userData
+    //         let result = user_cred.indexOf(person_data);
+    //         console.log(result);
+    //         // deleting the indexof person data
+    //         user_cred.splice(result, 1)
+    //         // user_cred.splice(resu = 1);
+    //         localStorage.setItem("user_cred", JSON.stringify(user_cred));
+    //         window.location.href="../../index.html";
+    //     }
+    // }
 
 
     // logout function
     function logOut(){
             if(confirm("Are you going to Logout ?")){
            // deleting the unique_id of person data
-            localStorage.removeItem("uniqueID")
+            localStorage.removeItem("uniqueID_user")
             alert("Sucessfully Logged out!")
         }
         window.location.href="../../index.html";

@@ -11,9 +11,9 @@ var seller = myOrigin + "/pages/seller products/seller home.html";
 var profile = myOrigin + "/pages/profile page/profile page.html"
 var cart = myOrigin + "/pages/buy now page/add to cart.html"
 var order = myOrigin + "/pages/orders/my orders.html"
-var favorite = myOrigin + "/pages/whislist/wishlist.html"
+var  favorite = myOrigin + "/pages/whislist/wishlist.html"
 
-let beforeLogin = 
+var beforeLogin = 
 `
 <div class="logo">
 <a href="${logo}"><img src="${logoSrc}" alt="logo" width="100px" height="80px"></a>
@@ -40,7 +40,7 @@ let beforeLogin =
 </div>
 `
 
-let afterLogin =
+var afterLogin =
     `
 <div class="logo">
 <a href="${logo}"><img src="${logoSrc}" alt="logo" width="100px" height="80px"></a>

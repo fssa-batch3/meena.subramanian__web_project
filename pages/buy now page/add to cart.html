@@ -14,12 +14,11 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-
 </head>
 
 <body>
 
-    <header>
+    <header id="header">
         <!-- <div class="logo">
             <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
                     height="80px"></a>
@@ -130,7 +129,7 @@
         <div class="all">
             <p>₹ 11000<br>
                 ₹100<br>
-               ₹11100
+                ₹11100
             </p>
         </div>
     </div>
@@ -206,104 +205,124 @@
             </div>
         </section>
     </section>
-    <script> 
+    <script src="../../JS/header.js"></script>
+    <script>
+        let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
+        let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
+        let product_crud = JSON.parse(localStorage.getItem("product_crud"));
 
-   
-    // function show(e){
-    // e.preventDefault();
-    let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
-    let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
-    let product_crud = JSON.parse(localStorage.getItem("product_crud"));
+        for (i = 0; i < addto_cart.length; i++) {
+            if (addto_cart[i].buyer_id === user_unique) {
 
-    for(i=0; i<addto_cart.length; i++){
-        if(addto_cart[i].buyer_id === user_unique){
 
-            let prod_data = product_crud.find(product => product.product_uuid === addto_cart[i].product_id);
+                
+                let prod_data = product_crud.find(product => product.product_uuid === addto_cart[i].product_id);
 
-            //  div_tag
-            let div_tag = document.createElement("div");
-            div_tag.setAttribute("class","tag");
-            
-            // img
-            let img = document.createElement("img");
-            img.setAttribute("src","../../assets/img/6.jpeg");
-            img.setAttribute("alt","photo");
-            div_tag.append(img);
+                //  div_tag
+                let div_tag = document.createElement("div");
+                div_tag.setAttribute("class", "tag");
 
-            // div_details
-            let div_details = document.createElement("div");
-            div_details.setAttribute("class","details");
-            div_tag.append(div_details);
+                // img
+                let img = document.createElement("img");
+                img.setAttribute("src", "../../assets/img/6.jpeg");
+                img.setAttribute("alt", "photo");
+                div_tag.append(img);
 
-            // para
-            let para = document.createElement("p");
-            para.innerText = prod_data.productname;
-            div_details.append(para);
+                // div_details
+                let div_details = document.createElement("div");
+                div_details.setAttribute("class", "details");
+                div_tag.append(div_details);
 
-            // h6
-            let h6 = document.createElement("h6");
-            div_details.append(h6);
+                // para
+                let para = document.createElement("p");
+                para.innerText = prod_data.productname;
+                div_details.append(para);
 
-            // a
-            let a = document.createElement("button");
-            a.setAttribute("class","remove");
-            a.setAttribute("id","remove");
-            a.innerText = "Delete"
-            a.onclick = function (event) {
+                // h6
+                let h6 = document.createElement("h6");
+                div_details.append(h6);
+
+                // a
+                let a = document.createElement("button");
+                a.setAttribute("class", "remove");
+                a.setAttribute("id", "remove");
+                // a.setAttribute("onclick", "remove(event,prod_data.product_uuid)")
+                a.innerText = "Delete"
+                a.onclick = function (event) {
                     remove(event, prod_data.product_uuid)
                 }
-            h6.append(a);
+                h6.append(a);
 
-            // div
-            let div_quan = document.createElement("div");
-            div_quan.setAttribute("class","quan");
-            div_tag.append(div_quan);
+                // div
+                let div_quan = document.createElement("div");
+                div_quan.setAttribute("class", "quan");
+                div_tag.append(div_quan);
 
-            // input
-            let input = document.createElement("input");
-            input.setAttribute("type","number");
-            input.setAttribute("min","0");
-            input.setAttribute("value","0");
-            div_quan.append(input);
+                // input
+                let input = document.createElement("input");
+                input.setAttribute("type", "number");
+                input.setAttribute("min", "0");
+                input.setAttribute("value", "0");
+                div_quan.append(input);
 
-            // div
-            let div_ten = document.createElement("div");
-            div_ten.setAttribute("class","ten");
-            div_ten.innerText = prod_data.productprice;
-            div_tag.append(div_ten);
+                // div
+                let div_ten = document.createElement("div");
+                div_ten.setAttribute("class", "ten");
+                div_ten.innerText = "₹ " + prod_data.productprice;
+                div_tag.append(div_ten);
 
-            document.querySelector("div.addcar").append(div_tag);
+                document.querySelector("div.addcar").append(div_tag);
+            }
         }
-    }
-// } 
 
-function remove(e, uniqueid) {
-    e.preventDefault();
-    let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
-    let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
+        // function remove(event, uniqueid) {
+        //     event.preventDefault();
+        //     if (!localStorage.getItem("addto_cart")) {
+        //         localStorage.setItem("addto_cart", JSON.stringify([]));
+        //     }
+        //     if (!localStorage.getItem("uniqueID_user")) {
+        //         localStorage.setItem("uniqueID_user", "");
+        //     }
+        //     let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
+        //     let uniqueID_user = localStorage.getItem("uniqueID_user");
 
-    const index = addto_cart.findIndex(item => item.product_id === uniqueid && item.buyer_id === uniqueID_user);
+        //     const index = addto_cart.findIndex(item => item.product_id === uniqueid.toString() && item.buyer_id === uniqueID_user);
 
-    if (index !== -1) {
-        if (confirm("Are you sure you want to remove your product")) {
-            addto_cart.splice(index, 1);
-            localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
-            window.location.reload();
-        } else {
-            return;
+        //     if (index !== -1) {
+        //         if (confirm("Are you sure you want to remove your product")) {
+        //             addto_cart.splice(index, 1);
+        //             localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
+        //         } else {
+        //             return;
+        //         }
+        //     }
+        // }
+
+
+        function remove(e, uniqueid) {
+            if (!e || typeof uniqueid !== 'string') {
+                return
+            }
+
+            e.preventDefault();
+
+            const addto_cart = JSON.parse(localStorage.getItem('addto_cart') || '[]');
+            const uniqueID_user = JSON.parse(localStorage.getItem('uniqueID_user') || '');
+
+            const index = addto_cart.findIndex(
+                item => item.product_id === uniqueid && item.buyer_id === uniqueID_user
+            );
+
+            if (index !== -1 && confirm('Are you sure you want to remove your product')) {
+                addto_cart.splice(index, 1);
+                localStorage.setItem('addto_cart', JSON.stringify(addto_cart));
+                window.location.reload();
+            }
         }
-    }
-}
 
-  </script>
-  <script src="../../JS/header.js"></script>
-  <script>home()</script>
+
+        home();
+    </script>
+
 </body>
-
-
 </html>
-
-
-
-
-

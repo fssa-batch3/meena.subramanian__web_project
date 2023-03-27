@@ -3,7 +3,7 @@
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
 	text-decoration: none;
-	
+
 }
 	
 
@@ -146,13 +146,10 @@ section{
 }
 
 .hol{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display:grid;
+	grid-template-columns: repeat(3,350px);
     justify-content: space-evenly;
- 
-    
-    
+  
 }
 
 .run{

@@ -122,13 +122,12 @@
 
         </button>
 
-        <button class="that">
-          <a onclick="cart()">
-            <i class="fa fa-shopping-cart" style="font-size:15px; color:black; margin-right: 10px;"></i>ADD TO CART</a>
+        <button class="that" onclick="cart(event)">
+            <a><i class="fa fa-shopping-cart" style="font-size:15px; color:black; margin-right: 10px;"></i>ADD TO CART</a>
         </button>
 
-        <button class="heart">
-          <a href="../whislist/wishlist.html"><i class="fa fa-heart"
+        <button class="heart" onclick="whish(event)">
+          <a><i class="fa fa-heart"
               style="font-size:15px; color:black;"><strong>Whislist</strong></i></a>
         </button>
 
@@ -275,6 +274,8 @@
       </div>
     </section>
   </section>
+  
+  <script src="../../JS/header.js"></script>
   <script>
 
     let product_upload = JSON.parse(localStorage.getItem("product_crud"));
@@ -293,6 +294,8 @@
       let dpercentage = document.getElementById("percentage").innerText = product.productoffer + "% off";
 
     }
+   
+ 
 
     function already() {
       let uniqueID_user = localStorage.getItem("uniqueID_user");
@@ -306,7 +309,7 @@
       }
     }
 
-    function cart() {
+    function cart(e) {
       e.preventDefault();
       let addto_cart = JSON.parse(localStorage.getItem("addto_cart")) || [];
 
@@ -331,10 +334,35 @@
       }
     }
 
-  </script>
 
-  <script src="../../JS/header.js"></script>
-  <script>home()</script>
+     
+    function whish(e) {
+      e.preventDefault();
+      let whish_list = JSON.parse(localStorage.getItem("whish_list")) || [];
+
+      let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
+
+      let product_uuid = new URLSearchParams(window.location.search).get('product');
+
+      let prod_data = whish_list.find(product => product.product_id === product_uuid && product.buyer_id === user_unique);
+
+      if (prod_data) {
+        alert('This Product Is Already Added In Your whishlist Page');
+        return;
+      } else {
+        let prod = {
+          product_id: product_uuid,
+          buyer_id: user_unique
+        }
+
+        whish_list.push(prod);
+        localStorage.setItem("whish_list", JSON.stringify(whish_list));
+        alert('Your Product Has Been Added To Your whiahlist')
+      }
+    }
+    home()
+
+  </script>
 </body>
 
 </html>
