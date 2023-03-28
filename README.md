@@ -9,8 +9,8 @@ User flow: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvI
 
 Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ;
 
-<!-- 
-1.Register CRUD
+
+1.Register CRUD ( COMPLETD )
 
     Create user profile
   
@@ -21,7 +21,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     delete user profile
 
 
-2.Product CRUD
+2.Product CRUD ( COMPLETD )
 
     Create product
    
@@ -36,7 +36,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Add and Remove product list
 
 
-3.Add to cart
+3.Add to cart ( COMPLETD )
 
     Creat Product cart
     
@@ -47,7 +47,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Delete product cart
 
 
-4.Whishlist
+4.Whishlist ( COMPLETD )
 
      Creat Product list
     
@@ -58,7 +58,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Delete product list
 
 
-5.Seller CRUD
+5.Seller CRUD ( COMPLETD )
 
     Profile create
 
@@ -66,11 +66,13 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
 
     Profile read
 
-    Profile delete -->
+    Profile delete 
 
 
 E-COMMERCE
+
 BUYER:
+
 CREATE AN ACCOUNT : ( COMPLETD )
 * Scenario 1: Successfully created an account
     * Steps :
