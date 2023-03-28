@@ -10,7 +10,7 @@ User flow: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvI
 Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrvIsfQ;
 
 
-1.Register CRUD ( COMPLETD )
+1.Register CRUD ( COMPLETED )
 
     Create user profile
   
@@ -21,7 +21,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     delete user profile
 
 
-2.Product CRUD ( COMPLETD )
+2.Product CRUD ( COMPLETED )
 
     Create product
    
@@ -36,7 +36,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Add and Remove product list
 
 
-3.Add to cart ( COMPLETD )
+3.Add to cart ( COMPLETED )
 
     Creat Product cart
     
@@ -47,7 +47,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Delete product cart
 
 
-4.Whishlist ( COMPLETD )
+4.Whishlist ( COMPLETED )
 
      Creat Product list
     
@@ -58,7 +58,7 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
     Delete product list
 
 
-5.Seller CRUD ( COMPLETD )
+5.Seller CRUD ( COMPLETED )
 
     Profile create
 
@@ -73,7 +73,7 @@ E-COMMERCE
 
 BUYER:
 
-CREATE AN ACCOUNT : ( COMPLETD )
+CREATE AN ACCOUNT : ( COMPLETED )
 * Scenario 1: Successfully created an account
     * Steps :
         1. Navigate to the sign-up page.
@@ -82,7 +82,7 @@ CREATE AN ACCOUNT : ( COMPLETD )
     * Expected result :
         * The user is redirected to the login page.
 
-CREATE AN ACCOUNT : ( COMPLETD )
+CREATE AN ACCOUNT : ( COMPLETED )
 * Scenario 1: Successfully logged in to your account
     * steps :
         1. Navigate to the login page.
@@ -91,7 +91,7 @@ CREATE AN ACCOUNT : ( COMPLETD )
     * Expected result :
         * The user is redirected to the home page.
 
-VIEW PROFILE :
+VIEW PROFILE :  ( COMPLETED )
 * Scenario 1: Create a profile
     * steps :
         1. Login as a user.
@@ -100,7 +100,7 @@ VIEW PROFILE :
     * Expected result :
         * The user can view their profile.
         
-EDIT PROFILE :
+EDIT PROFILE :  ( COMPLETED )
 * Scenario 1: Edit the profile
     * steps :
         1. Login as a user.
@@ -111,7 +111,7 @@ EDIT PROFILE :
     * Expected result :
         * The details of the user has been updated.
 
-VIEW PRODUCTS/ITEMS : ( COMPLETD )
+VIEW PRODUCTS/ITEMS : ( COMPLETED )
 * Scenario 1: Successfully view products/items
     * Steps :
         1. Login as a buyer.
@@ -120,7 +120,7 @@ VIEW PRODUCTS/ITEMS : ( COMPLETD )
     * Expected result :
         * The user can view the list of available products/items.
 
-VIEW PRODUCT/ITEM DETAIL : ( COMPLETD )
+VIEW PRODUCT/ITEM DETAIL : ( COMPLETED )
 * Scenario 1: Successfully view product/item details
     * Steps:
         1. Login as a buyer.
@@ -142,7 +142,7 @@ BUY A PRODUCT/ITEM : ( NOT YET STARTED )
         * An order confirmation message is sent to the user's phone number.
         * The product/item's stock is reduced by the purchased quantity.
 
-ADD PRODUCT/ITEM TO THE CART : ( COMPLETD )
+ADD PRODUCT/ITEM TO THE CART : ( COMPLETED )
 * Scenario 1: Successfully add product/item to cart
     * Steps :
         1. Login as a buyer.
@@ -153,7 +153,7 @@ ADD PRODUCT/ITEM TO THE CART : ( COMPLETD )
         *  If you want check the product means go to the cart page.
         * The product/item is added to the user's cart.
 
-VIEW PRODUCTS/ITEMS IN THE CART : ( COMPLETD )
+VIEW PRODUCTS/ITEMS IN THE CART : ( COMPLETED )
 * Scenario 1: Successfully view products/items in cart
     * Steps :
         1. Login as a buyer.
@@ -163,7 +163,7 @@ VIEW PRODUCTS/ITEMS IN THE CART : ( COMPLETD )
         * The user can view the list of items in the cart.
 
 
-REMOVE PRODUCTS/ITEMS FROM THE CART : ( COMPLETD )
+REMOVE PRODUCTS/ITEMS FROM THE CART : ( COMPLETED )
 * Scenario 1: Successfully remove item from cart
     * Steps:
         1. Login as a buyer.
@@ -173,7 +173,7 @@ REMOVE PRODUCTS/ITEMS FROM THE CART : ( COMPLETD )
     * Expected result:
         * The item is removed from the user's cart.
         
-ADD PRODUCT/ITEM TO THE WISHLIST : ( COMPLETD )
+ADD PRODUCT/ITEM TO THE WISHLIST : ( COMPLETED )
 * Scenario 1: Successfully add product/item to the wishlist
     * Steps :
         1. Login as a buyer.
@@ -185,7 +185,7 @@ ADD PRODUCT/ITEM TO THE WISHLIST : ( COMPLETD )
         * The product/item is added to the wishlist.
        
 
-REMOVE PRODUCT/ITEM FROM THE WISHLIST : ( COMPLETD )
+REMOVE PRODUCT/ITEM FROM THE WISHLIST : ( COMPLETED )
 * Scenario 1: Remove the product/item from the wishlist
     * steps :
         1. Login as a buyer.
@@ -197,7 +197,7 @@ REMOVE PRODUCT/ITEM FROM THE WISHLIST : ( COMPLETD )
 
 SELLER :
 
-CREATE AN ACCOUNT :( COMPLETD )
+CREATE AN ACCOUNT :( COMPLETED )
 * Scenario 1: Successfully created an account
     * Steps :
         1. Navigate to the sign-up page.
@@ -206,7 +206,7 @@ CREATE AN ACCOUNT :( COMPLETD )
     * Expected result :
         * The user is redirected to the login page.
 
-CREATE AN ACCOUNT : ( COMPLETD )
+CREATE AN ACCOUNT : ( COMPLETED )
 * Scenario 1: Successfully logged in to your account
     * steps :
         1. Navigate to the login page.
@@ -236,7 +236,7 @@ EDIT SELLER PROFILE :( COMPLETED )
         * The details of the user has been updated.
 
 
-UPLOAD NEW PRODUCT TO SELL :  ( COMPLETD )
+UPLOAD NEW PRODUCT TO SELL :  ( COMPLETED )
 * Scenario 1: Successfully uploaded the new product
     * Steps :
         1. Login as a seller.
@@ -248,7 +248,7 @@ UPLOAD NEW PRODUCT TO SELL :  ( COMPLETD )
          * The new product is created and added to the seller's product list page.
 
 
-    VIEW THE LIST OF PRODUCTS :  ( COMPLETD )
+    VIEW THE LIST OF PRODUCTS :  ( COMPLETED )
 * Scenario 1: Successfully view list of products
     * Steps :
         1. Login as a seller.
@@ -258,7 +258,7 @@ UPLOAD NEW PRODUCT TO SELL :  ( COMPLETD )
         * The seller can view the list of products.
 
 
-    VIEW THE DETAILS OF PRODUCTS :  ( COMPLETD )
+    VIEW THE DETAILS OF PRODUCTS :  ( COMPLETED )
 * Scenario 1: Successfully view details of products
     * Steps :
         1. Login as a seller.
@@ -269,7 +269,7 @@ UPLOAD NEW PRODUCT TO SELL :  ( COMPLETD )
         * The seller can view the Details of products.
 
 
-EDIT THE PRODUCT DETAILS :( COMPLETD )
+EDIT THE PRODUCT DETAILS :( COMPLETED )
 * Scenario 1: Successfully edit the product details
     * Steps :
         1. Login as a seller.
