@@ -89,7 +89,7 @@ CREATE AN ACCOUNT : ( COMPLETD )
     * Expected result :
         * The user is redirected to the home page.
 
-<!-- VIEW PROFILE :
+VIEW PROFILE :
 * Scenario 1: Create a profile
     * steps :
         1. Login as a user.
@@ -97,6 +97,7 @@ CREATE AN ACCOUNT : ( COMPLETD )
         3. View the user details such as name and phone number.
     * Expected result :
         * The user can view their profile.
+        
 EDIT PROFILE :
 * Scenario 1: Edit the profile
     * steps :
@@ -106,7 +107,7 @@ EDIT PROFILE :
         4. Update the user details.
         5. Click "Save" button to save the details.
     * Expected result :
-        * The details of the user has been updated. -->
+        * The details of the user has been updated.
 
 VIEW PRODUCTS/ITEMS : ( COMPLETD )
 * Scenario 1: Successfully view products/items
@@ -212,7 +213,7 @@ CREATE AN ACCOUNT : ( COMPLETD )
     * Expected result :
         * The user is redirected to the seller product list page.
 
-<!-- VIEW PROFILE :
+VIEW SELLER PROFILE :( COMPLETED )
 * Scenario 1: Create a profile
     * steps :
         1. Login as a user.
@@ -220,7 +221,8 @@ CREATE AN ACCOUNT : ( COMPLETD )
         3. View the user details such as name and phone number.
     * Expected result :
         * The user can view their profile.
-EDIT PROFILE :
+
+EDIT SELLER PROFILE :( COMPLETED )
 * Scenario 1: Edit the profile
     * steps :
         1. Login as a user.
@@ -229,7 +231,7 @@ EDIT PROFILE :
         4. Update the user details.
         5. Click "Save" button to save the details.
     * Expected result :
-        * The details of the user has been updated. -->
+        * The details of the user has been updated.
 
 
 UPLOAD NEW PRODUCT TO SELL :  ( COMPLETD )

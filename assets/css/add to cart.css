@@ -178,7 +178,7 @@ h6 button {
 #button a{
     text-decoration: none;
     color:black;
-    
+    margin-bottom:30px;
 }
 
 #button{
@@ -188,6 +188,7 @@ h6 button {
     padding:10px 10px 10px 10px;
     width:100px;
     margin-left:1150px;
+    margin-top: 30px;
 }
 
 
