@@ -1,5 +1,5 @@
 if (localStorage.getItem("product_crud")) {
-    return
+  
 }
 else {
     localStorage.setItem("product_crud", JSON.stringify(
@@ -18,4 +18,3 @@ else {
 }
 
 
-s
