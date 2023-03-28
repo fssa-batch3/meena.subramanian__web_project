@@ -70,7 +70,9 @@ Wire frame: https://drive.google.com/drive/folders/1s4pqzZvDE42ZA8bx_DT0HHggSgrv
 
 
 E-COMMERCE
+
 BUYER:
+
 CREATE AN ACCOUNT : ( COMPLETD )
 * Scenario 1: Successfully created an account
     * Steps :
