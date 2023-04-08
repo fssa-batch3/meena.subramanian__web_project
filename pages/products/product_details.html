@@ -315,6 +315,12 @@
 
       let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
 
+      let condition = JSON.parse(localStorage.getItem("uniqueID_user"))
+      if(!condition){
+        window.location.href = "../login page/logion page.html"
+        return
+      }
+
       let product_uuid = new URLSearchParams(window.location.search).get('product');
 
       let prod_data = addto_cart.find(product => product.product_id === product_uuid && product.buyer_id === user_unique);
@@ -325,7 +331,8 @@
       } else {
         let prod = {
           product_id: product_uuid,
-          buyer_id: user_unique
+          buyer_id: user_unique,
+          quandity : 1
         }
 
         addto_cart.push(prod);
@@ -341,6 +348,12 @@
       let whish_list = JSON.parse(localStorage.getItem("whish_list")) || [];
 
       let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
+
+      let condition = JSON.parse(localStorage.getItem("uniqueID_user"))
+      if(!condition){
+        window.location.href = "../login page/logion page.html"
+        return
+      }
 
       let product_uuid = new URLSearchParams(window.location.search).get('product');
 

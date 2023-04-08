@@ -119,20 +119,17 @@
 
 
 
-    <!-- <div class="total">
+    <div class="total">
         <div class="tax">
-            <p>Sub total <br>
-                Tax <br>
+            <p>
                 Total </p>
         </div>
 
         <div class="all">
-            <p>₹ 11000<br>
-                ₹100<br>
-                ₹11100
+            <p id="totalPrice">
             </p>
         </div>
-    </div> -->
+    </div>
 
     <button id="button"><a href="../login page/logion page.html"><b>BUY NOW</b></a></button>
 
@@ -215,7 +212,7 @@
             if (addto_cart[i].buyer_id === user_unique) {
 
 
-                
+
                 let prod_data = product_crud.find(product => product.product_uuid === addto_cart[i].product_id);
 
                 //  div_tag
@@ -258,22 +255,31 @@
                 div_quan.setAttribute("class", "quan");
                 div_tag.append(div_quan);
 
+                // update = document.createElement("button");
+                // update.setAttribute("type", "button");
+                // update.setAttribute("class", "btn update");
+                // update.setAttribute("style", "display:none");
+                // update.innerText = "Update"
+                // div_quan.append(update);
+
                 // input
                 let input = document.createElement("input");
                 input.setAttribute("type", "number");
-                input.setAttribute("min", "0");
-                input.setAttribute("value", "0");
+                input.setAttribute("min", "1");
+                input.setAttribute("value", "1");
                 div_quan.append(input);
 
                 // div
                 let div_ten = document.createElement("div");
                 div_ten.setAttribute("class", "ten");
-                div_ten.innerText = "₹ " + prod_data.productprice;
+                div_ten.innerText = "₹ " + prod_data.productprice * addto_cart[i].quandity;
                 div_tag.append(div_ten);
 
                 document.querySelector("div.addcar").append(div_tag);
             }
         }
+
+
 
         // function remove(event, uniqueid) {
         //     event.preventDefault();
@@ -306,8 +312,8 @@
 
             e.preventDefault();
 
-            const addto_cart = JSON.parse(localStorage.getItem('addto_cart') || '[]');
-            const uniqueID_user = JSON.parse(localStorage.getItem('uniqueID_user') || '');
+            const addto_cart = JSON.parse(localStorage.getItem('addto_cart') || []);
+            const uniqueID_user = JSON.parse(localStorage.getItem('uniqueID_user'));
 
             const index = addto_cart.findIndex(
                 item => item.product_id === uniqueid && item.buyer_id === uniqueID_user
@@ -325,4 +331,5 @@
     </script>
 
 </body>
+
 </html>
