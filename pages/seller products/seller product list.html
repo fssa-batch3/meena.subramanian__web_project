@@ -503,9 +503,9 @@ const add = document.querySelectorAll('button.run');
             
             let exist = delete_ids.length &&
                     JSON.parse(localStorage.getItem('add_products')).some(data =>
-                        data == id)
+                        data.product_uuid == id)
 
-                if (exist) {
+                if (!exist) {
                     alert("This product is removed from the page")
 
                     let uuid = JSON.parse(localStorage.getItem("add_products"));

@@ -127,6 +127,7 @@
 
         <div class="all">
             <p id="totalPrice">
+
             </p>
         </div>
     </div>
@@ -207,7 +208,7 @@
         let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
         let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
         let product_crud = JSON.parse(localStorage.getItem("product_crud"));
-
+        let total = 0;
         for (i = 0; i < addto_cart.length; i++) {
             if (addto_cart[i].buyer_id === user_unique) {
 
@@ -221,7 +222,7 @@
 
                 // img
                 let img = document.createElement("img");
-                img.setAttribute("src", "../../assets/img/6.jpeg");
+                img.setAttribute("src", prod_data.uppic);
                 img.setAttribute("alt", "photo");
                 div_tag.append(img);
 
@@ -253,56 +254,57 @@
                 // div
                 let div_quan = document.createElement("div");
                 div_quan.setAttribute("class", "quan");
+                div_quan.setAttribute("data-id", addto_cart[i]["product_id"]);
                 div_tag.append(div_quan);
-
-                // update = document.createElement("button");
-                // update.setAttribute("type", "button");
-                // update.setAttribute("class", "btn update");
-                // update.setAttribute("style", "display:none");
-                // update.innerText = "Update"
-                // div_quan.append(update);
 
                 // input
                 let input = document.createElement("input");
                 input.setAttribute("type", "number");
+                input.setAttribute("class", "quantity")
                 input.setAttribute("min", "1");
-                input.setAttribute("value", "1");
+                input.setAttribute("value", addto_cart[i].quantity);
+                // input.addEventListener("change", function () {
+                //     update.style.display = "block";
+                // });
                 div_quan.append(input);
 
                 // div
                 let div_ten = document.createElement("div");
                 div_ten.setAttribute("class", "ten");
-                div_ten.innerText = "₹ " + prod_data.productprice * addto_cart[i].quandity;
+                div_ten.innerText = "₹ " + prod_data.productprice * addto_cart[i].quantity;
                 div_tag.append(div_ten);
-
+             
+                 total += prod_data.productprice * addto_cart[i].quantity;
+                document.getElementById("totalPrice").innerText = total;
+    
                 document.querySelector("div.addcar").append(div_tag);
             }
         }
 
 
 
-        // function remove(event, uniqueid) {
-        //     event.preventDefault();
-        //     if (!localStorage.getItem("addto_cart")) {
-        //         localStorage.setItem("addto_cart", JSON.stringify([]));
-        //     }
-        //     if (!localStorage.getItem("uniqueID_user")) {
-        //         localStorage.setItem("uniqueID_user", "");
-        //     }
-        //     let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
-        //     let uniqueID_user = localStorage.getItem("uniqueID_user");
 
-        //     const index = addto_cart.findIndex(item => item.product_id === uniqueid.toString() && item.buyer_id === uniqueID_user);
 
-        //     if (index !== -1) {
-        //         if (confirm("Are you sure you want to remove your product")) {
-        //             addto_cart.splice(index, 1);
-        //             localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
-        //         } else {
-        //             return;
-        //         }
-        //     }
-        // }
+        const update_quan = document.querySelectorAll('input.quantity');
+        update_quan.forEach(function (findUuid) {
+            findUuid.addEventListener('click', function () {
+                let parent = this.parentNode;
+                const id = parent.dataset.id;
+                console.log(id)
+                function quantity(e) {
+                    return e.product_id == id;
+                }
+               let quan_data = addto_cart.find(quantity);
+                // console.log(quan_data)
+               let value = parent.querySelector(".quantity").value;
+            //    console.log(value)
+               quan_data.quantity = value;
+               console.log(quan_data)
+               localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
+               location.reload()
+
+            })
+        });
 
 
         function remove(e, uniqueid) {

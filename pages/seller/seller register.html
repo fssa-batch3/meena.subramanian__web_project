@@ -34,16 +34,20 @@
 
     <div class="pass" style="margin-top: 15px;">
     
-    <input type="password" id="password" placeholder="Abcd@2343 like that" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+    <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
     </div>
 
     <div  class="pass" style="margin-top: 15px;">
 
-    <input type="password" id="confirm_password" class="passs" placeholder="Abcd@2343 like that" required>
+    <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
     </div>
 
-  <button class="submit" type="submit"><b>Create</b></button>
-  <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button></a>
+  <button class="submit" type="submit"><b>Submit</b></button>
+  <div class="log">
+    <p> you already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);">Login</a></p>
+  </div>
+  <!-- <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button></a> -->
 
 </form>
 

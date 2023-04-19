@@ -279,11 +279,7 @@
   <script>
 
     let product_upload = JSON.parse(localStorage.getItem("product_crud"));
-
-
     const product_id = new URLSearchParams(window.location.search).get('product');
-
-
     const product = product_upload.find(product => product.product_uuid === product_id);
 
     if (product) {
@@ -315,6 +311,8 @@
 
       let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
 
+      let product_crud = JSON.parse(localStorage.getItem("product_crud")) 
+
       let condition = JSON.parse(localStorage.getItem("uniqueID_user"))
       if(!condition){
         window.location.href = "../login page/logion page.html"
@@ -322,17 +320,20 @@
       }
 
       let product_uuid = new URLSearchParams(window.location.search).get('product');
-
+      let product_price = product_crud.find(e=> e.product_uuid == product_uuid);
+    
       let prod_data = addto_cart.find(product => product.product_id === product_uuid && product.buyer_id === user_unique);
-
+      
       if (prod_data) {
         alert('This Product Is Already Added In Your Cart Page');
         return;
       } else {
         let prod = {
-          product_id: product_uuid,
-          buyer_id: user_unique,
-          quandity : 1
+          "product_id": product_uuid,
+          "buyer_id": user_unique,
+          "price" : product_price.productprice,
+          "quantity" : 1
+          
         }
 
         addto_cart.push(prod);

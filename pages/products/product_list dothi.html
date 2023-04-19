@@ -277,14 +277,17 @@
             // console.log(add);
             let products = JSON.parse(localStorage.getItem("product_crud")) ;
             // console.log(products);   
+            let add_products = products.filter(product =>
+            add.some(a => product.product_uuid === a))
+        console.log(add_products);
 
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const product_id = urlParams.get('product');
 
-            for (let i = 0; i< products.length; i++) {
+            for (let i = 0; i< add_products.length; i++) {
 
-                if (products[i].productreview === "Dhoti") {
+                if (add_products[i].productreview === "Dhoti") {
 
 
 
@@ -297,8 +300,8 @@
                     //  <img> <img>
 
                     img_pic = document.createElement("img");
-                    img_pic.setAttribute("src",products[i]["uppic"]);
-                    img_pic.setAttribute("alt",products[i]["productname"] + " image");
+                    img_pic.setAttribute("src",add_products[i]["uppic"]);
+                    img_pic.setAttribute("alt",add_products[i]["productname"] + " image");
                     img_pic.setAttribute("height", "150px");
                     img_pic.setAttribute("width", "150px");
                     div_wat.append(img_pic);
@@ -314,7 +317,7 @@
                     // <h3 class=product-name> </h3>
                     h3_product_name = document.createElement("h3");
                     h3_product_name.setAttribute("class", "product-name")
-                    h3_product_name.innerHTML= products[i]["productname"];
+                    h3_product_name.innerHTML= add_products[i]["productname"];
                     div_product_content.append(h3_product_name);
 
 
@@ -322,7 +325,7 @@
 
                     p_rate = document.createElement("p");
                     p_rate.setAttribute("class", "rate");
-                    p_rate.innerHTML = "₹" + products[i]["discountprice"];
+                    p_rate.innerHTML = "₹" + add_products[i]["discountprice"];
                     div_product_content.append(p_rate);
 
 
@@ -331,7 +334,7 @@
 
                     s_s1 = document.createElement("s");
                     s_s1.setAttribute("class", "s1");
-                    s_s1.innerHTML = "₹" + products[i]["productprice"];
+                    s_s1.innerHTML = "₹" + add_products[i]["productprice"];
                     div_product_content.append(s_s1);
 
 
@@ -352,7 +355,7 @@
 
                     // a button
                     a_but = document.createElement("a")
-                    a_but.setAttribute("href","./product_details.html?product=" + products[i].product_uuid);
+                    a_but.setAttribute("href","./product_details.html?product=" + add_products[i].product_uuid);
                     div_product_content.append(a_but)
 
                     // // <button class=buy> </buy>

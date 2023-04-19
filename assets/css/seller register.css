@@ -57,18 +57,22 @@ input[type=text]{
     border-radius: 5px;
     border-color: transparent;
     background-color: cadetblue;
-    margin-top: 30px;
-	margin-left:240px;
+    margin-top: 20px;
+	/* margin-left:240px; */
 }
 
-.login{
-    padding:3px;
-    width:85px;
-    border-radius: 5px;
-    border-color: transparent;
-    background-color: cadetblue;
+.pass p {
+	width: 500px;
+}
+
+.log{
     margin-top: 30px;
-	margin-left: 20px;
+	cursor: pointer;
+}
+
+.log a{
+    text-decoration: underline;
+	margin-left: 5px;
 }
 
 .submit:hover{

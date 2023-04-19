@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buyer Register </title>
 
-  <link rel="stylesheet" href="../../assets/css/seller register.css">
+  <link rel="stylesheet" href="../../assets/css/register.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,24 +31,29 @@
 
         <div class="mail" style="margin-top: 15px;">
 
-          <input type="email" placeholder="abcd@13u824.gmail.com" id="email"
+          <input type="email" placeholder="Email" id="email"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
         </div>
 
         <div class="pass" style="margin-top: 15px;">
 
-          <input type="password" id="password" placeholder="Abcd@2343 like that" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             required>
+            <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
         </div>
 
         <div class="pass" style="margin-top: 15px;">
 
-          <input type="password" id="confirm_password" class="passs" placeholder="Abcd@2343 like that" required>
+          <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
         </div>
 
-        <button class="submit" type="submit"><b>Create</b></button>
+        <button class="submit" type="submit"><b>Submit</b></button>
 
-        <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button> </a>
+        <div class="log">
+          <p> You already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);text-decoration: underline;">Login</a></p>
+         </div>
+
+        <!-- <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button> </a> -->
 
       </form>
 
