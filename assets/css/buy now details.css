@@ -104,6 +104,15 @@ input[type="number"] {
     background-color: #eaecef;
 }
 
+input[type="tel"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
+
 .cart{
     padding-right:30px;
 }
@@ -138,12 +147,10 @@ flex-wrap: wrap;
 
 .left .image img {
     border-radius: 20px;
+    margin-top:60px;
 }
 
-.left .sub-images{
-    margin-top:30px;
-   
-}
+
 
 .right{
     margin-left:150px;
@@ -233,7 +240,7 @@ h2{
 
 .right .form_list .form{
     width: 10rem;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 .right .form_list .form_input{
     margin-top: 15px;
@@ -271,10 +278,3 @@ h2{
 input{
     outline: none;
 }
-
-
-
-
-
-
-

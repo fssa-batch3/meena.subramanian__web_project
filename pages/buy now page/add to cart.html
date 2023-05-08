@@ -1,337 +1,256 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add To Cart</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add To Cart</title>
 
-    <link rel="stylesheet" href="../../assets/css/add to cart.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-</head>
+        <link rel="stylesheet" href="../../assets/css/add to cart.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
 
-<body>
+    <body>
 
-    <header id="header">
-        <!-- <div class="logo">
-            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
-                    height="80px"></a>
+        <header id="header">
+        </header>
+
+        <div class="addcar">
         </div>
 
-        <div class="nav">
-            <ul>
-                <li><a href="../products/product_list saree.html">Sarees</a></li>
-                <li><a href="../products/product_list dothi.html">Dhotis</a></li>
-                <li><a href="../about us/about us.html">About us</a></li>
-                <li><a href="#footer">Contact</a></li>
-
-            </ul>
-        </div>
-        <div class="navigations">
-
-
-            <div class="search">
-                <input type="search" placeholder="search">
+        <div class="total">
+            <div class="tax">
+                <p>
+                    Total </p>
             </div>
 
-            <div class="cart">
-                <a href="../buy now page/add to cart.html"><i class="fa fa-shopping-cart"
-                        style="font-size:24px; color:black;"></i>
-            </div>
-
-            <div class="accound">
-                <a href="../profile page/profile page.html"><i class="fa fa-user-circle-o"
-                        style="font-size:24px;color: black;"></i>
-                </a>
-            </div>
-
-            <div class="order">
-                <a href="../orders/my orders.html"><i class="fa fa-shopping-bag"
-                        style="font-size:22px; color:black"></i></a>
-            </div>
-
-            <div class="favorite">
-                <a href="../whislist/wishlist.html"><i class="fa fa-heart"
-                        style="font-size: 22px; color:black;"></i></a>
-            </div>
-
-        </div> -->
-    </header>
-
-    <div class="addcar">
-        <!-- <div class="tag">
-            <img src="../../assets/img/6.jpeg" alt="photo" />
-            <div class="details">
-                <p> Kanchipuram Saree</p>
-                <small> ₹4000 </small>
-                <h6><a href="../../index.html">Remove</a></h6>
-            </div>
-
-            <div class="quan">
-                <input type="number" value="0">
-            </div>
-
-            <div class="ten">
-              ₹4000
+            <div class="all">
+                <p id="totalPrice"> </p>
             </div>
         </div>
 
-        <div class="tag">
-            <img src="../../assets/img/2.jpeg" alt="photo" />
-            <div class="details">
-                <p> Cotton Saree</p>
-                <small>₹2000</small>
-                <h6><a href="../../index.html">Remove</a></h6>
-            </div>
+        <button id="button">
+            <a href="../login page/logion page.html">
+                <b>BUY NOW</b>
+            </a>
+        </button>
 
-            <div class="quan">
-                <input type="number" value="0">
-            </div>
+        <div class="extra">
 
-            <div class="ten">
-                ₹2000
-            </div>
         </div>
 
-        <div class="tag">
-            <img src="../../assets/img/44.jpeg" alt="photo" />
-            <div class="details">
-                <p>Silk Saree</p>
-                <small> ₹500</small>
-                <h6><a href="../../index.html">Remove</a></h6>
-            </div>
-
-            <div class="quan">
-                <input type="number" value="0">
-            </div>
-
-            <div class="ten">
-               ₹500
-            </div> -->
-        <!-- </div> -->
-    </div>
-
-
-
-    <div class="total">
-        <div class="tax">
-            <p>
-                Total </p>
-        </div>
-
-        <div class="all">
-            <p id="totalPrice">
-
-            </p>
-        </div>
-    </div>
-
-    <button id="button"><a href="../login page/logion page.html"><b>BUY NOW</b></a></button>
-
-    <div class="extra">
-
-    </div>
-
-
-    <section id="footer">
-        <section class="footer-container">
-            <div class="menu">
-                <h3>contact us:</h3>
-                <span class="number">+917209587436</span>
-
-            </div>
-            <div class="about">
-                <h3>Menu</h3>
-                <h6><a href="../../index.html">Home</a></h6>
-                <h6><a href="../products/product_list saree.html">Sarees</a></h6>
-                <h6><a href="../products/product_list dothi.html">Dhothi</a></h6>
-                <h6><a href="../about us/about us.html">About us</a></h6>
-
-            </div>
-
-            <div class="border-110">
-
-            </div>
-
-            <div class="c1">
-                <h3>Saree</h3>
-                <h6><a href="../products/product_details.html ">Kanchipuram Saree</a></h6>
-                <h6><a href="../Saree details/product 3.html">Cotton Saree</a></h6>
-                <h6><a href="../Saree details/product 5.html">Silk saree</a></h6>
-                <h6><a href="../Saree details/product 2.html">Binthu pattu</a></h6>
-            </div>
-
-            <div class="border-118">
-            </div>
-
-            <div class="dothi">
-                <h3>Dothi</h3>
-                <h6><a href="../dothi/dothi product 2.html">Othikko kattiko</a></h6>
-                <h6><a href="../dothi/dothi product 4.html">Cotton dhothi</a></h6>
-                <h6><a href="../dothi/dothi product 3 .html">Border dhothi</a></h6>
-                <h6><a href="../dothi/dothi product 6.html">Kaavi dhothi</a></h6>
-
-            </div>
-        </section>
-
-
-        <section class="foot">
-            <div class="footer-2">
-                <div class="copy">
-                    <p>Copyright 2022@kaithary company</p>
-                    <p>Allright reserved</p>
-                </div>
-
-                <div class="icons">
-                    <h4>Contact us</h4>
-                    <a href="https://in.linkedin.com/"><img src="../../assets/img/linkedin-2950130-2447889.webp"
-                            alt="photo" width="50px"></a>
-                    <a href="https://github.com/"><img src="../../assets/img/github-2950150-2447911.webp" alt="photo"
-                            width="50px"></a>
-                    <a href="https://www.instagram.com"><img src="../../assets/img/insta.webp" alt="photo"
-                            width="50px"></a>
-                    <a href="https://web.telegram.org/k/"><img class="tele" src="../../assets/img/tele.webp" alt="photo"
-                            width="40px" style="margin-bottom: 35px; margin-left: 3px;"></a>
+        <section id="footer">
+            <section class="footer-container">
+                <div class="menu">
+                    <h3>contact us:</h3>
+                    <span class="number">+917209587436</span>
 
                 </div>
-            </div>
+                <div class="about">
+                    <h3>Menu</h3>
+                    <h6>
+                        <a href="../../index.html">Home</a>
+                    </h6>
+                    <h6>
+                        <a href="../products/product_list saree.html">Sarees</a>
+                    </h6>
+                    <h6>
+                        <a href="../products/product_list dothi.html">Dhothi</a>
+                    </h6>
+                    <h6>
+                        <a href="../about us/about us.html">About us</a>
+                    </h6>
+
+                </div>
+
+                <div class="border-110">
+
+                </div>
+
+                <div class="c1">
+                    <h3>Saree</h3>
+                    <h6>
+                        <a href="../products/product_details.html ">Kanchipuram Saree</a>
+                    </h6>
+                    <h6>
+                        <a href="../Saree details/product 3.html">Cotton Saree</a>
+                    </h6>
+                    <h6>
+                        <a href="../Saree details/product 5.html">Silk saree</a>
+                    </h6>
+                    <h6>
+                        <a href="../Saree details/product 2.html">Binthu pattu</a>
+                    </h6>
+                </div>
+
+                <div class="border-118">
+                </div>
+
+                <div class="dothi">
+                    <h3>Dothi</h3>
+                    <h6>
+                        <a href="../dothi/dothi product 2.html">Othikko kattiko</a>
+                    </h6>
+                    <h6>
+                        <a href="../dothi/dothi product 4.html">Cotton dhothi</a>
+                    </h6>
+                    <h6>
+                        <a href="../dothi/dothi product 3 .html">Border dhothi</a>
+                    </h6>
+                    <h6>
+                        <a href="../dothi/dothi product 6.html">Kaavi dhothi</a>
+                    </h6>
+
+                </div>
+            </section>
+
+            <section class="foot">
+                <div class="footer-2">
+                    <div class="copy">
+                        <p>Copyright 2022@kaithary company</p>
+                        <p>Allright reserved</p>
+                    </div>
+
+                    <div class="icons">
+                        <h4>Contact us</h4>
+                        <a href="https://in.linkedin.com/">
+                            <img src="../../assets/img/linkedin-2950130-2447889.webp"
+                                alt="photo" width="50px"></a>
+                        <a href="https://github.com/">
+                            <img src="../../assets/img/github-2950150-2447911.webp" alt="photo"
+                                width="50px"></a>
+                        <a href="https://www.instagram.com">
+                            <img src="../../assets/img/insta.webp" alt="photo"
+                                width="50px"></a>
+                        <a href="https://web.telegram.org/k/">
+                            <img class="tele" src="../../assets/img/tele.webp" alt="photo"
+                                width="40px" style="margin-bottom: 35px; margin-left: 3px;"></a>
+
+                    </div>
+                </div>
+            </section>
         </section>
-    </section>
-    <script src="../../JS/header.js"></script>
-    <script>
-        let addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
-        let user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
-        let product_crud = JSON.parse(localStorage.getItem("product_crud"));
+        <script src="../../JS/header.js"></script>
+        <script>
+        const addto_cart = JSON.parse(localStorage.getItem("addto_cart"));
+        const user_unique = JSON.parse(localStorage.getItem("uniqueID_user"));
+        const product_crud = JSON.parse(localStorage.getItem("product_crud"));
         let total = 0;
-        for (i = 0; i < addto_cart.length; i++) {
-            if (addto_cart[i].buyer_id === user_unique) {
+        for (let i = 0; i < addto_cart.length; i++) {
+          if (addto_cart[i].buyer_id === user_unique) {
 
+                const prod_data = product_crud.find(product => product.product_uuid === addto_cart[i].product_id);
+                console.log(prod_data);
+          
+    //  div_tag
+            const div_tag = document.createElement("div");
+            div_tag.setAttribute("class", "tag");
 
+            // img
+            const img = document.createElement("img");
+            img.setAttribute("src", prod_data.uppic);
+            img.setAttribute("alt", "photo");
+            div_tag.append(img);
 
-                let prod_data = product_crud.find(product => product.product_uuid === addto_cart[i].product_id);
+            // div_details
+            const div_details = document.createElement("div");
+            div_details.setAttribute("class", "details");
+            div_tag.append(div_details);
 
-                //  div_tag
-                let div_tag = document.createElement("div");
-                div_tag.setAttribute("class", "tag");
+            // para
+            const para = document.createElement("p");
+            para.innerText = prod_data.productname;
+            div_details.append(para);
 
-                // img
-                let img = document.createElement("img");
-                img.setAttribute("src", prod_data.uppic);
-                img.setAttribute("alt", "photo");
-                div_tag.append(img);
+            // h6
+            const h6 = document.createElement("h6");
+            div_details.append(h6);
 
-                // div_details
-                let div_details = document.createElement("div");
-                div_details.setAttribute("class", "details");
-                div_tag.append(div_details);
+            // a
+            const a = document.createElement("button");
+            a.setAttribute("class", "remove");
+            a.setAttribute("id", "remove");
+            // a.setAttribute("onclick", "remove(event,prod_data.product_uuid)")
+            a.innerText = "Delete";
+            a.onclick = function (event) {
+              remove(event, prod_data.product_uuid);
+            };
+            h6.append(a);
 
-                // para
-                let para = document.createElement("p");
-                para.innerText = prod_data.productname;
-                div_details.append(para);
+            // div
+            const div_quan = document.createElement("div");
+            div_quan.setAttribute("class", "quan");
+            div_quan.setAttribute("data-id", addto_cart[i].product_id);
+            div_tag.append(div_quan);
 
-                // h6
-                let h6 = document.createElement("h6");
-                div_details.append(h6);
+            // input
+            const input = document.createElement("input");
+            input.setAttribute("type", "number");
+            input.setAttribute("class", "quantity");
+            input.setAttribute("min", "1");
+            input.setAttribute("value", addto_cart[i].quantity);
+            div_quan.append(input);
 
-                // a
-                let a = document.createElement("button");
-                a.setAttribute("class", "remove");
-                a.setAttribute("id", "remove");
-                // a.setAttribute("onclick", "remove(event,prod_data.product_uuid)")
-                a.innerText = "Delete"
-                a.onclick = function (event) {
-                    remove(event, prod_data.product_uuid)
-                }
-                h6.append(a);
+            // div
+            const div_ten = document.createElement("div");
+            div_ten.setAttribute("class", "ten");
+            div_ten.innerText = `₹ ${prod_data.productprice*addto_cart[i].quantity}`;
+            div_tag.append(div_ten);
+        
+            // let total=0;
+            total += prod_data.productprice * addto_cart[i].quantity;
+            document.getElementById("totalPrice").value = total;
 
-                // div
-                let div_quan = document.createElement("div");
-                div_quan.setAttribute("class", "quan");
-                div_quan.setAttribute("data-id", addto_cart[i]["product_id"]);
-                div_tag.append(div_quan);
-
-                // input
-                let input = document.createElement("input");
-                input.setAttribute("type", "number");
-                input.setAttribute("class", "quantity")
-                input.setAttribute("min", "1");
-                input.setAttribute("value", addto_cart[i].quantity);
-                // input.addEventListener("change", function () {
-                //     update.style.display = "block";
-                // });
-                div_quan.append(input);
-
-                // div
-                let div_ten = document.createElement("div");
-                div_ten.setAttribute("class", "ten");
-                div_ten.innerText = "₹ " + prod_data.productprice * addto_cart[i].quantity;
-                div_tag.append(div_ten);
-             
-                 total += prod_data.productprice * addto_cart[i].quantity;
-                document.getElementById("totalPrice").innerText = total;
-    
-                document.querySelector("div.addcar").append(div_tag);
-            }
+            document.querySelector("div.addcar").append(div_tag);
+          }
         }
-
-
-
-
-
-        const update_quan = document.querySelectorAll('input.quantity');
-        update_quan.forEach(function (findUuid) {
-            findUuid.addEventListener('click', function () {
-                let parent = this.parentNode;
-                const id = parent.dataset.id;
-                console.log(id)
-                function quantity(e) {
-                    return e.product_id == id;
-                }
-               let quan_data = addto_cart.find(quantity);
-                // console.log(quan_data)
-               let value = parent.querySelector(".quantity").value;
-            //    console.log(value)
-               quan_data.quantity = value;
-               console.log(quan_data)
-               localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
-               location.reload()
-
-            })
+    
+        const update_quan = document.querySelectorAll("input.quantity");
+        update_quan.forEach((findUuid) => {
+        findUuid.addEventListener("click", (e) => {
+            const parent = e.currentTarget.parentNode;
+            const ids = parent.dataset.id;
+            console.log(ids);
+            function quantity(f) {
+              return f.product_id === ids;
+            }
+            const quan_data = addto_cart.find(quantity);
+            const values = parent.querySelector(".quantity").value;
+            quan_data.quantity = values;
+            console.log(quan_data);
+            localStorage.setItem("addto_cart", JSON.stringify(addto_cart));
+            window.location.reload();
+          });
         });
 
-
         function remove(e, uniqueid) {
-            if (!e || typeof uniqueid !== 'string') {
-                return
-            }
+          if (!e || typeof uniqueid !== "string") {
+            return;
+          }
 
-            e.preventDefault();
+          e.preventDefault();
 
-            const addto_cart = JSON.parse(localStorage.getItem('addto_cart') || []);
-            const uniqueID_user = JSON.parse(localStorage.getItem('uniqueID_user'));
+          const addto_carts = JSON.parse(localStorage.getItem("addto_cart") || []);
+          const uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
 
-            const index = addto_cart.findIndex(
-                item => item.product_id === uniqueid && item.buyer_id === uniqueID_user
-            );
+          const index = addto_carts.findIndex(
+            (item) => item.product_id === uniqueid && item.buyer_id === uniqueID_user
+          );
 
-            if (index !== -1 && confirm('Are you sure you want to remove your product')) {
-                addto_cart.splice(index, 1);
-                localStorage.setItem('addto_cart', JSON.stringify(addto_cart));
-                window.location.reload();
-            }
+          if (index !== -1 && window.confirm("Are you sure you want to remove your product")) {
+            addto_carts.splice(index, 1);
+            localStorage.setItem("addto_cart", JSON.stringify(addto_carts));
+            window.location.reload();
+          }
         }
+</script>
 
-
-        home();
-    </script>
-
-</body>
+    </body>
 
 </html>

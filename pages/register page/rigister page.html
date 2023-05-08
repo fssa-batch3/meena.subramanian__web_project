@@ -1,160 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buyer Register </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Buyer Register </title>
 
-  <link rel="stylesheet" href="../../assets/css/register.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-    rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-  <section class="new">
-    <section class="total">
-      <p> Start For Free</p>
-      <h1>Create New Account</h1>
-      <form role="form" onsubmit="signUp(event)">
-        <div class="name" style="margin-top: 30px;">
+        <section class="new">
+            <section class="total">
+                <p> Start For Free</p>
+                <h1>Create New Account</h1>
+                <form role="form" onsubmit="signUp(event)">
+                    <div class="name" style="margin-top: 30px;">
 
-          <input type="text" id="name" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
-        </div>
+                        <input type="text" id="name" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
+                    </div>
 
-        <div class="mail" style="margin-top: 15px;">
+                    <div class="mail" style="margin-top: 15px;">
 
-          <input type="email" placeholder="Email" id="email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-        </div>
+                        <input type="email" placeholder="Email" id="email"
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
 
-        <div class="pass" style="margin-top: 15px;">
+                    <div class="pass" style="margin-top: 15px;">
 
-          <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            required>
-            <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
-        </div>
+                        <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                            required>
+                        <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
+                    </div>
 
-        <div class="pass" style="margin-top: 15px;">
+                    <div class="pass" style="margin-top: 15px;">
 
-          <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
-        </div>
+                        <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
+                    </div>
 
-        <button class="submit" type="submit"><b>Submit</b></button>
+                    <button class="submit" type="submit">
+                        <b>Submit</b>
+                    </button>
 
-        <div class="log">
-          <p> You already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);text-decoration: underline;">Login</a></p>
-         </div>
+                    <div class="log">
+                        <p>
+                            You already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);text-decoration: underline;">Login</a>
+                        </p>
+                    </div>
+                </form>
 
-        <!-- <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button> </a> -->
+            </section>
 
-      </form>
+            <section class="img">
+                <img src="../../assets/img/Untitled-removebg-preview.png" alt="img">
+            </section>
 
+        </section>
 
-    </section>
-
-    <section class="img">
-      <img src="../../assets/img/Untitled-removebg-preview.png" alt="img">
-    </section>
-
-
-
-  </section>
-
-  <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-
-
-  <script>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script>
     function signUp(e) {
       // Get form values
-      let name = document.getElementById("name").value;
-      let email = document.getElementById("email").value;
-      let password = document.getElementById("password").value;
-      let confirmPassword = document.getElementById("confirm_password").value;
-      let userUuid = uuidv4();
-
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm_password").value;
+      const userUuid = uuidv4();
+    
       // Get user credentials from local storage or create an empty array
-      let userCred = JSON.parse(localStorage.getItem('user_cred')) || [];
-
+      const userCred = JSON.parse(localStorage.getItem("user_cred")) || [];
       // Check if user already exists
-      let exist = userCred.length && userCred.some(data => data.email.toLowerCase() === email.toLowerCase());
-
+      const exist =
+    userCred.length &&
+    userCred.some((data) => data.email.toLowerCase() === email.toLowerCase());
       if (!exist) {
         // Add user credentials to local storage if passwords match
         if (password === confirmPassword) {
           userCred.push({ name, email, confirmPassword, password, userUuid });
-          localStorage.setItem('user_cred', JSON.stringify(userCred));
-          console.log(localStorage.getItem('user_cred'));
+        localStorage.setItem("user_cred", JSON.stringify(userCred));
+          // console.log(localStorage.getItem("user_cred"));
           document.querySelector("form").reset();
-          document.getElementById('email').focus();
-          alert('Account created successfully');
-          location.href = "../login page/logion page.html";
+          document.getElementById("email").focus();
+          alert("Account created successfully");
+          window.location.href = "../login page/logion page.html";
         } else {
           alert("Confirm password does not match");
         }
       } else {
-        alert('Sorry the User already exists! \n Try with a new Email.');
-        document.querySelector('form').reset();
+        alert("Sorry the User already exists! \n Try with a new Email.");
+        document.querySelector("form").reset();
       }
       e.preventDefault();
     }
 
-    // function signUp(e) {
-    //   // Get form values
-    //   let name = document.getElementById("name").value;
-    //   let email = document.getElementById("email").value;
-    //   let password = document.getElementById("password").value;
-    //   let confirmPassword = document.getElementById("confirm_password").value;
-    //   let userUuid = uuidv4();
-
-    //   // Get user credentials from local storage or create an empty array
-    //   let userCred = JSON.parse(localStorage.getItem('user_cred')) || [];
-
-    //   // Check if user already exists
-    //   let exist = userCred.length && userCred.some(data => data.email.toLowerCase() === email.toLowerCase());
-
-    //   if (!exist) {
-    //     // Validate user input
-    //     if (password === confirmPassword) {
-    //       // Add user credentials to local storage if passwords match
-    //       if (password === confirmPassword) {
-    //         userCred.push({ name, email, password, userUuid });
-    //         localStorage.setItem('user_cred', JSON.stringify(userCred));
-    //         console.log(localStorage.getItem('user_cred'));
-    //         document.querySelector("form").reset();
-    //         document.getElementById('email').focus();
-    //         alert('Account created successfully');
-    //         location.href = "../login page/logion page.html";
-    //       } else {
-    //         alert("Confirm password does not match");
-    //       }
-    //     } else {
-    //       alert("Please fill in all fields with valid inputs");
-    //     }
-    //   } else {
-    //     alert('Sorry the user already exists! \n Please try with a new email.');
-    //     document.querySelector('form').reset();
-    //   }
-    //   e.preventDefault();
-    // }
-
     function loginpage() {
-      window.location.href = "../login page/logion page.html"
+      window.location.href = "../login page/logion page.html";
     }
-
   </script>
 
-
-
-</body>
-
-
+    </body>
 
 </html>

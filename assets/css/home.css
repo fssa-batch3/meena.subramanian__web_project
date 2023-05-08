@@ -116,7 +116,6 @@ input[type="search"]{
 	margin-top:50px;
 	margin-bottom:50px;
 	margin-left:135px;
-
     border-radius: 8px;
 	background-color:#e7fff2;
 }
@@ -233,12 +232,12 @@ i:hover{
 
 
 .hol{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    align-items: center;
     justify-content: space-evenly;
     height: 45vh;
-	margin-top: 80px;
+	margin-top: 100px;
     
     
 }

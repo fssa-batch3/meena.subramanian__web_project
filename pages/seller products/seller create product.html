@@ -1,130 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Upload product</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seller Upload product</title>
 
-    <link rel="stylesheet" href="../../assets/css/seller create product.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/seller create product.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <header>
-        <div class="logo">
-            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
-                    height="80px"></a>
-        </div>
-
-        <h1 class="up" style="margin-top: 30px; color: crimson;">UPLOADE YOUR PRODUCTS</h1>
-
-        <div class="navigations">
-
-            <div class="accound">
-                <a href="../profile page/profile page.html"><i class="fa fa-user-circle-o"
-                        style="font-size:24px;color: black;"></i>
-                </a>
+        <header>
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
+                        height="80px"></a>
             </div>
-        </div>
-    </header>
 
+            <h1 class="up" style="margin-top: 30px; color: crimson;">UPLOADE YOUR PRODUCTS</h1>
 
+            <div class="navigations">
 
-    <h2>ADD NEW</h2>
-    <section class="profile_details">
-        <form role="form" onsubmit="createProduct(event)">
-            <div class="form">
-                <div class="details">
-                    <div class="new"><img src="../../assets/img/10.jpeg" alt="photo"></div>
-                    <div class="details_list">
-                        <p class="list">UplodePhoto:</p>
-                        <input type="url" placeholder="https//.//" class="list_2" id="uppic">
+                <div class="accound">
+                    <a href="../profile page/profile page.html">
+                        <i class="fa fa-user-circle-o"
+                            style="font-size:24px;color: black;"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <h2>ADD NEW</h2>
+        <section class="profile_details">
+            <form role="form" onsubmit="createProduct(event)">
+                <div class="form">
+                    <div class="details">
+                        <div class="new">
+                            <img src="../../assets/img/10.jpeg" alt="photo">
+                        </div>
+                        <div class="details_list">
+                            <p class="list">Image:</p>
+                            <input type="url" placeholder="https://." pattern="https://.*" class="list_2" id="uppic">
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list"> Product Name:</p>
+                            <input type="text" class="list_2" placeholder="Saree" pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required id="productname">
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list">Price:</p>
+                            <input type="text" class="list_2" placeholder="10000(Rs)" pattern="[0-9]{5}" required id="productprice">
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list">Category:</p>
+                            <select type="text" class="list_2" placeholder="others" required id="productreview">
+                                <option>None</option>
+                                <option>Dhoti</option>
+                                <option>Saree</option>
+                            </select>
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list">Offers:</p>
+                            <input type="text" class="list_2" placeholder="10(% off)" pattern="[0-9]{2}" required id="productoffer">
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list">discription:</p>
+                            <textarea type="text" class="list_2"
+                                placeholder="*Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C." pattern = "[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required id="descrip"></textarea>
+                        </div>
+
+                        <!-- <p class="pattern">Price and offer should be in number</p> -->
                     </div>
-
-                    <div class="details_list">
-                        <p class="list"> ProductName:</p>
-                        <input type="text" class="list_2" placeholder="Saree" required id="productname">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">Spical Price:</p>
-                        <input type="text" class="list_2" placeholder="₹0000" required id="productprice">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">category:</p>
-                        <select type="text" class="list_2"   placeholder="others" required id="productreview">
-                            <option>None</option>
-                            <option>Dhoti</option>
-                            <option>Saree</option>
-                        </select>
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">offers:</p>
-                        <input type="text" class="list_2" placeholder="10%off" required id="productoffer">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">discription:</p>
-                        <textarea type="text" class="list_2" placeholder="*Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C. " required id="descrip"></textarea>
-                    </div>
+                    <button type="submit" class="save">
+                        <strong>Upload</strong>
+                    </button>
 
                 </div>
-                <button type="submit" class="save"><strong>Upload</strong></button>
-
-            </div>
-        </form>
-    </section>
-
-    <script>
+            </form>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+        <script>
         function createProduct(e) {
-            e.preventDefault();
-            let uppic = document.getElementById("uppic").value;
-            let descrip = document.getElementById("descrip").value;
-            let productreview = document.getElementById("productreview").value;
-            let productprice = document.getElementById("productprice").value;
-            let productname = document.getElementById("productname").value;
-            let productoffer = document.getElementById("productoffer").value;
-            let product_uuid = uuidv4();
-            // console.log(product_uuid)
-            let product_crud = JSON.parse(localStorage.getItem('product_crud')) || [];
-            let unique = JSON.parse(localStorage.getItem('uniqueID_seller'));
-            let seller_id = unique;
+          e.preventDefault();
+          const uppic = document.getElementById("uppic").value;
+          const descrip = document.getElementById("descrip").value;
+          const productreview = document.getElementById("productreview").value;
+          const productprice = document.getElementById("productprice").value;
+          const productname = document.getElementById("productname").value;
+          const productoffer = document.getElementById("productoffer").value;
+          const product_uuid = uuidv4();
+          // console.log(product_uuid)
+          const product_crud = JSON.parse(localStorage.getItem("product_crud")) || [];
+          const unique = JSON.parse(localStorage.getItem("uniqueID_seller"));
+          const seller_id = unique;
+  if (productoffer === productoffer) {
+            let discountprice = productprice - (productprice * productoffer) / 100;
+            discountprice = Math.round(discountprice);
+          } else {
+            const discountprice = productprice - productoffer;
+          }
 
+  product_crud.push({
+    uppic,
+    productname,
+    productprice,
+    discountprice,
+    productreview,
+    descrip,
+    productoffer,
+    product_uuid,
+    seller_id,
+  });
+          localStorage.setItem("product_crud", JSON.stringify(product_crud));
 
-            if(productoffer==productoffer){
-                discountprice=productprice-productprice*productoffer/100;
-                discountprice=Math.round(discountprice);
-            }
-            else{
-                discountprice=productprice-productoffer;
-            }
-        
-
-
-            product_crud.push({ uppic, productname, productprice, discountprice, productreview, descrip, productoffer, product_uuid, seller_id,});
-            localStorage.setItem('product_crud', JSON.stringify(product_crud));
-      
-           
-
-            alert('Product created successfully');
-            window.location.href = "../seller products/seller product list.html?product=" + product_uuid;
-
-        }      
+  alert("Product created successfully");
+          window.location.href = `../seller products/seller product list.html?product=${product_uuid}`;
+        }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
 
-</body>
+    </body>
 
 </html>
 <!-- <a href="https://freeimage.host/"><img src="https://iili.io/HVTQc2R.jpg" alt="HVTQc2R.jpg" border="0"></a> -->

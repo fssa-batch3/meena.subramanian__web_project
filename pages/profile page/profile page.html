@@ -1,179 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Page</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Profile Page</title>
 
-    <link rel="stylesheet" href="../../assets/css/profile page.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/profile page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <header id="header">
-        <!-- <div class="logo">
-            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
-        </div>
-
-        <div class="nav">
-            <ul>
-                <li><a href="../products/product_list saree.html">Sarees</a></li>
-                <li><a href="../products/product_list dothi.html">Dhotis</a></li>
-                <li><a href="../about us/about us.html">About us</a></li>
-                <li><a href="#footer">Contact</a></li>
-             
-            </ul>
-        </div>
-        <div class="navigations">
-
-            <div class="search">
-                <input type="search" placeholder="search" >
-            </div>
-
-            <div class="cart">
-                <a href="../buy now page/add to cart.html"><i class="fa fa-shopping-cart" style="font-size:24px; color:black;"></i></a>
-            </div>
-
-            <div class="accound">
-                <a href="../profile page/profile page.html"><i class="fa fa-user-circle-o"style="font-size:24px;color: black;"></i>
-                </a>
-            </div>
-
-            <div class="order">
-                <a href="../orders/my orders.html"><i class="fa fa-shopping-bag" style="font-size:22px;color:black"></i></a>
-            </div>
-
-            <div class="favorite">
-                <a href="../whislist/wishlist.html"><i class="fa fa-heart" style="font-size: 22px; color:black;"></i></a>
-            </div>
-
-        </div> -->
-    </header>
-
-
+        <header id="header">
+        </header>
        
-            <h1 class="heading"> PROFILE </h1>
+        <h1 class="heading"> PROFILE </h1>
    
-    <section class="profile_details">
-        <div class="form">
-            <div class="profile">
-                <img class="profile_img" src="../../assets/img/profile.png" alt="photo" width="180px">
+        <section class="profile_details">
+            <div class="form">
+                <div class="profile">
+                    <img class="profile_img" src="../../assets/img/profile.png" alt="photo" width="180px">
+                </div>
+                <div class="details">
+                    <div class="details_list">
+                        <p class="list">Name:</p>
+                        <p class="list_2" id="name"></p>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Email:</p>
+                        <p class="list_2" id="email"></p>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Address:</p>
+                        <p class="list_2" id="address"></p>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Contact:</p>
+                        <p class="list_2" id="phone"></p>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">District:</p>
+                        <p class="list_2" id="district"></p>
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">D.O.B:</p>
+                        <p class="list_2" id="dob"></p>
+                    </div>
+
+                </div>
+                <div class="buttons">
+                    <a href="../profile page/profile edit page.html">
+                        <button type="button" class="edit-btn">
+                            <strong>EDIT</strong>
+                        </button>
+                    </a>
+                    <a href="../../index.html">
+                        <button type="submit" onclick="logOut()" class="log">
+                            <strong>LOG OUT</strong>
+                        </button>
+                    </a>
+                </div>
             </div>
-            <div class="details">
-                <div class="details_list">
-                    <p class="list">Name:</p>
-                    <p class="list_2" id="name"></p>
-                </div>
+        </section>
 
+        <script src="../../JS/header.js"></script>
+        <script>
+     const uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
+    const user_cred = JSON.parse(localStorage.getItem("user_cred"));
+     function profile_data(e) {
+       return e.email === uniqueID_user;
+     }
+     const person_data = user_cred.find(profile_data);
+     document.getElementById("name").innerText = person_data.name;
+     document.getElementById("email").innerText = person_data.email;
+     document.getElementById("phone").innerText = person_data.phone;
+     document.getElementById("dob").innerText = person_data.dob;
+     document.getElementById("address").innerText = person_data.address;
+     document.getElementById("district").innerText = person_data.district;
 
-                <div class="details_list">
-                    <p class="list">Email:</p>
-                    <p class="list_2" id="email"></p>
-                </div>
-
-
-                <div class="details_list">
-                    <p class="list">Address:</p>
-                    <p class="list_2" id="address"></p>
-                </div>
-
-
-                <div class="details_list">
-                    <p class="list">Contact:</p>
-                    <p class="list_2" id="phone"></p>
-                </div>
-
-
-                <div class="details_list">
-                    <p class="list">District:</p>
-                    <p class="list_2" id="district"></p>
-                </div>
-
-
-                <div class="details_list">
-                    <p class="list">D.O.B:</p>
-                    <p class="list_2" id="dob"></p>
-                </div>
-
-
-            </div>
-            <div class="buttons">
-                <a href="../profile page/profile edit page.html"><button type="button" class="edit-btn"><strong>EDIT</strong></button></a>
-                <a href="../../index.html"><button type="submit" onclick="logOut()" class="log"> <strong>LOG OUT</strong></button></a>
-                <!-- <button type="submit" onclick="deleteAcc()" class="run"> <strong>DELETE</strong></button></a> -->
-             </div>
-        </div>
-    </section>
-
-    <!-- <script>
-        const user_email  = localStorage.getItem("user_email");
-        console.log(user_email)
-
-        document.getElementById("user_email").innerText =user_email
-
-    </script> -->
-    <script src="../../JS/header.js"></script>
-    <script>
-         home();
-        let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
-        let user_cred = JSON.parse(localStorage.getItem("user_cred"));
-            function profile_data(e){
-                return e.email == uniqueID_user;
-            }
-            person_data = user_cred.find(profile_data);
-            document.getElementById("name").innerText = person_data["name"];
-            document.getElementById("email").innerText = person_data["email"];
-            document.getElementById("phone").innerText = person_data["phone"];
-            document.getElementById("dob").innerText = person_data["dob"];
-            document.getElementById("address").innerText = person_data["address"];
-            document.getElementById("district").innerText = person_data["district"];
-
-
-    //         // delete account function
-    //     function deleteAcc(){
-    //         if(confirm("Are you sure to delete this account ?")){
-    //         //get value from local storage
-    //         let uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
-    //         console.log(uniqueID_user);
-    //         let user_cred = JSON.parse(localStorage.getItem("user_cred"));
-    //         console.log(user_cred);
-    //         function profile_data(e){
-    //             return e.email == uniqueID_user;
-    //         }
-    //         person_data = user_cred.find(profile_data);
-    //         console.log(person_data);
-    //         // find the index of person_data from userData
-    //         let result = user_cred.indexOf(person_data);
-    //         console.log(result);
-    //         // deleting the indexof person data
-    //         user_cred.splice(result, 1)
-    //         // user_cred.splice(resu = 1);
-    //         localStorage.setItem("user_cred", JSON.stringify(user_cred));
-    //         window.location.href="../../index.html";
-    //     }
-    // }
-
-
-    // logout function
-    function logOut(){
-            if(confirm("Are you going to Logout ?")){
-           // deleting the unique_id of person data
-            localStorage.removeItem("uniqueID_user")
-            alert("Sucessfully Logged out!")
-        }
-        window.location.href="../../index.html";
-    }
-   
-
+// logout function
+function logOut() {
+       if (window.confirm("Are you going to Logout ?")) {
+         // deleting the unique_id of person data
+         localStorage.removeItem("uniqueID_user");
+         alert("Sucessfully Logged out!");
+  }
+  window.location.href = "../../index.html";
+}
         </script>
         
-        
-     </body>
+    </body>
 </html>

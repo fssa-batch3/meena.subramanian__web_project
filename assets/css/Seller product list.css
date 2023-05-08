@@ -152,16 +152,16 @@ section{
   
 }
 
-.run{
+/* .run{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
     margin-top:100px;
-    height: 45vh;
+    height: 45vh;    
+} */
 
-    
-}
+
 
 .fall{
     display: flex;

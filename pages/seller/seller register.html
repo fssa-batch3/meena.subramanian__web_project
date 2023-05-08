@@ -1,68 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller Register </title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seller Register </title>
 
-    <link rel="stylesheet" href="../../assets/css/seller register.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/seller register.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-<section class="new">
-    <section class="total">
-    <p> Start For Free</p>
-    <h1>Create New Account</h1>
-<form role="form" onsubmit="signUp(event)">    
-    <div class="name" style="margin-top: 30px;">
+        <section class="new">
+            <section class="total">
+                <p> Start For Free</p>
+                <h1>Create New Account</h1>
+                <form role="form" onsubmit="signUp(event)">    
+                    <div class="name" style="margin-top: 30px;">
     
-     <input  type="text" id="name" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
-     </div>
+                        <input type="text" id="name" placeholder="Name" pattern="[a-zA-Z0-9]+" required>
+                    </div>
   
-    <div class="mail" style="margin-top: 15px;">
+                    <div class="mail" style="margin-top: 15px;">
 
-    <input type="email" placeholder="abcd@13u824.gmail.com" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-    </div>
+                        <input type="email" placeholder="abcd@13u824.gmail.com" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
 
-    <div class="pass" style="margin-top: 15px;">
+                    <div class="pass" style="margin-top: 15px;">
     
-    <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
-    <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
-    </div>
+                        <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+                        <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
+                    </div>
 
-    <div  class="pass" style="margin-top: 15px;">
+                    <div class="pass" style="margin-top: 15px;">
 
-    <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
-    </div>
+                        <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
+                    </div>
 
-  <button class="submit" type="submit"><b>Submit</b></button>
-  <div class="log">
-    <p> you already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);">Login</a></p>
-  </div>
-  <!-- <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button></a> -->
+                    <button class="submit" type="submit">
+                        <b>Submit</b>
+                    </button>
+                    <div class="log">
+                        <p>
+                            you already have a account<a onclick="loginpage()" style="color: rgb(71, 159, 118);">Login</a>
+                        </p>
+                    </div>
+                    <!-- <a onclick="loginpage()" style="color:black;"><button class="login"><b>login</b></button></a> -->
 
-</form>
+                </form>
 
-</section>
+            </section>
 
-<section class="img">
-    <img src="../../assets/img/Untitled-removebg-preview.png" alt="img">
-</section>
+            <section class="img">
+                <img src="../../assets/img/Untitled-removebg-preview.png" alt="img">
+            </section>
 
-
-
-</section>
-<script>
-
-// function submit(){ 
+        </section>
+        <script>
+// function submit(){
 //     const email = document.getElementById("email").value
 //     const confirm_password = document.getElementById("confirm_password").value
 //     const password = document.getElementById("password").value
@@ -80,55 +81,53 @@
 //     localStorage.setItem("user_confirm_password",confirm_password)
 //     localStorage.setItem("user_name",first_name)
 
-
 //     window.location.href = "../seller products/seller products.html"
 
 // }
 
 function signUp(e) {
-    let email = document.getElementById("email").value;
-      confirm_password = document.getElementById("confirm_password").value;
-      password = document.getElementById("password").value;
-     name = document.getElementById("name").value;
-     seller_uuid=uuidv4();
-    let seller_cred = JSON.parse(localStorage.getItem('seller_cred')) || [];
+  const email = document.getElementById("email").value;
+  const confirm_password = document.getElementById("confirm_password").value;
+  const password = document.getElementById("password").value;
+  const name = document.getElementById("name").value;
+  const seller_uuid = uuidv4();
+  const seller_cred = JSON.parse(localStorage.getItem("seller_cred")) || [];
 
-    let exist = seller_cred.length &&
-        JSON.parse(localStorage.getItem('seller_cred')).some(data =>
-            data.email.toLowerCase() == email.toLowerCase()
-             
-        );
-    if(!exist){
-
-      if(password == confirm_password){
-        seller_cred.push({name,email,confirm_password,password,seller_uuid});
-        localStorage.setItem('seller_cred',JSON.stringify(seller_cred));
-        console.log(localStorage.getItem('seller_cred'));
-        document.querySelector("form").reset();
-       document.getElementById('email').focus();
-        alert('Account created successfully');
-        location.href = "../seller/seller login.html";
+  const exist =
+    seller_cred.length &&
+    JSON.parse(localStorage.getItem("seller_cred")).some(
+      (data) => data.email.toLowerCase() === email.toLowerCase()
+    );
+  if (!exist) {
+    if (password === confirm_password) {
+      seller_cred.push({
+        name,
+        email,
+        confirm_password,
+        password,
+        seller_uuid,
+      });
+      localStorage.setItem("seller_cred", JSON.stringify(seller_cred));
+      console.log(localStorage.getItem("seller_cred"));
+      document.querySelector("form").reset();
+      document.getElementById("email").focus();
+      alert("Account created successfully");
+      window.location.href = "../seller/seller login.html";
+    } else {
+      alert("Confirm password does not match");
     }
-
-      else{
-        alert("Confirm password does not match")
-      }
-    }
-    else {
-        alert('Sorry the User already exists! \n Try with a new Email.');
-    document.querySelector('form').reset();
-    }
-    
-    e.preventDefault();
+  } else {
+    alert("Sorry the User already exists! \n Try with a new Email.");
+    document.querySelector("form").reset();
   }
 
-  function loginpage(){
-      window.location.href="../seller/seller login.html" 
-    }
+  e.preventDefault();
+}
 
+function loginpage() {
+  window.location.href = "../seller/seller login.html";
+}
 </script>
-<script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
-
-</body
-
-
+        <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
+    </body>
+</html>

@@ -70,9 +70,9 @@ header{
 
 button:hover{
     scale: 1.03;
-    background-color:rgb(51, 208, 213);
+    background-color: crimson;
+    color: white;
 }
-
 
 .content .content-1{
     font-size: 15px;
@@ -85,11 +85,7 @@ button:hover{
 }
 
 
-button:hover{
-    scale: 1.03;
-    background-color: crimson;
-    color: white;
-}
+
 
 
  

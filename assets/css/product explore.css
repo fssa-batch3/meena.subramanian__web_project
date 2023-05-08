@@ -116,14 +116,13 @@ input[type="search"]{
 	margin-top: 100px;
 	margin-left:80px;
 }
-
+ 
 .meenu img{
     border-radius:10px;
     margin-left:10px;
     margin-right:20px;
+	margin-top: 37px;
 }
-
-
 
 .product{
 	 margin-top:60px;
@@ -133,22 +132,20 @@ input[type="search"]{
 
 .product-1{
     margin-top:25px;
-	margin-left:40px;
-	
+	margin-left:40px;	
 }
+
 
 .then{
 	padding:50px;
-	
 }
-
-
 
 .sneaker{
 	padding:150px;
 	margin-top:20px;
 	padding-top:30px;
 }
+
 
 h4{
 	color:rgb(163, 148, 120);
@@ -157,6 +154,7 @@ h4{
 	font-size: 25px;
 	
 }
+
 
 h2{
 	font-size:35px;
@@ -177,10 +175,9 @@ h2{
 	padding-top:14px;
 	padding-left:50px;
 	padding-right:50px;
-	margin-left:20px;
-	
-	
+	margin-left:20px;	
 }
+
 
 .the{
 	padding-bottom:15px;
