@@ -23,7 +23,7 @@
         </header>
 
         <div class="pro">
-            <h1 class="heading"> PROFILE </h1>
+            <h1 class="heading"> PROFILE EDIT </h1>
         </div>
         <section class="profile_details">
             <form onsubmit="update_details(event)">
@@ -41,26 +41,26 @@
                             <input type="email" id="email" placeholder="vasumeenu2004@gmail.com"
                                 class="list_2">
                         </div>
-                        <div class="details_list">
+                        <!-- <div class="details_list">
                             <p class="list">Address:</p>
                             <input type="text" id="address"
                                 placeholder="42/36,baguadwjeduuiNDEId street" class="list_2">
-                        </div>
+                        </div> -->
                         <div class="details_list">
                             <p class="list">Contact:</p>
                             <input type="text" id="phone" placeholder="74671*****"
                                 class="list_2">
                         </div>
-                        <div class="details_list">
+                        <!-- <div class="details_list">
                             <p class="list">District:</p>
                             <input type="text" id="district" placeholder="Thirunelveli"
                                 class="list_2">
-                        </div>
-                        <div class="details_list">
+                        </div> -->
+                        <!-- <div class="details_list">
                             <p class="list">D.O.B:</p>
                             <input type="date" id="dob" placeholder="17/08/2004" class="list_2">
                         </p>
-                        </div>
+                        </div> -->
                     </div>
                     <div class="buttons">
                         <button type="submit" class="edit-btn">
@@ -81,17 +81,17 @@
         document.getElementById("name").value = person_data.name;
         document.getElementById("email").value = person_data.email;
         document.getElementById("phone").value = person_data.phone;
-        document.getElementById("dob").value = person_data.dob;
-        document.getElementById("address").value = person_data.address;
+        // document.getElementById("dob").value = person_data.dob;
+        // document.getElementById("address").value = person_data.address;
         document.getElementById("district").value = person_data.district;
 
         function update_details(e) {
           e.preventDefault();
 
-          const address = document.getElementById("address").value;
+        //   const address = document.getElementById("address").value;
           const district = document.getElementById("district").value;
           const phone = document.getElementById("phone").value;
-          const dob = document.getElementById("dob").value;
+        //   const dob = document.getElementById("dob").value;
 
           person_data.address = address;
           person_data.district = district;

@@ -39,14 +39,13 @@
 
                         <input type="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                             required>
-                        <p> Pattern : Minimum 8 characters include Uppercase, Lowercase, Number and Special characters. </p>
                     </div>
 
                     <div class="pass" style="margin-top: 15px;">
 
                         <input type="password" id="confirm_password" class="passs" placeholder="Confirm Password" required>
                     </div>
-
+                    <p style="font-size: 13px;"> Pattern : Minimum 8 characters include Uppercase,<br>  Lowercase, Number and Special characters. </p>
                     <button class="submit" type="submit">
                         <b>Submit</b>
                     </button>
@@ -85,7 +84,7 @@
       if (!exist) {
         // Add user credentials to local storage if passwords match
         if (password === confirmPassword) {
-          userCred.push({ name, email, confirmPassword, password, userUuid });
+          userCred.push({ name, email, confirmPassword, password, userUuid});
         localStorage.setItem("user_cred", JSON.stringify(userCred));
           // console.log(localStorage.getItem("user_cred"));
           document.querySelector("form").reset();

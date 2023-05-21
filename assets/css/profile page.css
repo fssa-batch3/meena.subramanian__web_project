@@ -16,8 +16,7 @@ header{
     box-shadow:0px 2px 7px 0px #eaecef;  
    
 }
-header div ul{
-    
+header div ul{ 
     display:flex;
     flex-direction:row;
     list-style:none;
@@ -95,71 +94,200 @@ input[type="search"]{
 }
 
 .heading{
-    margin-left:42rem;
-    margin-top:80px;
-}
-/*--form--*/
-
-
-body .profile_details{
-    margin-top:2rem;
-}
-
-body .profile_details .form{
-    width: 30rem;
-    height: 34rem;
     margin: auto;
-    border: 1px solid gray;
+    font-size: 40px;
+}
+
+/*--form--*/
+body .profile_details{
+    margin-top:6rem;
+   
+}
+
+body .profile_details .form {
+    width: 31rem;
+    height: 35rem;
+    margin: auto;
+    border: 1px solid #fcfcfc;
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column;
-    box-shadow: 3px 3px 5px rgb(90, 88, 88);
-    border-radius: 15px;
+    /* box-shadow: 3px 3px 5px rgb(90, 88, 88); */
+    border-radius: 17px;
+}
+img{
+   border-radius:50%;
+   margin: auto;
 }
 
+.details {
+   
+    margin-bottom: 1rem; 
+}
 .form .details_list{
     display: flex;
     flex-direction: row;
 }
 
-body .profile_details .form .profile,.details,.buttons{
+body .profile_details .form .profile{
     margin: auto;
 }
 
+.buttons{
+    margin-left: 4.5rem;
+}
 .pro .heading{
     margin-top: 170px;
     margin-left: 680px;
 }
 
 .form .details .list{
-    width: 100px;
-    padding-top: 10px;
+    /* width:max-content; */
+    /* padding-top: 6px; */
+    max-width: max-content;
+    font-size: 37px;
+    font-weight: bold;
+    margin: auto;
+
 }
 
+.form .details .list_1{
+ 
+    padding-top: 10px;
+    margin: auto;
+    font-size: 15px;
+    color: #adb0b3;
+}
 .form .details .list_2{
+
+ margin: auto;
+    padding-top: 10px;
+   
+    font-size: 17px;
+    color: #646767;
+}
+/* .form .details .list_3{
+    width: 237px;
+    padding-top: 10px;
+    margin-left: 2rem;
+    color: #a0a4a4;
+} */
+.form .details .list_4{
+    padding-top: 10px;
+    margin: auto;
+    color: #a5abab;
+    font-size: 13px;
+}
+
+.form .details .list_5{
     width: 200px;
     padding-top: 10px;
 }
 
-.form .buttons{
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
 
+.form .buttons{
+ margin:auto;
+  
+}
+/* 
 .form .buttons .edit-btn{
+    width: 25%;
+} */
+
+/* .form .buttons .address{
     margin-right: 30px;
 }
 
+
 .form .buttons .log{
-    margin-right: 20px;
-}
+    margin-right: 30px;
+} */
 
 
-.form .buttons .edit-btn,.log,.run{
-    padding: 5px 10px;
+.form .buttons .edit-btn{
+    margin-left:1rem;
+    padding: 8px 32px;
+    color: white;
     border-radius: 7px;
-    border: 2px solid white;
-    background-color:cadetblue;
+    border: 2px solid transparent;
+    background-color: #73a3a6;
 }
 
+.form .buttons .log{
+    margin-left:1rem;
+    padding: 8px 25px;
+    background-color: rgba(255, 172, 172, 0.285);
+    color: red;
+    border-radius: 7px;
+    border: 2px solid transparent;
 
+}
 
+.form .buttons .address{
+    margin-left:1rem;
+    color: white;
+    padding:  8px 21px;
+    border-radius: 7px;
+    border: 2px solid transparent;
+    background-color: #73a3a6;
+}
+
+/* popup */
+div.modal{
+  /* border: 3px solid #f1f1f1; */
+  z-index: 9;
+  box-sizing: border-box;
+  position: relative;;
+  opacity: 10;
+  max-width:518px;
+  margin: auto;
+}
+
+.d-none{
+    display: none !important;
+}
+
+.modal form {
+    background-color: #ece8e8;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid transparent;
+    width: 91%;
+    height: 27rem;
+    border-radius: 17px;
+}
+  
+  .modal h1 {
+    text-align: center;
+    margin: 50px;
+  }
+  
+  .modal .popup {
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    gap:30px;
+  }
+  
+  .modal input[type="text"],
+   .modal input[type="email"] {
+    padding: 20px;
+    width: 75%;
+    margin:auto;
+    border-radius: 7px;
+    border: 1px solid transparent;
+    outline: none;
+   }
+  
+  .modal input[type="submit"] {
+    padding: 10px;
+    width: 35%;
+    margin: 18px auto;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    background-color:rgb(89, 144, 146);
+    color: white;
+    font-size: bold;
+  }
+  
+  

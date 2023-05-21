@@ -78,6 +78,7 @@ input[type="search"]{
 
 .cart{
     padding-right:30px;
+
 }
 
 
@@ -97,6 +98,13 @@ input[type="search"]{
     width: 100%;
 }
 
+.no_product{
+    text-align: center;
+    margin-top:9rem;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(176, 182, 182);
+}
 
 .tag{
     display: flex;
@@ -130,8 +138,10 @@ h6 button {
     outline:none;
     border: none;
     background-color:white;
+    margin: auto;
 
 }
+
 
 .tag img{
     width: 250px;
@@ -146,6 +156,7 @@ h6 button {
 .total small{
     padding-left:80px;
 }
+
 
 
 .details{
@@ -175,13 +186,13 @@ h6 button {
     height: 30px;
 }
 
-#button a{
+button {
     text-decoration: none;
     color:black;
     margin-bottom:30px;
 }
 
-#button{
+button{
     background-color:cadetblue;
     border-radius: 5px;
     border:0px solid transparent;

@@ -66,6 +66,7 @@ header{
     border-color: transparent;
     background-color: cadetblue;
     margin-bottom:10px;
+    cursor: pointer;
 }
 
 button:hover{
