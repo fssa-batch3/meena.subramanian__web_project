@@ -121,13 +121,13 @@
         const add_address = JSON.parse(localStorage.getItem("add_address")) || [];
         console.log(add_address);
 
-       const user_sdress=add_address.filter((e)=>e.uniqueID_user===uniqueID_user)
+       const user_address=add_address.filter((e)=>e.uniqueID_user===uniqueID_user)
 
 
-       if(user_sdress.length>0){
+       if(user_address.length>0){
 
      
-        const defaultAdd = useraddress.find(x => x.default === true);
+        const defaultAdd = user_address.find(x => x.default === true);
         console.log(defaultAdd);
 
 
