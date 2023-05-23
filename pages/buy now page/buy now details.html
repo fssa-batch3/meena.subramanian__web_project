@@ -191,8 +191,10 @@
         });
 
         const address_list = JSON.parse(localStorage.getItem("add_address"));
+        console.log(address_list);
 
         const user_default_adress = address_list.find(e => e.uniqueID_user === uniqueID_user && e.default === true)
+        console.log(user_default_adress);
 
         // get address element from html
         const add_name = document.getElementById('add_name').innerText = user_default_adress.name;
@@ -232,11 +234,14 @@
             //   const district = document.getElementById("district").value;
             const user_adress = user_default_adress.address_uuid;
             const order_uuid = uuidv4();
+            let order_date=new Date();
+            const formate_order_date=`${order_date.getFullYear()}-0${order_date.getMonth() + 1}-${order_date.getDate()}`;
             
             const product_uuid = new URLSearchParams(window.location.search).get(
                 "product"
             );
             order_list.push({
+                order_date:formate_order_date,
                 user_adress: user_adress,
                 quantity,
                 order_uuid,

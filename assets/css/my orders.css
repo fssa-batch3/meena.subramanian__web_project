@@ -273,6 +273,13 @@ p{
     margin-right: 100px;
 }
 
+
+.cancel_order{
+    display: inline;
+color: #f19494;
+cursor: pointer;
+}
+
 .card img {
     margin: 12px;
     height: 188px;

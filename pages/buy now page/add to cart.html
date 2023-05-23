@@ -21,6 +21,10 @@
     <header id="header">
     </header>
 
+    <div class="change">
+        <p id="change_add">Change Address</p>
+    </div>
+
     <div class="addcar">
     </div>
 
@@ -35,7 +39,7 @@
         </div>
     </div>
 
-    <button id="buy_all_button">
+    <button id="buy_all_button" class="buy_all_button">
         <!-- <a href="../login page/logion page.html"> -->
         <b>BUY NOW</b>
         <!-- </a> -->
@@ -445,12 +449,15 @@
 
             for (let i = 0; i < cart_list.length; i++) {
                 let order_uuid = uuidv4();
+                let order_date=new Date();
+            const formate_order_date=`${order_date.getFullYear()}-0${order_date.getMonth() + 1}-${order_date.getDate()}`;
                 order_list.push({
+                    "order_date":formate_order_date,
                     "order_uuid": order_uuid,
                     "product_id": cart_list[i].product_id,
                     "quantity": cart_list[i].quantity,
                     "uniqueID_user": user_unique,
-                    "user_adress": user_d_adress,
+                    "user_adress": user_d_adress.address_uuid,
                 });
 
             }
@@ -468,6 +475,11 @@
 
 
         });
+
+        const change_add = document.getElementById("change_add");
+        change_add.addEventListener("click",function(){
+            window.location.href='../profile page/youraddress.html'
+        })
 
     </script>
 

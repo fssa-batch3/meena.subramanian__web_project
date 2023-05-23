@@ -182,12 +182,12 @@
             // <p class=rate> </p>
             const p_rate = document.createElement("p");
             p_rate.setAttribute("class", "rate");
-            p_rate.innerHTML = product[i].discountprice;
+            p_rate.innerHTML = "₹"+product[i].discountprice;
             div_product_content.append(p_rate);
             //  <s class=s1> </s>
             const s_s1 = document.createElement("s");
             s_s1.setAttribute("class", "s1");
-            s_s1.innerHTML = product[i].productprice;
+            s_s1.innerHTML ="₹"+ product[i].productprice;
             div_product_content.append(s_s1);
             //  <div class=star> </div>
             const div_star = document.createElement("div");

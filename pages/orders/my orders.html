@@ -28,11 +28,11 @@
             <h1>My Orders</h1>
         </div>
         <div class="cards">
-
+            <!-- <i class="fa fa-trash-o" style="color:black"></i> -->
         </div>
     </div>
 
-    <!-- <div class="orders">
+   <!-- <div class="orders">
                 <div class="card">
                     <img src="../../assets/img/4.jpeg" alt="saree" width="200px" height="230px">
                 </div>
@@ -44,6 +44,7 @@
                         <p>Color:Pink</p>
                         <p>1 item</p>
                         <hr>
+                        <p>Cancel Order</p>
                         <p>Shopping From:United States</p>
                     </div>
                 </div>
@@ -60,9 +61,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                
+            </div> -->
 
-            <div class="orders">
+             <!-- <div class="orders">
                 <div class="card">
                     <img src="../../assets/img/3.jpeg" alt="saree" width="200px" height="230px">
                 </div>
@@ -195,7 +197,7 @@
 
         const unique = JSON.parse(localStorage.getItem("uniqueID_user"));
 
-        for (let i = 1; i < orderArray.length; i++) {
+        for (let i = 0; i < orderArray.length; i++) {
 
             if (orderArray[i].uniqueID_user === unique) {
                 const productData = product_crud.find(e => e.product_uuid === orderArray[i].product_id);
@@ -211,6 +213,12 @@
                 const image = document.createElement("img");
                 image.src = productData.uppic;
                 image.alt = "saree";
+                image.style.cursor="pointer";
+
+                image.addEventListener("click",function() {
+                    window.location.href=`${ window.location.origin}/pages/products/product_details.html?product=${productData.product_uuid}`;
+                });
+
 
                 // Append the image to the card div
                 cardDiv.appendChild(image);
@@ -223,19 +231,64 @@
                 const heading = document.createElement("h3");
                 heading.setAttribute('style','font-size:25px;')
                 heading.textContent = productData.productname;
+                heading.style.cursor="pointer";
+
+                heading.addEventListener("click",function() {
+                    window.location.href=`${ window.location.origin}/pages/products/product_details.html?product=${productData.product_uuid}`;
+                });
+
 
                 // Create the quantity paragraph
                 const quantity = document.createElement("p");
                 quantity.classList.add("quantity");
                 quantity.textContent = "quantity:" + orderArray[i].quantity;
 
+
+                const cancelOrder = document.createElement("p");
+                cancelOrder.classList.add("cancel_order");
+                cancelOrder.textContent ="cancel order";
+                cancelOrder.setAttribute("id",orderArray[i].order_uuid)
+
+
+                cancelOrder.addEventListener("click",function(){
+                        const unic=this.id;
+
+                    const order_data=JSON.parse(localStorage.getItem("order_list"));
+                    const find_product=order_data.find((e)=>e.order_uuid===unic);
+
+                    const find_index=order_data.indexOf(find_product);
+
+                    order_data.splice(find_index,1)
+
+                    localStorage.setItem(("order_list"),JSON.stringify(order_data));
+                    alert("Are you sure?")
+
+                    location.reload();
+
+
+                })
+
+
                 // Append the heading and quantity to the card content div
+                
                 cardContentDiv.appendChild(heading);
                 cardContentDiv.appendChild(quantity);
+                cardContentDiv.appendChild(cancelOrder);
 
+
+                let initialDate=new Date(orderArray[i].order_date) ;
+                  initialDate.setDate(initialDate.getDate() + 7); 
+                let formattedDate = initialDate.toISOString().slice(0, 10);
+                console.log(formattedDate);
                 // Create the cost div
                 const costDiv = document.createElement("div");
                 costDiv.classList.add("cost");
+
+                
+                let  paragraph = document.createElement('p');
+                paragraph.setAttribute('class', 'product_price');
+                paragraph.setAttribute('style', 'font-size: 11px; margin-top: -30px; margin-bottom: 30px; color:#7d8993;');
+                paragraph.innerHTML = "delivered by "+ formattedDate;
 
                 // Create the product price paragraph
                 const productPrice = document.createElement("p");
@@ -250,6 +303,7 @@
                 freeShipping.textContent = "free shipping";
 
                 // Append the product price and free shipping to the cost div
+                costDiv.appendChild(paragraph);
                 costDiv.appendChild(productPrice);
                 costDiv.appendChild(freeShipping);
 
@@ -264,6 +318,9 @@
 
             }
         }
+
+
+
     </script>
 
 </body>
