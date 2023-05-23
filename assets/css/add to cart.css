@@ -78,6 +78,7 @@ input[type="search"]{
 
 .cart{
     padding-right:30px;
+
 }
 
 
@@ -97,18 +98,26 @@ input[type="search"]{
     width: 100%;
 }
 
+.no_product{
+    text-align: center;
+    margin-top:9rem;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(176, 182, 182);
+}
 
 .tag{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border:1px solid gray ;
-    box-shadow: 5px 5px 5px  gray;
+    border: 1px solid transparent;
+    /* box-shadow: 5px 5px 5px gray; */
     border-radius: 8px;
-    width:1050px;
-    margin-left: 240px;
-    margin-top:30px;
+    background-color: #e7eded;
+    width: 1050px;
+    margin-left: 219px;
+    margin-top: 37px;
    
 }
 
@@ -124,14 +133,16 @@ input[type="search"]{
 }
 
 h6 button {
-    color:cadetblue;
     font-size: 13px;
-    text-decoration: none;
     outline:none;
+    cursor: pointer;
+    margin: auto;
+    background-color: #e7eded;
     border: none;
-    background-color:white;
+    color:rgb(130, 158, 158)
 
 }
+
 
 .tag img{
     width: 250px;
@@ -146,6 +157,7 @@ h6 button {
 .total small{
     padding-left:80px;
 }
+
 
 
 .details{
@@ -163,36 +175,33 @@ h6 button {
 }
 
 .quan input{
-     width:45px;
-     height:25px;
-    border:0px solid ;
-    background-color:cadetblue;
+    width: 45px;
+    height: 25px;
+    border: 0px solid;
     border-radius: 5px;
-    text-align: center;
+    background-color: #eaecef;
+    text-align: end;
    
 }
 .ten{
     height: 30px;
 }
 
-#button a{
+button {
     text-decoration: none;
     color:black;
     margin-bottom:30px;
+    cursor: pointer;
 }
 
-#button{
+button.buy_all_button {
     background-color:cadetblue;
     border-radius: 5px;
     border:0px solid transparent;
     padding:10px 10px 10px 10px;
     width:100px;
     margin-left:1150px;
-    margin-top: 30px;
 }
-
-
-
 
 
 .extra{
@@ -276,6 +285,16 @@ h6{
 .icons a img{
     margin-bottom:25px;
 }
+
+.change p{
+    text-align: center;
+    margin-top: 36px;
+    margin-left: 55rem;
+    cursor: pointer;
+    color:rgb(96, 122, 123);
+    text-decoration: underline;
+}
+
 
 
 

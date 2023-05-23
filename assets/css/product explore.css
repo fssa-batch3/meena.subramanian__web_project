@@ -175,7 +175,8 @@ h2{
 	padding-top:14px;
 	padding-left:50px;
 	padding-right:50px;
-	margin-left:20px;	
+	margin-left:20px;
+	cursor: pointer;	
 }
 
 
@@ -188,12 +189,13 @@ h2{
 	border:0px;
 	background-color:cadetblue;
 	color:white;
-	
+	cursor: pointer;
 }
 
 .the a {
 	text-decoration: none;
 	color:black;
+	
 }
 
 
@@ -289,7 +291,7 @@ span{
 	padding-left:25px;
 	padding-right:25px;
 	border-radius: 7px;
-
+	cursor: pointer;
 }
 
 

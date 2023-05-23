@@ -62,17 +62,30 @@ h2{
 body .profile_details{
     margin-top:2rem;
 }
+.profile_img{
+border-radius: 50%;
+}
 
 body .profile_details .form{
-    width: 30rem;
+    /* width: 30rem;
     height: 34rem;
     margin: auto;
     border: 1px solid gray;
     display: flex;
     flex-direction: column;
     box-shadow: 3px 3px 5px rgb(90, 88, 88);
+    border-radius: 15px; */
+
+    width: 30rem;
+    height: 34rem;
+    margin: auto;
+    background-color: #e6e6e7;
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
     border-radius: 15px;
 }
+
 
 .form .details_list{
     display: flex;
@@ -109,14 +122,16 @@ body .profile_details .form .profile,.details,.buttons{
 
 .form .buttons .log{
     margin-right: 20px;
+    cursor: pointer;
 }
 
 
 .form .buttons .edit-btn,.log,.run{
-    padding: 5px 10px;
+    padding: 6px 20px;
     border-radius: 7px;
-    border: 2px solid white;
-    background-color:cadetblue;
+    border: 2px solid transparent;
+    background-color: #7cb2b4;
+    cursor: pointer;
 }
 
 .but{
@@ -124,6 +139,7 @@ body .profile_details .form .profile,.details,.buttons{
     border-radius: 7px;
     border: 2px solid white;
     background-color:cadetblue;
+    cursor: pointer;
 }
 
 

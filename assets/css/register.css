@@ -59,6 +59,7 @@ input[type=text]{
     background-color: cadetblue;
     margin-top: 20px;
 	/* margin-left:240px; */
+	cursor: pointer;
 }
 
 .pass p {

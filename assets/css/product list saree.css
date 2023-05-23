@@ -158,7 +158,7 @@ section{
     position: relative;
     left: 100px;
     top: 40px;
-
+    cursor: pointer;
 }
 
 .log {

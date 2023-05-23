@@ -166,7 +166,7 @@
             const indexOfUser = product_list.indexOf(product_datas);
 
             product_list.splice(indexOfUser, 1);
-            localStorage.setItem("product_crud", JSON.stringify(product));
+            localStorage.setItem("product_crud", JSON.stringify(product_list));
             window.location.href = "../seller products/seller product list.html";
           }
         }
