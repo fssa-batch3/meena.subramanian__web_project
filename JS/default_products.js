@@ -5,7 +5,7 @@ if (!productCrud) {
     JSON.stringify([
       {
         uppic: "https://iili.io/HNwvmns.jpg",
-        productname: "kanchipuram saree",
+        productname: "kanchivaram saree",
         productprice: " 15000",
         discountprice: 13500,
         productreview: "Saree",
@@ -89,7 +89,7 @@ if (!productCrud) {
       },
       {
         uppic: "https://iili.io/HNNquG1.webp",
-        productname: "Ottikko Kttiko",
+        productname: "Ottikko Kattiko",
         productprice: "1500",
         discountprice: 1350,
         productreview: "Dhoti",
