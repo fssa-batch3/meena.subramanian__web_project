@@ -48,43 +48,71 @@
                     <div class="details_list">
                         <p class="list">Image:</p>
                         <input type="url" placeholder="https://." pattern="https://.*"
-                            value="https://iili.io/HNOEOsS.jpg" class="list_2" id="uppic">
+                            value="https://iili.io/HNw8ESp.jpg" class="list_2" id="uppic">
                     </div>
 
                     <div class="details_list">
                         <p class="list"> Product Name:</p>
-                        <input type="text" class="list_2" placeholder="Saree" value="Cotton saree"
+                        <input type="text" class="list_2" placeholder="Saree" value="Kanjivaram saree"
                             pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required id="productname">
                     </div>
-
-                    <div class="details_list">
-                        <p class="list">Price:</p>
-                        <input type="text" class="list_2" placeholder="10000(Rs)" value="8000" pattern="[0-9]{3,6}"
-                            required id="productprice">
-                    </div>
-
                     <div class="details_list">
                         <p class="list">Category:</p>
                         <select type="text" class="list_2" placeholder="others" value="Saree" required
                             id="productreview">
-                            <option>None</option>
                             <option>Dhoti</option>
-                            <option>Saree</option>
+                            <option>Silk Saree</option>
+                            <option>Pumpar Cotton Saree</option>
                         </select>
                     </div>
 
                     <div class="details_list">
-                        <p class="list">Offers:</p>
-                        <input type="text" class="list_2" placeholder="10(% off)" value="10" pattern="[0-9]{2}" required
-                            id="productoffer">
+                        <p class="list">Price:</p>
+                        <input type="number" class="list_2" placeholder="10000(Rs)" value="9000" pattern="[0-9]{3,6}"
+                            required id="productprice">
+                    </div>
+
+                    <div class="flex_row">
+                        <div class="details_list">
+                            <p class="list">Offers:</p>
+                            <input type="number" class="list_3" placeholder="10(% off)" value="10" pattern="[0-9]{2}"
+                                required id="productoffer"><span class="percentage_discount">%</span>
+                        </div>
+
+                        <div class="details_list">
+                            <p class="list_1">Quantity:</p>
+                            <input type="number" min="1" class="list_4" required id="Quantity">
+                        </div>
                     </div>
 
                     <div class="details_list">
-                        <p class="list">discription:</p>
+                        <p class="list">Length:</p>
+                        <div class="length_option">
+                            <input value="5.5 Meter" type="radio" name="length_radio">5.5 Meter
+                            <input value="8.2 Meter" type="radio" name="length_radio" class="meete">8.2 Meter
+
+                        </div>
+
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Design Name:</p>
+                        <input type="text" class="list_2" required id="design">
+                    </div>
+
+                    <div class="details_list">
+                        <p class="list">Jarigai:</p>
+                        <input type="text" class="list_2" required id="Jargai">
+                    </div>
+
+
+
+                    <div class="details_list">
+                        <p class="list">Discription:</p>
                         <textarea type="text" class="list_2"
                             placeholder="*Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C."
                             pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+"
-                            value="Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.  Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C.  Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm accountT&C.  Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and aboveT&C."
+                            value="Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.  Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C."
                             required id="descrip"></textarea>
                     </div>
 
@@ -108,8 +136,27 @@
             const productprice = document.getElementById("productprice").value;
             const productname = document.getElementById("productname").value;
             const productoffer = document.getElementById("productoffer").value;
+            const Quantity = document.getElementById("Quantity").value;
+            const Jarigai = document.getElementById("Jargai").value;
+            const Design_Name = document.getElementById("design").value
             const product_uuid = uuidv4();
-
+            let radioButtons = document.getElementsByName("length_radio");
+            console.log(radioButtons[0].value);
+            console.log(radioButtons[1].value);
+            let selectedValue;
+            console.log(selectedValue);
+            let checked =false;
+            for (let i = 0; i < radioButtons.length; i++) {
+                if (radioButtons[i].checked) {
+                    selectedValue = radioButtons[i].value;
+                    checked=true;
+                    console.log(selectedValue);
+                } 
+            }
+            if (checked===false){
+                alert("Please choose any length")
+            }
+            else{
             let discountprice;
             if (productoffer === productoffer) {
                 discountprice = productprice - (productprice * productoffer) / 100;
@@ -132,12 +179,17 @@
                 productoffer,
                 product_uuid,
                 seller_id,
+                Quantity,
+                Jarigai,
+                Design_Name,
+                selectedValue
             });
 
             localStorage.setItem("product_crud", JSON.stringify(product_crud));
             alert("Product created successfully");
             window.location.href = `../seller products/seller product list.html?product=${product_uuid}`;
         }
+    }
 
     </script>
 

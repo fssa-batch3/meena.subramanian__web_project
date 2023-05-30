@@ -26,19 +26,22 @@
     <form>
         <!-- <div class="total"> -->
         <div class="form-group">
-            <input type="text" class="form-control" id="inputName" value="Meena" pattern="[a-zA-Z0-9]+" placeholder="Name" required>
+            <input type="text" class="form-control" id="inputName" value="Meena" pattern="[a-zA-Z0-9]+"
+                placeholder="Name" required>
 
-            <input type="text" class="form-control" id="inputStreet" value="32/21,bajanai madam street" pattern="[a-zA-Z0-9]+" placeholder="Street"
-                required>
+            <input type="text" class="form-control" id="inputStreet" value="32/21,bajanai madam street"
+                pattern="[a-zA-Z0-9]+" placeholder="Street" required>
 
-            <input type="text" class="form-control" id="inputCity" value="Veeravanallur" pattern="[a-zA-Z0-9]+" placeholder="Town" required>
+            <input type="text" class="form-control" id="inputCity" value="Veeravanallur" pattern="[a-zA-Z0-9]+"
+                placeholder="Town" required>
 
             <input type="number" class="form-control" id="inputZip" placeholder="Pincode" value="627426" required>
- 
-            <input type="text" class="form-control" id="inputCountry" value="Thirunelveli" pattern="[a-zA-Z0-9]+" placeholder="city"
-                required>
 
-            <input type="number" class="form-control" id="inputPhone" placeholder="Mobile Number" value="6574839209" required>
+            <input type="text" class="form-control" id="inputCountry" value="Thirunelveli" pattern="[a-zA-Z0-9]+"
+                placeholder="city" required>
+
+            <input type="tel" class="form-control" id="inputPhone" placeholder="Mobile Number" value="6574839209"
+                pattern="[0-9]{,10}" required>
 
             <div class="butt">
                 <button type="submit" class="Save" onclick="addAddress(event)">Save Your Address</button>
@@ -58,36 +61,28 @@
         <script src="../../JS/header.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/uuid@8.3.2/dist/umd/uuidv4.min.js"></script>
         <script>
-
+            
             const uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
             console.log(uniqueID_user)
             const add_address = JSON.parse(localStorage.getItem("add_address")) || [];
 
-                const useraddress = add_address.filter((data) => data.uniqueID_user == uniqueID_user);
-                console.log(useraddress);
+            const useraddress = add_address.filter((data) => data.uniqueID_user == uniqueID_user);
+            console.log(useraddress);
 
-                const defaultAdd = useraddress.find(x => x.default == true);
-                console.log(defaultAdd);
+            const defaultAdd = useraddress.find(x => x.default == true);
+            console.log(defaultAdd);
 
-                let defIndex = -1;
-                for(let i=0; i < useraddress.length ; i++){
-                    if(add_address[i].default === true){
-                        defIndex = i;
-                    }
+            let defIndex = -1;
+            for (let i = 0; i < useraddress.length; i++) {
+                if (add_address[i].default === true) {
+                    defIndex = i;
                 }
-                console.log(defIndex);
+            }
+            console.log(defIndex);
 
-                function address_data(e) {
+            function address_data(e) {
                 return e.uniqueID_user === uniqueID_user;
-                }
-            // const address = add_address.find(address_data);
-            // document.getElementById("inputStreet").value = address.street;
-            // document.getElementById("inputCity").value = address.town;
-            // document.getElementById("inputName").value = address.name;
-            // document.getElementById("inputZip").value = address.zip;
-            // document.getElementById("inputCountry").value = address.country;
-            // document.getElementById("inputPhone").value = address.phone;
-
+            }
             function addAddress(e) {
                 e.preventDefault();
                 const street = document.getElementById("inputStreet").value;
@@ -100,24 +95,22 @@
                 const uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
                 const add_address = JSON.parse(localStorage.getItem("add_address")) || [];
 
-                const status = !defaultAdd ? true : false ;
-
-
+                const status = !defaultAdd ? true : false;
 
                 let addObj = {
-                        street,
-                        town,
-                        name,
-                        zip,
-                        country,
-                        uniqueID_user,
-                        address_uuid,
-                        default: status,
-                        phone,
-                    }
+                    street,
+                    town,
+                    name,
+                    zip,
+                    country,
+                    uniqueID_user,
+                    address_uuid,
+                    default: status,
+                    phone,
+                }
 
                 add_address.push(addObj);
-            
+
                 localStorage.setItem("add_address", JSON.stringify(add_address));
                 alert("Your address saved");
                 window.location.href = "../profile page/youraddress.html";

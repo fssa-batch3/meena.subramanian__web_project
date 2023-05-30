@@ -19,10 +19,6 @@ header{
 }
 
 
-
-
-
- 
 .navigations{
     display:flex;
     padding-top:50px;
@@ -49,11 +45,53 @@ body .profile_details .form{
     margin-top:50px;
 }
 
+.list_3{
+    width: 33px;
+    padding-top: 10px;
+    margin-top:40px;
+    outline: none;
+    border:1px solid transparent;
+    border-bottom-color: gray; 
+}
+
+.list_4{
+    width: 84px;
+    padding-top: 10px;
+    margin-top:40px;
+    outline: none;
+    border:1px solid transparent;
+    border-bottom-color: gray; 
+}
+.percentage_discount{
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
+}
+
 .form .details_list{
     display: flex;
     flex-direction: row;
 }
 
+
+
+.details_list label{
+margin: auto;
+}
+.length_option{
+    margin-top: 50px;
+}
+
+.meete{
+    margin-left: 30px;
+}
 body .profile_details .form .profile,.details,.buttons{
     margin: auto;
 }
@@ -68,6 +106,14 @@ body .profile_details .form .profile,.details,.buttons{
     padding-top: 50px;
     margin-right:100px;
 }
+
+
+.form .details .list_1{
+    width: 43px;
+    padding-top: 50px;
+    margin-right:100px;
+}
+
 
 .form .details .list_2{
     width: 400px;

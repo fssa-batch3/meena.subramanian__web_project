@@ -1,100 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Seller edit</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller edit</title>
 
-        <link rel="stylesheet" href="../../assets/css/seller product edit.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/seller product edit.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
 
-    </head>
+</head>
 
-    <body>
+<body>
 
-        <header>
-            <div class="logo">
-                <a href="../../index.html">
-                    <img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px"
-                        height="80px"></a>
+    <header>
+        <div class="logo">
+            <a href="../../index.html">
+                <img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
+        </div>
+
+        <h1>Edit You Product Page</h1>
+
+        <div class="navigations">
+
+            <div class="accound">
+                <a href="../profile page/profile page.html">
+                    <i class="fa fa-user-circle-o" style="font-size:24px;color: black;"></i>
+                </a>
             </div>
 
-            <h1>Edit You Product Page</h1>
-
-            <div class="navigations">
-
-                <div class="accound">
-                    <a href="../profile page/profile page.html">
-                        <i class="fa fa-user-circle-o"
-                            style="font-size:24px;color: black;"></i>
-                    </a>
-                </div>
-
-                <div class="favorite">
-                    <a href="../../pages/seller products/seller create product.html">
-                        <i class="fa fa-plus"
-                            style="font-size: 22px; color:black;"></i></a>
-                </div>
-
+            <div class="favorite">
+                <a href="../../pages/seller products/seller create product.html">
+                    <i class="fa fa-plus" style="font-size: 22px; color:black;"></i></a>
             </div>
-        </header>
 
-        <section class="profile_details">
+        </div>
+    </header>
 
-            <img class="run" src="../../assets/img/10.jpeg" alt="photo" width="250px" height="250px">
+    <section class="profile_details">
 
-            <div class="form">
-                <div class="details">
+        <img class="run" src="../../assets/img/10.jpeg" alt="photo" width="250px" height="250px">
+
+        <div class="form">
+            <div class="details">
+                <div class="details_list">
+                    <p class="list">Image:</p>
+                    <input type="url" placeholder="https://." pattern="https://.*" value="https://iili.io/HNw8ESp.jpg"
+                        class="list_2" id="uppic">
+                </div>
+
+                <div class="details_list">
+                    <p class="list"> Product Name:</p>
+                    <input type="text" class="list_2" placeholder="Saree" value="Kanjivaram saree"
+                        pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required id="productname">
+                </div>
+                <div class="details_list">
+                    <p class="list">Category:</p>
+                    <select type="text" class="list_2" placeholder="others" value="Saree" required id="productreview">
+                        <option>Dhoti</option>
+                        <option>Silk Saree</option>
+                        <option>Pumpar Cotton Saree</option>
+                    </select>
+                </div>
+
+                <div class="details_list">
+                    <p class="list">Price:</p>
+                    <input type="number" class="list_2" placeholder="10000(Rs)" value="9000" pattern="[0-9]{3,6}"
+                        required id="productprice">
+                </div>
+
+                <div class="flex_row">
                     <div class="details_list">
-                        <p class="list">UplodePhoto:</p>
-                        <input type="text" placeholder="https//.//" class="list_2" id="uppic">
+                        <p class="list">Offers:</p>
+                        <input type="number" class="list_3" placeholder="10(% off)" value="10" pattern="[0-9]{2}"
+                            required id="productoffer"><span class="percentage_discount">%</span>
                     </div>
 
                     <div class="details_list">
-                        <p class="list"> ProductName:</p>
-                        <input type="text" placeholder="Kanchipuram saree" class="list_2" id="productname">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">Spical Price:</p>
-                        <input type="text" placeholder=" ₹4000" class="list_2" id="productprice">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">Review:</p>
-                        <input type="text" placeholder="YOUR WHISH" class="list_2" id="productreview">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">offers:</p>
-                        <input type="text"
-                            placeholder="% off"
-                            class="list_2" id="productoffer">
-                    </div>
-
-                    <div class="details_list">
-                        <p class="list">discription:</p>
-                        <textarea
-                            placeholder=" *Special PriceGet extra 15% off (price inclusive of cashback/coupon)T&C
-                        * Buy More, Save MoreBuy worth ₹2 save 1%See all productsT&C
-                                               *Bank Offer10% off on ICICI Bank Credit Cards, up to ₹300. On orders of ₹1750 and aboveT&C "
-                            class="list_2" id="descrip"></textarea>
+                        <p class="list_1">Quantity:</p>
+                        <input type="number" min="1" class="list_4" required id="Quantity">
                     </div>
                 </div>
-                <button type="button" class="save">Save</button>
-                <button type="button" class="delete_data">Delete</button>
-            </div>
-        </section>
-        <a href></a>
 
-        <script>
+                <div class="details_list">
+                    <p class="list">Design Name:</p>
+                    <input type="text" class="list_2" required id="design">
+                </div>
+
+                <div class="details_list">
+                    <p class="list">Jarigai:</p>
+                    <input type="text" class="list_2" required id="Jargai">
+                </div>
+
+
+
+                <div class="details_list">
+                    <p class="list">Discription:</p>
+                    <textarea type="text" class="list_2"
+                        placeholder="*Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C."
+                        value="Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.  Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C."
+                        required id="descrip"></textarea>
+                </div>
+            </div>
+            <button type="button" class="save">Save</button>
+            <button type="button" class="delete_data">Delete</button>
+        </div>
+    </section>
+
+
+    <script>
         // const email = document.getElementById("email").value
         // const confirm_password = document.getElementById("confirm_password").value
         // const password = document.getElementById("password").value
@@ -109,16 +129,22 @@
         const urlParams = new URLSearchParams(queryString);
         const product_id = urlParams.get("product");
 
-        const uuid = JSON.parse(localStorage.getItem("product_uuid"));
+        // const uuid = JSON.parse(localStorage.getItem("product_uuid"));
         const product = JSON.parse(localStorage.getItem("product_crud"));
 
         function find_data(e) {
-          return e.product_uuid === uuid;
+            return e.product_uuid === product_id;
         }
 
         let product_data = product.find(find_data);
         // console.log(product_data)
-        document.getElementById("uppic").value = product_data.product_uuid;
+
+        document.getElementById("Quantity").value=parseInt(product_data.Quantity);
+    
+
+        document.getElementById("Jargai").value=product_data.Jarigai;
+        document.getElementById("design").value=product_data.Design_Name;
+        document.getElementById("uppic").value = product_data.uppic;
         document.getElementById("productname").value = product_data.productname;
         document.getElementById("productprice").value = product_data.productprice;
         document.getElementById("productreview").value = product_data.productreview;
@@ -126,55 +152,67 @@
         document.getElementById("productoffer").value = product_data.productoffer;
 
         const update = document.querySelector("button.save");
-        
+        console.log(update);
+
+        update.addEventListener("click", upadate_product);
+
         function upadate_product() {
-          const produc_uuid = JSON.parse(localStorage.getItem("product_uuid"));
-          const product_crud = JSON.parse(localStorage.getItem("product_crud"));
-          function find_Data(e) {
-            return e.product_uuid === produc_uuid;
-          }
-          update.addEventListener("click", upadate_product);
-          product_data = product_crud.find(find_Data);
-          // console.log(product_data)
-          const edit_image = document.getElementById("uppic").value;
-          const edit_name = document.getElementById("productname").value;
-          const edit_price = document.getElementById("productprice").value;
-          const edit_review = document.getElementById("productreview").value;
-          const edit_descrip = document.getElementById("descrip").value;
-          const edit_offer = document.getElementById("productoffer").value;
+            console.log("12345");
+            // const produc_uuid = JSON.parse(localStorage.getItem("product_uuid"));
+            const product_crud = JSON.parse(localStorage.getItem("product_crud"));
+            function find_Data(e) {
+                return e.product_uuid === product_id;
+            }
+            
 
-          product_data.product_uuid = edit_image;
-          product_data.productname = edit_name;
-          product_data.productprice = edit_price;
-          product_data.productreview = edit_review;
-          product_data.productoffer = edit_offer;
-          product_data.descrip = edit_descrip;
+            product_data = product_crud.find(find_Data);
+            console.log(product_data);
+            // console.log(product_data)
+            const edit_image = document.getElementById("uppic").value;
+            const edit_name = document.getElementById("productname").value;
+            const edit_price = document.getElementById("productprice").value;
+            const edit_review = document.getElementById("productreview").value;
+            const edit_descrip = document.getElementById("descrip").value;
+            const edit_offer = document.getElementById("productoffer").value;
+           const edit_quantity= document.getElementById("Quantity").value;
+            const edit_jargai= document.getElementById("Jargai").value;
+            const edit_design= document.getElementById("design").value;
 
-          localStorage.setItem("product_crud", JSON.stringify(product_crud));
-          alert("Product updated successfully");
-          window.location.href = `../seller products/seller products.html?product=${product_id}`;
+            product_data.Quantity=edit_quantity;
+            product_data.Jarigai=edit_jargai;
+            product_data.Design_Name=edit_design;
+            product_data.uppic = edit_image;
+            product_data.productname = edit_name;
+            product_data.productprice = edit_price;
+            product_data.productreview = edit_review;
+            product_data.productoffer = edit_offer;
+            product_data.descrip = edit_descrip;
+
+            localStorage.setItem("product_crud", JSON.stringify(product_crud));
+            alert("Product updated successfully");
+            window.location.href = `../seller products/seller products.html?product=${product_id}`;
         }
 
         function delData() {
-          if (window.confirm("Are you sure?")) {
-            const unique_id = JSON.parse(localStorage.getItem("product_uuid"));
-            const product_list = JSON.parse(localStorage.getItem("product_crud"));
-            function findData(e) {
-                return e.product_uuid === unique_id;
-            }
-            const product_datas = product_list.find(findData);
-            const indexOfUser = product_list.indexOf(product_datas);
+            if (window.confirm("Are you sure?")) {
+                // const unique_id = JSON.parse(localStorage.getItem("product_uuid"));
+                const product_list = JSON.parse(localStorage.getItem("product_crud"));
+                function findData(e) {
+                    return e.product_uuid === product_id;
+                }
+                const product_datas = product_list.find(findData);
+                const indexOfUser = product_list.indexOf(product_datas);
 
-            product_list.splice(indexOfUser, 1);
-            localStorage.setItem("product_crud", JSON.stringify(product_list));
-            window.location.href = "../seller products/seller product list.html";
-          }
+                product_list.splice(indexOfUser, 1);
+                localStorage.setItem("product_crud", JSON.stringify(product_list));
+                window.location.href = "../seller products/seller product list.html";
+            }
         }
         const del_product = document.querySelector("button.delete_data");
         del_product.addEventListener("click", delData);
     </script>
-        <!-- <a href="./seller product list.html"></a> -->
+    <!-- <a href="./seller product list.html"></a> -->
 
-    </body>
+</body>
 
 </html>

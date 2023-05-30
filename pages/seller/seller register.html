@@ -32,6 +32,17 @@
                         <input type="email" placeholder="abcd@13u824.gmail.com" id="email" value="vasumeena2004@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                     </div>
 
+                    <div class="photo" style="margin-top: 15px;">
+                      <label>Click Here Choose Your ID CARD Image</label>
+                      <input type="file" class="Weaving" id=" card_photo" >
+                  </div>
+
+                  <div class="photo" style="margin-top: 15px;">
+                    <label>Click Here Choose Your Weaving Image</label>
+
+                    <input type="file" class="Weaving" id="img_photo" >
+                </div>
+
                     <div class="pass" style="margin-top: 15px;">
     
                         <input type="password" id="password" placeholder="Password"value="Meenu@2343" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
@@ -89,6 +100,8 @@ function signUp(e) {
   const confirm_password = document.getElementById("confirm_password").value;
   const password = document.getElementById("password").value;
   const name = document.getElementById("name").value;
+  const Id_card = "card_photo";
+  const weaving_pic = "img_photo"
   const seller_uuid = uuidv4();
   const seller_cred = JSON.parse(localStorage.getItem("seller_cred")) || [];
 
@@ -105,6 +118,8 @@ function signUp(e) {
         confirm_password,
         password,
         seller_uuid,
+        Id_card,
+        weaving_pic
       });
       localStorage.setItem("seller_cred", JSON.stringify(seller_cred));
       console.log(localStorage.getItem("seller_cred"));
