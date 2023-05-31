@@ -32,7 +32,7 @@
         </div>
     </div>
 
-   <!-- <div class="orders">
+    <!-- <div class="orders">
                 <div class="card">
                     <img src="../../assets/img/4.jpeg" alt="saree" width="200px" height="230px">
                 </div>
@@ -64,7 +64,7 @@
                 
             </div> -->
 
-             <!-- <div class="orders">
+    <!-- <div class="orders">
                 <div class="card">
                     <img src="../../assets/img/3.jpeg" alt="saree" width="200px" height="230px">
                 </div>
@@ -191,16 +191,22 @@
     <script src="../../JS/header.js"></script>
 
     <script>
+
+
+
         const product_crud = JSON.parse(localStorage.getItem("product_crud"));
 
         const orderArray = JSON.parse(localStorage.getItem("order_list"));
 
         const unique = JSON.parse(localStorage.getItem("uniqueID_user"));
 
+
         for (let i = 0; i < orderArray.length; i++) {
 
             if (orderArray[i].uniqueID_user === unique) {
+
                 const productData = product_crud.find(e => e.product_uuid === orderArray[i].product_id);
+
                 // Create the main container div
                 const ordersContainer = document.createElement("div");
                 ordersContainer.classList.add("orders");
@@ -213,13 +219,10 @@
                 const image = document.createElement("img");
                 image.src = productData.uppic;
                 image.alt = "saree";
-                image.style.cursor="pointer";
-
-                image.addEventListener("click",function() {
-                    window.location.href=`${ window.location.origin}/pages/products/product_details.html?product=${productData.product_uuid}`;
-                });
-
-
+                image.style.cursor = "pointer";
+                image.setAttribute('data-id', orderArray[i].order_uuid);
+                image.setAttribute('class', 'product_1');
+               
                 // Append the image to the card div
                 cardDiv.appendChild(image);
 
@@ -229,13 +232,12 @@
 
                 // Create the heading element
                 const heading = document.createElement("h3");
-                heading.setAttribute('style','font-size:25px;')
+                heading.setAttribute('style', 'font-size:25px;')
                 heading.textContent = productData.productname;
-                heading.style.cursor="pointer";
-
-                heading.addEventListener("click",function() {
-                    window.location.href=`${ window.location.origin}/pages/products/product_details.html?product=${productData.product_uuid}`;
-                });
+                heading.style.cursor = "pointer";
+                // heading.addEventListener("click", function () {
+                //     window.location.href = `${window.location.origin}/pages/orders/order_summary_page.html?order=${productData.order_uuid}`;
+                // });
 
 
                 // Create the quantity paragraph
@@ -246,21 +248,21 @@
 
                 const cancelOrder = document.createElement("p");
                 cancelOrder.classList.add("cancel_order");
-                cancelOrder.textContent ="cancel order";
-                cancelOrder.setAttribute("id",orderArray[i].order_uuid)
+                cancelOrder.textContent = "cancel order";
+                cancelOrder.setAttribute("id", orderArray[i].order_uuid)
 
 
-                cancelOrder.addEventListener("click",function(){
-                        const unic=this.id;
+                cancelOrder.addEventListener("click", function () {
+                    const unic = this.id;
 
-                    const order_data=JSON.parse(localStorage.getItem("order_list"));
-                    const find_product=order_data.find((e)=>e.order_uuid===unic);
+                    const order_data = JSON.parse(localStorage.getItem("order_list"));
+                    const find_product = order_data.find((e) => e.order_uuid === unic);
 
-                    const find_index=order_data.indexOf(find_product);
+                    const find_index = order_data.indexOf(find_product);
 
-                    order_data.splice(find_index,1)
+                    order_data.splice(find_index, 1)
 
-                    localStorage.setItem(("order_list"),JSON.stringify(order_data));
+                    localStorage.setItem(("order_list"), JSON.stringify(order_data));
                     alert("Are you sure?")
 
                     location.reload();
@@ -270,30 +272,30 @@
 
 
                 // Append the heading and quantity to the card content div
-                
+
                 cardContentDiv.appendChild(heading);
                 cardContentDiv.appendChild(quantity);
                 cardContentDiv.appendChild(cancelOrder);
 
 
-                let initialDate=new Date(orderArray[i].order_date) ;
-                  initialDate.setDate(initialDate.getDate() + 7); 
+                let initialDate = new Date(orderArray[i].order_date);
+                initialDate.setDate(initialDate.getDate() + 7);
                 let formattedDate = initialDate.toISOString().slice(0, 10);
                 console.log(formattedDate);
                 // Create the cost div
                 const costDiv = document.createElement("div");
                 costDiv.classList.add("cost");
 
-                
-                let  paragraph = document.createElement('p');
+
+                let paragraph = document.createElement('p');
                 paragraph.setAttribute('class', 'product_price');
                 paragraph.setAttribute('style', 'font-size: 11px; margin-top: -30px; margin-bottom: 30px; color:#7d8993;');
-                paragraph.innerHTML = "delivered by "+ formattedDate;
+                paragraph.innerHTML = "delivered by " + formattedDate;
 
                 // Create the product price paragraph
                 const productPrice = document.createElement("p");
                 productPrice.classList.add("product_price");
-                productPrice.setAttribute('style','font-size:19px;')
+                productPrice.setAttribute('style', 'font-size:19px;')
                 productPrice.innerText = "₹" + productData.discountprice * orderArray[i].quantity;
 
 
@@ -318,7 +320,14 @@
 
             }
         }
-
+//URL Params
+const bookCovers = document.querySelectorAll(".product_1");
+        bookCovers.forEach((bookCover) => {
+            bookCover.addEventListener("click", (event) => {
+                const person_data = bookCover.dataset.id;
+                window.location.href = `./order_summary_page.html?order_id=${person_data}`;
+            });
+        });
 
 
     </script>

@@ -54,40 +54,30 @@
 
         <section class="box">
 
-            <!-- <div class="section"> -->
-            <!-- <div class="meenu">
+            <div class="section">
+             <div class="meenu">
                 <div class="product">
-                <img src="../../assets/img/10.jpeg" alt="product-1" width="450px" height="450px" />
+                <img id="product_image" src="../../assets/img/10.jpeg" alt="product-1" width="450px" height="450px" />
                 </div>
 
-                <div class="product-1">
-                <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
-
-                <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
-
-                <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
-
-                <img src="../../assets/img/10.jpeg" alt="product" width="86px" />
-                </div>
                 </div>
 
                 <div class="sneaker">
                 <h4>KAITHTHARI</h4>
 
-                <h2>Kanchipuram Saree</h2>
+                <h2 id="name_of_product"></h2>
                 <div class="rupeeees">
 
                 <div class="akka">
                 <p>Special Price</p>
-                <b>₹ 5,200</b>
-                <span>
-                25% off
+                <b id="offered_price"></b>
+                <span id="offer_discount">
                 </span>
                 </div>
                 </div>
 
                 <div class="ic">
-                <s>₹ 7500</s>
+                <s id="normal_price"></s>
                 </div>
 
                 <div class="review">
@@ -99,39 +89,39 @@
                 <i class="fa fa-star-o" style="font-size:24px; color:orange;"></i>
                 </div>
 
+                
+
+                <div>
+                    <p id="quan">Ouantity : </p>
+                </div>
+                <div>
+                    <p id="length">Product-length : </p>
+                </div>
+
                 <div class="content-details">
-                <h3>Available price</h3>
-                <p>Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.</p>
-                <p>Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C.</p>
-                <p>Bank OfferFlat ₹100 Instant Cashback on Paytm Wallet. Min Order Value ₹1000. Valid once per Paytm
-                accountT&C.</p>
-                <p>Bank Offer10% instant discount on IDFC FIRST Credit Card EMI Trxns, up to ₹3000 on orders of ₹5,000 and
-                aboveT&C.</p>
+                    <h3>Design-Type : </h3>
+                    <p id="Design"></p>
+                </div>
+                <div class="content-details">
+                    <h3>Jarigai : </h3>
+                    <p id="Jarigai"></p>
+                </div>
+
+                <div class="content-details">
+                <h3>Product Details</h3>
+                <p id="product_detail_para"></p>
                 </div>
 
                 <div class="what">
                 <button class="the">
-
-                <a href="../register page/rigister page.html"><strong>BUY NOW</strong></a>
-
-                </button>
-
-                <button class="that">
-                <a href="../buy now page/add to cart.html"><i class="fa fa-shopping-cart"
-                style="font-size:15px; color:black; margin-right: 10px;"></i>ADD TO CART</a>
-
-                </button>
-
-                <button class="heart">
-                <a href="../whislist/wishlist.html"><i class="fa fa-heart"
-                style="font-size:15px; color:black;"><strong>Whislist</strong></i></a>
+                    <strong>EDIT</strong>
                 </button>
 
                 </div>
 
-                </div> -->
+                </div> 
 
-            <!-- </div> -->
+            </div>
 
         </section>
         <script>
@@ -185,147 +175,175 @@ const urlParams = new URLSearchParams(queryString);
 const product_id = urlParams.get("product");
 
 const unique_id = url_upload.find((e) => e.product_uuid === product_id);
+console.log(product_id);
 console.log(url_upload);
 
+document.getElementById("product_image").src=unique_id.uppic;
+document.getElementById("name_of_product").innerText=unique_id.productname;
+document.getElementById("offered_price").innerText="₹"+unique_id.discountprice;
+document.getElementById("offer_discount").innerText=unique_id.productoffer+"% off";
+document.getElementById("normal_price").innerText="₹"+unique_id.productprice;
+document.getElementById("product_detail_para").innerText=unique_id.descrip;
+document.getElementById("Jarigai").innerText=unique_id.Jarigai;
+document.getElementById("Design").innerText=unique_id.Design_Name;
+document.getElementById("quan").innerText="Quandity : "+unique_id.Quantity;
+document.getElementById("length").innerText="Length : "+unique_id.selectedValue;
+
+// {
+//   "uppic": "https://iili.io/HNw8ESp.jpg",
+//   "productname": "Kanji saree",
+//   "productprice": "9000",
+//   "discountprice": 8100,
+ 
+//   "descrip": "mnbvzasdfghjkloiuytrewqasdfghjkl,mnbvcxzaqw",
+//   "productoffer": "10",
+  
+ 
+//   "Quantity": "13",
+//   "jarigai": "qwertyhnm ",
+//   "Design_Name": "hvtsvbtafaasdfghj 65788",
+//   "selectedValue": "5.5 Meter",
+//   "Jargai": "qwertyhnm "
+// }
 // div_meenu
 
-const div_section = document.createElement("div");
-div_section.setAttribute("class", "section");
-console.log(div_section);
+// const div_section = document.createElement("div");
+// div_section.setAttribute("class", "section");
+// console.log(div_section);
 
-const div_meenu = document.createElement("div");
-div_meenu.setAttribute("class", "meenu");
-div_section.append(div_meenu);
+// const div_meenu = document.createElement("div");
+// div_meenu.setAttribute("class", "meenu");
+// div_section.append(div_meenu);
 
-// // div_product
+// // // div_product
 
-const div_product = document.createElement("div");
-div_product.setAttribute("class", " product");
-div_meenu.append(div_product);
+// const div_product = document.createElement("div");
+// div_product.setAttribute("class", " product");
+// div_meenu.append(div_product);
 
-// <img> </img>
+// // <img> </img>
 
-const img = document.createElement("img");
-img.setAttribute("src", unique_id.uppic);
-img.setAttribute("alt", "product-1");
-img.setAttribute("height", "450px");
-img.setAttribute("width", "450px");
-div_product.append(img);
+// const img = document.createElement("img");
+// img.setAttribute("src", unique_id.uppic);
+// img.setAttribute("alt", "product-1");
+// img.setAttribute("height", "450px");
+// img.setAttribute("width", "450px");
+// div_product.append(img);
 
-// div_product_1
+// // div_product_1
 
-const div_product_1 = document.createElement("div");
-div_product_1.setAttribute("class", "product-1");
-div_product.append(div_product_1);
+// const div_product_1 = document.createElement("div");
+// div_product_1.setAttribute("class", "product-1");
+// div_product.append(div_product_1);
 
-// div_sneaker
+// // div_sneaker
 
-const div_sneaker = document.createElement("div");
-div_sneaker.setAttribute("class", "sneaker");
-div_section.append(div_sneaker);
+// const div_sneaker = document.createElement("div");
+// div_sneaker.setAttribute("class", "sneaker");
+// div_section.append(div_sneaker);
 
-// h4
-const h4 = document.createElement("h4");
-h4.innerText = "KAITHTHARI";
-div_sneaker.append(h4);
+// // h4
+// const h4 = document.createElement("h4");
+// h4.innerText = "KAITHTHARI";
+// div_sneaker.append(h4);
 
-// h2
-const h2 = document.createElement("h2");
-h2.innerText = unique_id.productname;
-div_sneaker.append(h2);
+// // h2
+// const h2 = document.createElement("h2");
+// h2.innerText = unique_id.productname;
+// div_sneaker.append(h2);
 
-// div_rupeeees
+// // div_rupeeees
 
-const div_rupeeees = document.createElement("div");
-div_rupeeees.setAttribute("class", "rupeeees");
-div_sneaker.append(div_rupeeees);
+// const div_rupeeees = document.createElement("div");
+// div_rupeeees.setAttribute("class", "rupeeees");
+// div_sneaker.append(div_rupeeees);
 
-// div_akka
+// // div_akka
 
-const div_akka = document.createElement("div");
-div_akka.setAttribute("class", "akka");
-div_rupeeees.append(div_akka);
+// const div_akka = document.createElement("div");
+// div_akka.setAttribute("class", "akka");
+// div_rupeeees.append(div_akka);
 
-// <p></p>
+// // <p></p>
 
-const p = document.createElement("p");
-p.innerText = "Special Price";
-div_akka.append(p);
+// const p = document.createElement("p");
+// p.innerText = "Special Price";
+// div_akka.append(p);
 
-// <b></b>
+// // <b></b>
 
-const b = document.createElement("b");
-b.innerText = `₹${unique_id.discountprice}`;
-div_akka.append(b);
+// const b = document.createElement("b");
+// b.innerText = `₹${unique_id.discountprice}`;
+// div_akka.append(b);
 
-//  <span></span>
+// //  <span></span>
 
-const span = document.createElement("span");
-span.innerText = `${unique_id.productoffer}% off`;
-div_akka.append(span);
+// const span = document.createElement("span");
+// span.innerText = `${unique_id.productoffer}% off`;
+// div_akka.append(span);
 
-//  div_ic
-const div_ic = document.createElement("div");
-div_ic.setAttribute("class", "ic");
-div_sneaker.append(div_ic);
+// //  div_ic
+// const div_ic = document.createElement("div");
+// div_ic.setAttribute("class", "ic");
+// div_sneaker.append(div_ic);
 
-// <s></s>
+// // <s></s>
 
-const s = document.createElement("s");
-s.innerText = `₹${unique_id.productprice}`;
-div_ic.append(s);
+// const s = document.createElement("s");
+// s.innerText = `₹${unique_id.productprice}`;
+// div_ic.append(s);
 
-//   div_review
+// //   div_review
 
-const div_review = document.createElement("div");
-div_review.setAttribute("class", "review");
-div_review.innerText = "REVIEW :";
-div_sneaker.append(div_review);
+// const div_review = document.createElement("div");
+// div_review.setAttribute("class", "review");
+// div_review.innerText = "REVIEW :";
+// div_sneaker.append(div_review);
 
-// <i class=fa fa-star> </i>
-for (let j = 0; j < 5; j++) {
-  const i_fa = document.createElement("i");
-  i_fa.setAttribute("class", "fa fa-star");
-  i_fa.setAttribute("style", "font-size:24px");
-  i_fa.setAttribute("style", "color:orange");
-  div_review.append(i_fa);
-}
+// // <i class=fa fa-star> </i>
+// for (let j = 0; j < 5; j++) {
+//   const i_fa = document.createElement("i");
+//   i_fa.setAttribute("class", "fa fa-star");
+//   i_fa.setAttribute("style", "font-size:24px");
+//   i_fa.setAttribute("style", "color:orange");
+//   div_review.append(i_fa);
+// }
 
-// <div_content-details>
+// // <div_content-details>
 
-const div_content_details = document.createElement("div");
-div_content_details.setAttribute("class", "content-details");
-div_sneaker.append(div_content_details);
+// const div_content_details = document.createElement("div");
+// div_content_details.setAttribute("class", "content-details");
+// div_sneaker.append(div_content_details);
 
-// <h3></h3>
+// // <h3></h3>
 
-const h3 = document.createElement("h3");
-h3.innerText = "Available price";
-div_content_details.append(h3);
+// const h3 = document.createElement("h3");
+// h3.innerText = "Available price";
+// div_content_details.append(h3);
 
-// const descript = product_details.description;
-// const no_of_list = descript.length;
-//<p_Special>
-// for (let j = 0; j < no_of_list; j++) {
-const p_spcial = document.createElement("P");
-p_spcial.innerText = unique_id.descrip;
-div_content_details.append(p_spcial);
+// // const descript = product_details.description;
+// // const no_of_list = descript.length;
+// //<p_Special>
+// // for (let j = 0; j < no_of_list; j++) {
+// const p_spcial = document.createElement("P");
+// p_spcial.innerText = unique_id.descrip;
+// div_content_details.append(p_spcial);
 
-// div_what
+// // div_what
 
-const div_what = document.createElement("div");
-div_what.setAttribute("class", "what");
-div_sneaker.append(div_what);
-console.log(div_what);
+// const div_what = document.createElement("div");
+// div_what.setAttribute("class", "what");
+// div_sneaker.append(div_what);
+// console.log(div_what);
 
-// button_the
+// // button_the
 
-const button_the = document.createElement("button");
-button_the.setAttribute("class", "the");
-button_the.setAttribute("style", "color:black");
-button_the.setAttribute("data-id", unique_id.product_uuid);
-button_the.innerText = "EDIT";
-div_what.append(button_the);
+// const button_the = document.createElement("button");
+// button_the.setAttribute("class", "the");
+// button_the.setAttribute("style", "color:black");
+// button_the.setAttribute("data-id", unique_id.product_uuid);
+// button_the.innerText = "EDIT";
+// div_what.append(button_the);
 
 // // a_href
 // a_href = document.createElement("a");
@@ -357,13 +375,13 @@ div_what.append(button_the);
 // document.querySelector("div.section").append(div_meenu);
 // document.querySelector("div.section").append(div_sneaker);
 // document.querySelector("div.sneaker").append(div_what);
-document.querySelector("section.box").append(div_section);
+// document.querySelector("section.box").append(div_section);
 
 const edit = document.querySelectorAll("button.the");
 edit.forEach((findId) => {
   findId.addEventListener("click", function on() {
     const { id } = this.dataset;
-    localStorage.setItem("product_uuid", JSON.stringify(id));
+    // localStorage.setItem("product_uuid", JSON.stringify(id));
     window.location.href = `../seller products/seller product edit.html?product=${product_id}`;
   });
 });

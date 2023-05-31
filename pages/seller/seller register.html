@@ -13,6 +13,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <!-- <script src="../../JS/default_products.js"></script> -->
+
     </head>
 
     <body>
@@ -31,6 +34,27 @@
 
                         <input type="email" placeholder="abcd@13u824.gmail.com" id="email" value="vasumeena2004@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
                     </div>
+
+                    <div class="photo" style="margin-top: 15px;">
+                      <label>Click Here Choose Your ID CARD Image</label>
+                      <input type="file" class="Weaving" id="card_img_upload" >
+                      <img src="" id="imgBox2" style="display: none;" alt="">
+                 
+                        <img class="check_img" src="../../assets/img/icon/grey_style.gif" style="display: none;" width="30px" height="30px" id="card_load" alt="">
+                        <img class="check_img2" src="../../assets/img/icon/check-mark.png" style="display: none;" width="20px" height="20px" id="card_check" alt="">
+              
+
+                   </div>
+
+                  <div class="photo" style="margin-top: 15px;">
+                    <label>Click Here Choose Your Weaving Image</label>
+                    <input type="file" class="Weaving" id="photo_img_upload" >
+
+                                     
+                    <img class="check_img" src="../../assets/img/icon/grey_style.gif" style="display: none;" width="30px" height="30px" id="photo_load" alt="">
+                    <img class="check_img2" src="../../assets/img/icon/check-mark.png" style="display: none;" width="20px" height="20px" id="photo_check" alt="">
+        
+                </div>
 
                     <div class="pass" style="margin-top: 15px;">
     
@@ -62,6 +86,87 @@
 
         </section>
         <script>
+
+              //  API for store image in cloud
+// post image Upload API
+const CLOUDINARY_URL = "https://api.cloudinary.com/v1_1/dvb2bkrx9/upload";
+const CLOUDINARY_UPLOAD_PRESET = "sk3iuzma";
+// const img_pre_div = document.getElementById("img_pre_div");
+const imgPreview = document.getElementById("imgBox2");
+const fileUpload = document.getElementById("card_img_upload");
+let card_img = "";
+fileUpload.addEventListener("change", function (event) {
+
+document.getElementById("card_load").style.display="block";
+
+   
+  const file = event.target.files[0];
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+  axios({
+    url: CLOUDINARY_URL,
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    data: formData,
+  })
+    .then(function (res) {
+      console.log(res);
+      imgPreview.src = res.data.secure_url;
+      document.getElementById("card_load").style.display="none";
+      document.getElementById("card_check").style.display="block";
+      // Store the URL in localStorage
+      card_img = res.data.secure_url;
+      console.log(post_img);
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+});
+
+              //  API for store image in cloud
+// post image Upload API
+
+// const img_pre_div = document.getElementById("img_pre_div");
+// const photoimgPreview = document.getElementById("imgBox1");
+const photofileUpload = document.getElementById("photo_img_upload");
+let photo_card_img = "";
+photofileUpload.addEventListener("change", function (event) {
+
+document.getElementById("photo_load").style.display="block";
+
+   
+  const file = event.target.files[0];
+  const formData = new FormData();
+  formData.append("file", file);
+  formData.append("upload_preset", CLOUDINARY_UPLOAD_PRESET);
+  axios({
+    url: CLOUDINARY_URL,
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    data: formData,
+  })
+    .then(function (res) {
+      console.log(res);
+      imgPreview.src = res.data.secure_url;
+      document.getElementById("photo_load").style.display="none";
+      document.getElementById("photo_check").style.display="block";
+      // Store the URL in localStorage
+      photo_card_img = res.data.secure_url;
+      console.log(post_img);
+    })
+    .catch(function (err) {
+      console.error(err);
+    });
+});
+
+
+
+
 // function submit(){
 //     const email = document.getElementById("email").value
 //     const confirm_password = document.getElementById("confirm_password").value
@@ -89,6 +194,8 @@ function signUp(e) {
   const confirm_password = document.getElementById("confirm_password").value;
   const password = document.getElementById("password").value;
   const name = document.getElementById("name").value;
+  const Id_card = "card_photo";
+  const weaving_pic = "img_photo"
   const seller_uuid = uuidv4();
   const seller_cred = JSON.parse(localStorage.getItem("seller_cred")) || [];
 
@@ -105,6 +212,8 @@ function signUp(e) {
         confirm_password,
         password,
         seller_uuid,
+        "Id_card":card_img,
+        weaving_pic:photo_card_img
       });
       localStorage.setItem("seller_cred", JSON.stringify(seller_cred));
       console.log(localStorage.getItem("seller_cred"));

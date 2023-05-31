@@ -21,9 +21,17 @@
         <header id="header">
         </header>
 
-        <section>
+        <section class="sharee_section">
 
-            <div class="hol">
+            <h3 class="title">silk saree</h3>
+            <div id="silk_saree" class="hol">
+             
+            
+            </div>
+            <h3  class="title">cotton saree</h3>
+            <div id="cotton_saree" class="hol">
+                
+
             </div>
 
         </section>
@@ -132,8 +140,18 @@ const add_products = products.filter((product) =>
     // const urlParams = new URLSearchParams(queryString);
     // const product_id = urlParams.get("product");
 
+    const silk_sharee=products.filter((e)=>e.productreview==="Silk Saree");
+
+    creat_card(silk_sharee);
+
+    const cotton_sharee=products.filter((e)=>e.productreview==="Pumpar Cotton Saree");
+
+    creat_card(cotton_sharee);
+
+    function creat_card(add_products){
+
 for (let i = 0; i < add_products.length; i++) {
-  if (add_products[i].productreview === "Saree") {
+//   if (add_products[i].productreview === "Saree") {
         //    <div class=wat> </div>
 
         const div_wat = document.createElement("div");
@@ -182,12 +200,45 @@ for (let i = 0; i < add_products.length; i++) {
         div_product_content.append(div_star);
 
         // // <i class=fa fa-star> </i>
-        for (let k = 0; k < 5; k++) {
-          const i_fa = document.createElement("i");
-          i_fa.setAttribute("class", "fa fa-star");
-          i_fa.setAttribute("style", "font-size:24px");
-          div_star.append(i_fa);
-        }
+
+        const review_data = JSON.parse(localStorage.getItem("review_data")) || [];
+let rating = 0;
+let average_rating=0;
+
+const find_review = review_data.filter(e => e.product_uuid === add_products[i].product_uuid);
+
+if (find_review.length < 1) {
+  rating = 0;
+} else {
+  for (let j = 0; j < find_review.length; j++) {
+    rating += parseInt(find_review[j].rating);
+  }
+ average_rating = Math.floor(rating / find_review.length);
+
+
+}
+if (find_review.length<1) {
+    for (let k = 0; k < 5; k++) {
+   const i_fa = document.createElement("i")
+     i_fa.setAttribute("class", "fa fa-star-o");
+   i_fa.setAttribute("style", "font-size:24px");
+   div_star.appendChild(i_fa);
+ }
+}
+else{
+    for (let k = 0; k < 5; k++) {
+   const i_fa = document.createElement("i")
+   if(k<average_rating){
+    i_fa.setAttribute("class", "fa fa-star");
+   }else{
+    i_fa.setAttribute("class", "fa fa-star-o");
+   }
+     
+   i_fa.setAttribute("style", "font-size:24px");
+   div_star.appendChild(i_fa);
+}
+}
+
 
         // a button
         const a_but = document.createElement("a");
@@ -207,9 +258,15 @@ for (let i = 0; i < add_products.length; i++) {
         strong.innerHTML = "view";
         button_buy.append(strong);
 
-        document.querySelector("div.hol").append(div_wat);
+        if (add_products[i].productreview==="Silk Saree") {
+            document.querySelector("div#silk_saree").appendChild(div_wat);
+        }else if(add_products[i].productreview==="Pumpar Cotton Saree"){
+            document.querySelector("div#cotton_saree").appendChild(div_wat);
+        }
+        // document.querySelector("div.hol").append(div_wat);
   }
-}
+};
+
  </script>
     <script src="../../JS/header.js"></script>
      

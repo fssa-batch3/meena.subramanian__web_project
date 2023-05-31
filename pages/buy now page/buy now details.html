@@ -127,6 +127,7 @@
                         <input type="number" id="quantity" min="1" value="1" required>
                     </div>
                 </div>
+                <p id="stock_alert" style="color:red;">Only 5 stock left. HURRY UP....</p>
 
                 <div class="card">
                     <div class="name">
@@ -151,11 +152,10 @@
                     </div>
                 </div>
 
-                <a href="../../index.html">
-                    <button class="place">
+               
+                    <button class="place" id="PlaceOrder">
                         <b> PLACE ORDER </b>
                     </button>
-                </a>
             </div>
         </form>
     </div>
@@ -170,6 +170,24 @@
         const uniqueID_user = JSON.parse(localStorage.getItem("uniqueID_user"));
         const order_list = JSON.parse(localStorage.getItem("order_list")) || [];
         const user_cred = JSON.parse(localStorage.getItem("user_cred"));
+
+
+        const stoct_alert=document.getElementById("stock_alert");
+        const PlaceOrder_bn=document.getElementById("PlaceOrder");
+
+     
+            if(parseInt(product.Quantity)<10 && parseInt(product.Quantity)>0){
+                stoct_alert.innerText="Only "+ product.Quantity +" stock left. Hurry up....";
+            }else if(parseInt(product.Quantity)==0){
+                stoct_alert.innerText="Out of Stock";
+                PlaceOrder_bn.style.opacity="0.3";
+                PlaceOrder_bn.style.pointerEvents ="none";
+            }
+            else{
+                stoct_alert.style.display="none";
+            }
+
+   
 
         const add_quan = document.querySelector("#quantity");
         add_quan.addEventListener("click", () => {
@@ -247,14 +265,27 @@
                 order_uuid,
                 uniqueID_user,
                 product_id: product_uuid,
+                seller_id:product.seller_id,
+                shipped:false
 
             });
+            minus_quantity(quantity);
             localStorage.setItem("order_list", JSON.stringify(order_list));
             // window.location.href = "../orders/my orders.html"
                 location.href="../../index.html";
                 alert("Your Order Has Been Placed✅")
 
         }
+
+        function minus_quantity(qty){
+            const product_crud=JSON.parse(localStorage.getItem("product_crud"));
+
+            let find_product=product_crud.find((e)=>e.product_uuid===product_id);
+
+            find_product.Quantity=parseInt(find_product.Quantity)-qty;
+
+            localStorage.setItem("product_crud",JSON.stringify(product_crud));
+        };
 
 
         change_adress.addEventListener('click', function () {

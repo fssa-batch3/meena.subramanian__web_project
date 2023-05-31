@@ -231,6 +231,15 @@ input[type="zip"]{
 	background-color:#eaecef;
 }
 
+input[type="tel"]{
+	padding:9px 5px 9px 5px;
+	outline: none;
+	margin-bottom: 35px;
+	border-radius: 5px;
+	border-color: transparent;
+	background-color:#eaecef;
+}
+
 input[type="number"]{
 	padding:9px 5px 9px 5px;
 	outline: none;

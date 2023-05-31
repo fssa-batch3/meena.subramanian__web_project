@@ -217,7 +217,7 @@ h2{
 }
 
 .content-details h3{
-	margin-top:30px;
+	/* margin-top:30px; */
 	color:crimson
 }
 
@@ -498,6 +498,17 @@ span{
     margin-bottom:35px;
 }
 
-/* @media only screen and (max-width:700px) {
-	
-} */
+.washing_instruction {
+    width: 100%;
+    height: auto;
+    margin-top: -81px;
+    margin-bottom: 60px;
+}
+.wash{
+	width: 90%;
+	padding: 12px;
+	border-radius: 8px;
+	height: auto;
+	margin: auto;
+	background-color: rgb(203, 209, 214);
+}

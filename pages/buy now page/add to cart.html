@@ -19,6 +19,9 @@
 <body>
 
     <header id="header">
+        <div class="item-count">
+            <span>3</span>
+          </div>
     </header>
 
     <div class="change">
@@ -458,7 +461,11 @@
                     "quantity": cart_list[i].quantity,
                     "uniqueID_user": user_unique,
                     "user_adress": user_d_adress.address_uuid,
+                    "seller_id":cart_list[i].seller_id,
+                    "shipped":false
                 });
+
+                minus_quantity( cart_list[i].quantity, cart_list[i].product_id)
 
             }
 
@@ -475,6 +482,17 @@
 
 
         });
+
+        function minus_quantity(qty,product_id){
+            const product_crud=JSON.parse(localStorage.getItem("product_crud"));
+
+            let find_product=product_crud.find((e)=>e.product_uuid===product_id);
+
+            find_product.Quantity=parseInt(find_product.Quantity)-qty;
+
+            localStorage.setItem("product_crud",JSON.stringify(product_crud));
+        };
+
 
         const change_add = document.getElementById("change_add");
         change_add.addEventListener("click",function(){
