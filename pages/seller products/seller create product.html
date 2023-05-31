@@ -48,17 +48,17 @@
                     <div class="details_list">
                         <p class="list">Image:</p>
                         <input type="url" placeholder="https://." pattern="https://.*"
-                            value="https://iili.io/HNw8ESp.jpg" class="list_2" id="uppic">
+                             class="list_2" id="uppic">
                     </div>
 
                     <div class="details_list">
                         <p class="list"> Product Name:</p>
-                        <input type="text" class="list_2" placeholder="Saree" value="Kanjivaram saree"
+                        <input type="text" class="list_2" placeholder="Saree" 
                             pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+" required id="productname">
                     </div>
                     <div class="details_list">
                         <p class="list">Category:</p>
-                        <select type="text" class="list_2" placeholder="others" value="Saree" required
+                        <select type="text" class="list_2" placeholder="others"  required
                             id="productreview">
                             <option>Dhoti</option>
                             <option>Silk Saree</option>
@@ -68,14 +68,14 @@
 
                     <div class="details_list">
                         <p class="list">Price:</p>
-                        <input type="number" class="list_2" placeholder="10000(Rs)" value="9000" pattern="[0-9]{3,6}"
+                        <input type="number" class="list_2" placeholder="10000(Rs)" pattern="[0-9]{3,6}"
                             required id="productprice">
                     </div>
 
                     <div class="flex_row">
                         <div class="details_list">
                             <p class="list">Offers:</p>
-                            <input type="number" class="list_3" placeholder="10(% off)" value="10" pattern="[0-9]{2}"
+                            <input type="number" class="list_3" placeholder="10"  pattern="[0-9]{2}"
                                 required id="productoffer"><span class="percentage_discount">%</span>
                         </div>
 
@@ -112,7 +112,6 @@
                         <textarea type="text" class="list_2"
                             placeholder="*Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C."
                             pattern="[a-zA-Z0-9!@#$$%^&*()_+:>?|\]+"
-                            value="Special PriceGet extra 5% off (price inclusive of cashback/coupon)T&C.  Bank Offer10% instant discount on SBI Credit Card, up to ₹750 on orders of ₹2,500 and aboveT&C."
                             required id="descrip"></textarea>
                     </div>
 
@@ -190,6 +189,9 @@
             window.location.href = `../seller products/seller product list.html?product=${product_uuid}`;
         }
     }
+
+
+
 
     </script>
 

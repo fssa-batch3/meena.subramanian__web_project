@@ -108,4 +108,12 @@ input[type=text]{
     margin-left:150px;
     
 }
-
+.check_img{
+	margin-left: 50px;
+    /* margin-top: 8px; */
+    margin-bottom: -10px;
+}
+.check_img2{
+	margin-left: 30px;
+    
+}
