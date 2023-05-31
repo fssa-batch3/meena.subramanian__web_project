@@ -89,6 +89,10 @@ input[type="search"]{
     padding-left:30px;
 }
 
+.favorite{
+    padding-left:30px;
+}
+
 
 
 .buy{
@@ -121,10 +125,10 @@ input[type="search"]{
     top: 15px;
 }
 
-.s1 i{
+.s1{
     position: relative;
     top: 15px;
-   text-decoration: line-through;
+    text-decoration: line-through;
 }
 .star{
     position: relative;
@@ -139,7 +143,7 @@ input[type="search"]{
     border: 1px solid white;
     border-radius:6px;
     background-color:whitesmoke;
-	margin-bottom: 30px;
+	margin-bottom: 60px;
   
 }
 .wat:hover{
@@ -156,14 +160,11 @@ input[type="search"]{
 }
 
 .hol{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display:grid;
+	grid-template-columns: repeat(3,350px);
     justify-content: space-evenly;
-    height: 45vh;
-    margin-top:100px;
-    
-    
+	margin-top: 60px;
+  
 }
 
 .del{
@@ -174,7 +175,7 @@ input[type="search"]{
 
 #footer{
 	background-color:cadetblue;
-	margin-top:200px;
+	
 }
 
 .footer-container{
@@ -189,8 +190,16 @@ input[type="search"]{
 	margin-right:730px;
 	
 }
-
-
+.no_product{
+	text-align: center;
+    margin-top: 5rem;
+    width: 100vw;
+    height: 25vh;
+    margin-left: -117px;
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(176, 182, 182);
+}
 
 .about h3{
 	color: white;

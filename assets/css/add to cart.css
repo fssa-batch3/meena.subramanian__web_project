@@ -78,6 +78,7 @@ input[type="search"]{
 
 .cart{
     padding-right:30px;
+
 }
 
 
@@ -97,26 +98,51 @@ input[type="search"]{
     width: 100%;
 }
 
+.no_product{
+    text-align: center;
+    margin-top:9rem;
+    font-size: 30px;
+    font-weight: 600;
+    color:rgb(176, 182, 182);
+}
 
 .tag{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border:1px solid gray ;
-    box-shadow: 5px 5px 5px  gray;
+    border: 1px solid transparent;
+    /* box-shadow: 5px 5px 5px gray; */
     border-radius: 8px;
-    width:1050px;
-    margin-left: 240px;
-    margin-top:30px;
+    background-color: #e7eded;
+    width: 1050px;
+    margin-left: 219px;
+    margin-top: 37px;
    
 }
 
-h6 a{
-    color:cadetblue;
-    font-size: 13px;
-    text-decoration: none;
+.log {
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 10px;
 }
+
+h6 button {
+    font-size: 13px;
+    outline:none;
+    cursor: pointer;
+    margin: auto;
+    background-color: #e7eded;
+    border: none;
+    color:rgb(130, 158, 158)
+
+}
+
 
 .tag img{
     width: 250px;
@@ -131,6 +157,7 @@ h6 a{
 .total small{
     padding-left:80px;
 }
+
 
 
 .details{
@@ -148,26 +175,26 @@ h6 a{
 }
 
 .quan input{
-     width:45px;
-     height:25px;
-    border:0px solid ;
-    background-color:cadetblue;
+    width: 45px;
+    height: 25px;
+    border: 0px solid;
     border-radius: 5px;
-    text-align: center;
+    background-color: #eaecef;
+    text-align: end;
    
 }
 .ten{
-    width: 50px;
     height: 30px;
 }
 
-#button a{
+button {
     text-decoration: none;
     color:black;
-    
+    margin-bottom:30px;
+    cursor: pointer;
 }
 
-#button{
+button.buy_all_button {
     background-color:cadetblue;
     border-radius: 5px;
     border:0px solid transparent;
@@ -175,9 +202,6 @@ h6 a{
     width:100px;
     margin-left:1150px;
 }
-
-
-
 
 
 .extra{
@@ -217,7 +241,6 @@ h3{
 }
 
 h6{
-    
 	font-size: 15px;
 }
 
@@ -262,6 +285,16 @@ h6{
 .icons a img{
     margin-bottom:25px;
 }
+
+.change p{
+    text-align: center;
+    margin-top: 36px;
+    margin-left: 55rem;
+    cursor: pointer;
+    color:rgb(96, 122, 123);
+    text-decoration: underline;
+}
+
 
 
 

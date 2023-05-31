@@ -1,0 +1,4 @@
+ node_modules/**
+    assets/js/vendor/**
+    **/*.config.js
+    **/*.min.js

@@ -5,6 +5,16 @@
 	text-decoration: none;	
 }
 
+.log{
+	display: block;
+    width: 140px;
+    height: 30px;
+    background-color:cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+   margin-left:10px;
+}
 
 	
 
@@ -106,7 +116,6 @@ input[type="search"]{
 	margin-top:50px;
 	margin-bottom:50px;
 	margin-left:135px;
-
     border-radius: 8px;
 	background-color:#e7fff2;
 }
@@ -156,16 +165,7 @@ input[type="search"]{
     left: 90px;
     top: 40px;
 }
-.run{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-   margin-top:100px;
-   height: 45vh;
 
-    
-}
 
 .buy{
     display: block;
@@ -177,11 +177,12 @@ input[type="search"]{
     border: 1px solid white;
    margin-top:40px;
    margin-left:98px;
+   cursor: pointer;
 
 }
 
 .buy:hover{
-	scale: 1.04;
+	scale: 1;
 	background-color: crimson;
 	color: white;
 }
@@ -210,27 +211,23 @@ i:hover{
 
 
 .s1 {
-
-    text-decoration: line-through;
-	
+    text-decoration: line-through;	
 }
+
+
 .star{
     position: relative;
     top: 25px;
     color:orange;
 }
 
-
-
 .hol{
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3,350px);
+    align-items: center;
     justify-content: space-evenly;
     height: 45vh;
-	margin-top: 80px;
-    
-    
+	margin-top: 100px;    
 }
 
 .products-container{
@@ -252,14 +249,13 @@ i:hover{
 }
 
 .border-2{
-		height:5px;
-		width:500px;
-		background-color: cadetblue;
-		float:right;
-		margin-bottom:40px;
-		position: relative;
-		bottom: 20px;
-
+	height:5px;
+	width:500px;
+	background-color: cadetblue;
+	float:right;
+	margin-bottom:40px;
+	position: relative;
+	bottom: 20px;
 }
 
 .trent{
@@ -322,7 +318,7 @@ i:hover{
 
 .menu{
 	margin-top: 30px;
-	margin-right:800px;
+	margin-right:650px;
 	
 	
 }
@@ -379,5 +375,7 @@ h6{
 .copy{
 	margin-right:880px;
 }
+
+
 
 

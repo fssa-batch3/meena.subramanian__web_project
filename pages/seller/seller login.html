@@ -1,102 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seller</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seller</title>
 
-    <link rel="stylesheet" href="../../assets/css/seller login.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../../assets/css/seller login.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Nerko+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 
-</head>
+    </head>
 
-<body>
+    <body>
 
-    <header>
-        <div class="logo">
-            <a href="../../index.html"><img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px"></a>
-        </div>
-
-    
-        <div class="navigations">
-          <div class="accound">
-                <a href="../../pages/profile page/profile page.html"><i class="fa fa-user-circle-o"style="font-size:24px;color:black;"></i>
+        <header>
+            <div class="logo">
+                <a href="../../index.html">
+                    <img src="../../assets/img/image-removebg-preview.png" alt="logo" width="100px" height="80px">
                 </a>
             </div>
-
-        
+    
+            <!-- <div class="navigations">
+                <div class="accound">
+                <a href="../../pages/seller/Seller profile.html"><i class="fa fa-user-circle-o"style="font-size:24px;color:black;"></i>
+                </a>
+                </div> -->
 
 </div>
-    </header>
+        </header>
 
-<section class="total">
-<section class="sell">
-    <h1 style="font-size: 40px;"> Welcome To Seller Panel</h1>
-    <div class="content">
-        <p>Sell nationwide to millions customers<br> 24 hours a day. 7 day a week.</p>
-    </div>
-    <form role="form" onsubmit="signIn(event)">
+        <section class="total">
+            <section class="sell">
+                <h1 style="font-size: 40px;"> Welcome To Seller Panel</h1>
+                <div class="content">
+                    <p>
+                        Sell nationwide to millions customers<br> 24 hours a day. 7 day a week.
+                    </p>
+                </div>
+                <form role="form" onsubmit="signIn(event)">
 
-    <div class="mail">
-        <input type="email" id="email" placeholder="abcd788@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
-    </div>
-    <div class="password">
-        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="*********" required>
-    </div>
+                    <div class="mail">
+                        <input type="email" id="email" placeholder="email" value="vasumeena2004@gmail.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                    </div>
+                    <div class="password">
+                        <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" value="Meenu@2343" placeholder="password" required>
+                    </div>
+                    <p style="font-size: 13px;"> Pattern : Minimum 8 characters include Uppercase,<br>  Lowercase, Number and Special characters. </p>
+                    <div class="forget">
+                        <a href="#" style="color: rgb(71, 159, 118);">Forget Password</a>
+                    </div>
 
-    <div class="forget">
-        <a href="#" style="color: rgb(71, 159, 118);">Forget Password</a>
-    </div>
-
-    <button class="sign" type="submit"> <b style="color: black;">Sign In</b></button>
+                    <button class="sign" type="submit">
+                        <b style="color: black;">Sign In</b>
+                    </button>
  
-    <div class="regis">
-    <p> Don't have a account?<a href="../../pages/seller/seller register.html" style="color: rgb(71, 159, 118);">Register Now</a></p>
-    </div>
-</form>
+                    <div class="regis">
+                        <p>
+                            Don't have a account?<a href="../../pages/seller/seller register.html" style="color: rgb(71, 159, 118);">Register Now</a>
+                        </p>
+                    </div>
+                </form>
 
-</section>
+            </section>
 
-<section class="img">
-     <img src="../../assets/img/Ecommerce web page-rafiki.png" alt="image" width="650px" height="650px" >
-</section>
-</section>
+            <section class="img">
+                <img src="../../assets/img/Ecommerce web page-rafiki.png" alt="image" width="650px" height="650px">
+            </section>
+        </section>
 
-<script>
+        <script>
     // const email = document.getElementById("email").value
     // const password = document.getElementById("password").value
-   
 
     // console.log(email)
     // console.log(password)
-  
-
 
     function signIn(e) {
-            e.preventDefault();
-            let email = document.getElementById('email').value,
-            password = document.getElementById('password').value;
-            let seller_cred = JSON.parse(localStorage.getItem('seller_cred')) || [];
-            let exist = seller_cred.length &&
-            JSON.parse(localStorage.getItem('seller_cred')).some(data =>
-            data.email.toLowerCase() == email
-            && data.password == password);
-            if(!exist){
-                alert("Incorrect User Credentials");
-                document.querySelector('form').reset();
-            }
-            else{
-                localStorage.setItem('uniqueID',JSON.stringify(email));
-                alert("Your Login is Successful");
-                location.href = "../seller/Seller profile.html";
-            }
-        }
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+      const seller_cred = JSON.parse(localStorage.getItem("seller_cred")) || [];
+      const exist =
+        seller_cred.length &&
+    JSON.parse(localStorage.getItem("seller_cred")).some(
+          (data) => data.email.toLowerCase() === email && data.password === password
+    );
+  if (!exist) {
+        alert("Incorrect User Credentials");
+        document.querySelector("form").reset();
+      } else {
+        localStorage.setItem("uniqueID_seller", JSON.stringify(email));
+        alert("Your Login is Successful");
+        window.location.href = "../seller products/seller product list.html";
+      }
+    }
 </script>
 
-</body>
+    </body>
 </html>

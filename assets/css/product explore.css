@@ -25,9 +25,18 @@ header div ul{
     list-style:none;
 	margin-left:60px;
 	padding-top:30px;
-    
-	
 
+}
+
+.log {
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 10px;
 }
 
 header div ul li a{
@@ -107,14 +116,13 @@ input[type="search"]{
 	margin-top: 100px;
 	margin-left:80px;
 }
-
+ 
 .meenu img{
     border-radius:10px;
     margin-left:10px;
     margin-right:20px;
+	margin-top: 37px;
 }
-
-
 
 .product{
 	 margin-top:60px;
@@ -124,22 +132,20 @@ input[type="search"]{
 
 .product-1{
     margin-top:25px;
-	margin-left:40px;
-	
+	margin-left:40px;	
 }
+
 
 .then{
 	padding:50px;
-	
 }
-
-
 
 .sneaker{
 	padding:150px;
 	margin-top:20px;
 	padding-top:30px;
 }
+
 
 h4{
 	color:rgb(163, 148, 120);
@@ -148,6 +154,7 @@ h4{
 	font-size: 25px;
 	
 }
+
 
 h2{
 	font-size:35px;
@@ -169,9 +176,9 @@ h2{
 	padding-left:50px;
 	padding-right:50px;
 	margin-left:20px;
-	
-	
+	cursor: pointer;	
 }
+
 
 .the{
 	padding-bottom:15px;
@@ -182,12 +189,13 @@ h2{
 	border:0px;
 	background-color:cadetblue;
 	color:white;
-	
+	cursor: pointer;
 }
 
 .the a {
 	text-decoration: none;
 	color:black;
+	
 }
 
 
@@ -209,7 +217,7 @@ h2{
 }
 
 .content-details h3{
-	margin-top:30px;
+	/* margin-top:30px; */
 	color:crimson
 }
 
@@ -221,7 +229,7 @@ h2{
 }
 
 .what{
-	padding:30px;
+	padding:11px;
 	margin-left:-35px;
 
 }
@@ -283,7 +291,7 @@ span{
 	padding-left:25px;
 	padding-right:25px;
 	border-radius: 7px;
-
+	cursor: pointer;
 }
 
 
@@ -490,6 +498,17 @@ span{
     margin-bottom:35px;
 }
 
-/* @media only screen and (max-width:700px) {
-	
-} */
+.washing_instruction {
+    width: 100%;
+    height: auto;
+    margin-top: -81px;
+    margin-bottom: 60px;
+}
+.wash{
+	width: 90%;
+	padding: 12px;
+	border-radius: 8px;
+	height: auto;
+	margin: auto;
+	background-color: rgb(203, 209, 214);
+}

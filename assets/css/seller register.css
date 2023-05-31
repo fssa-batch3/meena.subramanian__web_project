@@ -44,12 +44,27 @@ input[type=text]{
     padding:13px;
     width:420px;
     margin-bottom:20px;
-	font-size: 16px;
-
-	
+	font-size: 16px;	
 }
 
 
+
+.photo{
+	border-radius: 5px;
+	border-color: transparent;
+	background-color:#eaecef;
+    outline: none;
+    padding:13px;
+    width:420px;
+    margin-bottom:20px;
+	font-size: 16px;
+}
+
+.Weaving{
+	margin-left: -21rem;
+    opacity: 0;
+	
+}
 
 .submit{
     padding:3px;
@@ -57,11 +72,32 @@ input[type=text]{
     border-radius: 5px;
     border-color: transparent;
     background-color: cadetblue;
+    margin-top: 20px;
+	/* margin-left:240px; */
+	cursor: pointer;
+}
+
+.pass p {
+	width: 500px;
+}
+
+.log{
     margin-top: 30px;
-	margin-left:350px;
+	cursor: pointer;
+}
+
+.log a{
+    text-decoration: underline;
+	margin-left: 5px;
 }
 
 .submit:hover{
+	scale: 1.04;
+	background-color: crimson;
+	color: white;
+}
+
+.login:hover{
 	scale: 1.04;
 	background-color: crimson;
 	color: white;
@@ -72,4 +108,12 @@ input[type=text]{
     margin-left:150px;
     
 }
-
+.check_img{
+	margin-left: 50px;
+    /* margin-top: 8px; */
+    margin-bottom: -10px;
+}
+.check_img2{
+	margin-left: 30px;
+    
+}

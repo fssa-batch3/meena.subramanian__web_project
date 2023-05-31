@@ -2,9 +2,7 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
-	text-decoration: none;
-    
-	
+	text-decoration: none;	
 }
 
 	
@@ -21,10 +19,6 @@ header{
 }
 
 
-
-
-
- 
 .navigations{
     display:flex;
     padding-top:50px;
@@ -38,15 +32,47 @@ header{
 
 
 
+body .profile_details{
+    margin-top: 20px;
+}
 
 body .profile_details .form{
     width: 70rem;
-    height: 24rem;
+    height: 28rem;
     margin: auto;
     display: flex;
     flex-direction: column;
-    margin-top:3px;
- 
+    margin-top:50px;
+}
+
+.list_3{
+    width: 33px;
+    padding-top: 10px;
+    margin-top:40px;
+    outline: none;
+    border:1px solid transparent;
+    border-bottom-color: gray; 
+}
+
+.list_4{
+    width: 84px;
+    padding-top: 10px;
+    margin-top:40px;
+    outline: none;
+    border:1px solid transparent;
+    border-bottom-color: gray; 
+}
+.percentage_discount{
+    margin-top: 50px;
+    margin-left: 20px;
+
+}
+
+.flex_row{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    justify-content: space-between;
 }
 
 .form .details_list{
@@ -54,6 +80,18 @@ body .profile_details .form{
     flex-direction: row;
 }
 
+
+
+.details_list label{
+margin: auto;
+}
+.length_option{
+    margin-top: 50px;
+}
+
+.meete{
+    margin-left: 30px;
+}
 body .profile_details .form .profile,.details,.buttons{
     margin: auto;
 }
@@ -67,35 +105,39 @@ body .profile_details .form .profile,.details,.buttons{
     width: 100px;
     padding-top: 50px;
     margin-right:100px;
-	font-size: 15px;
 }
+
+
+.form .details .list_1{
+    width: 43px;
+    padding-top: 50px;
+    margin-right:100px;
+}
+
 
 .form .details .list_2{
     width: 400px;
     padding-top: 10px;
     margin-top:40px;
-	font-size: 16px;
     outline: none;
     border:1px solid transparent;
-    border-bottom-color: gray;
-
-    
+    border-bottom-color: gray;   
 }
 
-h1{
-    margin-top:30px;
-	color: crimson;
- 
+h2{
+    margin-top:70px;
+    margin-left:42rem;
 }
 
 .form  .save{
-    padding: 7px;
+    padding: 5px;
+    width:70px;
     border-radius: 7px;
     border: 2px solid white;
     background-color:cadetblue;
     margin-top: 40px;
-	width:80px;
-   margin-left:40rem;
+   margin-left:49rem;
+   cursor: pointer;
 }
 
 
@@ -105,25 +147,73 @@ h1{
     color:white;
 }
 
-.delete_data:hover{
-    scale: 1.03;
-    background-color:crimson;
-    color:white;
+div button .save{
+    margin-left:70px;   
 }
 
-.form .delete_data{
+.new img{
+    width:450px;
+    margin-left:60px;
+    border-radius: 20px;   
+}
+
+
+.form .save {
     padding: 7px;
     border-radius: 7px;
     border: 2px solid white;
-    background-color:cadetblue;
-    margin-bottom: 190px;
-	width:80px;
-    margin-left:49rem;
+    background-color: cadetblue;
+    margin-top: 40px;
+    width: 80px;
+    margin-left: 40rem;
+    font-weight: bold;
 }
 
-.profile_details .run{
-	margin-top:50px;
-	margin-left:35rem;
-	border-radius:10px;
-	
+body .profile_details .form .profile,
+.details,
+.buttons {
+    margin: auto;
 }
+
+.form .delete_data {
+    padding: 7px;
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color: cadetblue;
+    margin-top: -38px;
+    width: 80px;
+    margin-left: 40rem;
+    font-weight: bold;
+}
+
+
+.save:hover {
+    scale: 1.03;
+    background-color: crimson;
+    color: white;
+}
+
+.delete_data:hover {
+    scale: 1.03;
+    background-color: crimson;
+    color: white;
+}
+
+.form .delete_data {
+    padding: 7px;
+    border-radius: 7px;
+    border: 2px solid white;
+    background-color: cadetblue;
+    margin-bottom: 190px;
+    width: 80px;
+    margin-left: 49rem;
+}
+
+.profile_details .run {
+    margin-top: 50px;
+    margin-left: 40rem;
+    border-radius: 10px;
+
+}
+
+

@@ -75,6 +75,43 @@ input[type="search"]{
 	background-color:#eaecef;
 }
 
+input[type="text"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
+
+.log {
+    display: block;
+    width: 140px;
+    height: 30px;
+    background-color: cadetblue;
+    color: black;
+    border-radius: 6px;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+
+input[type="number"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
+
+input[type="tel"] {
+    padding: 4px 25px 4px 25px;
+    outline: none;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border-color: transparent;
+    background-color: #eaecef;
+}
 
 .cart{
     padding-right:30px;
@@ -93,8 +130,12 @@ input[type="search"]{
     padding-left:30px;
 }
 
+.form label{
+    margin-top: 30px;
+}
+
 .total{
-  display:flex;
+display:flex;
 flex-wrap: wrap;
 }
 
@@ -106,12 +147,14 @@ flex-wrap: wrap;
 
 .left .image img {
     border-radius: 20px;
+    /* width: 103%; */
+    /* height: 115%; */
+    height: 33rem;
+    width: 27rem;
+    margin-top: 80px;
 }
 
-.left .sub-images{
-    margin-top:30px;
-   
-}
+
 
 .right{
     margin-left:150px;
@@ -198,15 +241,18 @@ h2{
     display: flex;
     flex-direction: row;
 }
+
 .right .form_list .form{
-    width: 10rem;
-    margin-top: 15px;
+    width: 5rem;
+    margin-top: 20px;
 }
 .right .form_list .form_input{
     margin-top: 15px;
 }
 .right .form_list .form input,.form_input input{
-    margin-top: 5px;
+    margin-top: 1px;
+    width: 86px;
+    margin-left: 20px
 }
 .right .cash{
     display: flex;
@@ -218,15 +264,16 @@ h2{
     margin-top: 15px;
 }
 .right .cash .radio{
-    margin-top: 18px;
+    margin-top: 15px;
     margin-left: 20px;
 }
 .place{
-    margin-top:100px;
-    margin-left:350px;
-    padding:10px;
+    margin-top: 37px;
+    margin-left: 1px;
+    width: 102%;
+    padding: 10px;
     background-color: cadetblue;
-    border:1px solid white;
+    border: 1px solid white;
     border-radius: 10px;
 }
 
@@ -241,7 +288,49 @@ input{
 
 
 
+div.card{
+    background-color: #fafafa;
+    border-radius: 9px;
+    padding: 10px;
+    margin-top: 30px;
+    min-width: 220px;
+    max-width: 196px;
+    min-height: 231px;
+    max-height: 286px;
+}
 
 
+.name {
+    margin-bottom: 10px;
+}
 
+.name h3 {
+    font-size: 22px;
+    margin-top: 6px;
+    margin-left: 17px;
+}
+
+.details {
+    margin: 10px;
+}
+
+.details p {
+    margin: 5px;
+    font-size: 14px;
+}
+
+.defa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+  cursor: pointer;
+}
+.def{
+    margin: 8px 0;
+    border: 0;
+    padding: 6px;
+    background: 0;
+    border-radius: 5px;
+}
 

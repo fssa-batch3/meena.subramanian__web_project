@@ -194,8 +194,9 @@ h6 {
 	padding-right: 40px;
 	border-radius: 7px;
 	border: 0px;
+	font-weight: bold;
 	background-color: cadetblue;
-	color: white;
+	color: black;
 
 }
 
@@ -223,7 +224,7 @@ h6 {
 }
 
 .content-details h3 {
-	margin-top: 30px;
+	/* margin-top: 30px; */
 	color: crimson
 }
 
